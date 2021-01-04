@@ -86,7 +86,6 @@ export default {
             width: 150px;
             height: 150px;
             opacity: 0.8;
-            // filter: grayscale(100%);
         }
         h3 {
             font-weight: bold;

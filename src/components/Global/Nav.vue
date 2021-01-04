@@ -42,15 +42,15 @@ export default {
     z-index: 3;
     position: relative;
     &-mobile {
-        padding: 1rem 1.5rem;
+        padding: 1.2rem 2.2rem;
         display: flex;
         justify-content: flex-end;
         width: 100%;
         position: fixed;
         background: white;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     }
     &-content {
-    //   width: inherit;
       @media screen and (max-width: 767px) {
         display: flex;
         justify-content: flex-end;
