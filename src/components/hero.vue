@@ -5,12 +5,13 @@
                 <div class="spaces--brief">
                     <img src="@/assets/spaces_logo_lg.png" alt="Large Spaces logo">
                     <h2 class="hero--text">
-                        Spaces is a technology-driven platform established with the goal to facilitate indigenous commerce and help Africans increase their earning potential
+                        Building intelligent systems to enhance African trade.
+                        <span>Spaces</span> is the backbone for indigenous commerce in Africa.
                     </h2>
                 </div>
                 <div class="spaces-app">
                     <img src="@/assets/blank-screen-phone-template.png" alt="blank phone screen" class="app-template">
-                    <img src="@/assets/android-app.png" alt="spaces app" class="app">
+                    <img src="@/assets/Dashboard_Merchant.png" alt="spaces app" class="app">
                 </div>
             </div>
         </div>
@@ -36,20 +37,29 @@ export default {
     .hero {
         height: 85vh;
         padding: 2rem 15rem 0;
+        @media screen and (max-width: 1100px) {
+            padding: 2rem 4rem 0;
+        }
         border-bottom: 0.1rem solid #f2f2f2;
         &--text {
             max-width: 54rem;
             font-weight: 400;
             padding: 3rem 0;
             line-height: 30px;
+            span {
+                color: #1F2138;
+                font-weight: 400;
+            }
         }
     }
     .spaces {
         &--brief {
-            // max-width: 45rem;
             align-self: center;
             img {
                 max-width: 160px;
+                @media screen and (max-width: 768px) {
+                    max-width: 100px;
+                }
             }
         }
         &-app {
@@ -58,19 +68,25 @@ export default {
             width: 45rem;
             height: 50rem;
             animation: floater 5s linear infinite alternate;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
     }
     .app {
         width: 19.6rem;
         height: 40.5rem;
         position: absolute;
-        top: 9%;
-        left: 153px;
+        top: 6.5%;
+        left: 32%;
+        @media screen and (max-width: 1200px) {
+            left: 33%;
+        }
         &-template {
             position: absolute;
-            left: 5.8%;
-            height: 50rem;
-            width: 500px;
+            left: 29%;
+            height: 46.5rem;
+            width: 22rem;
             filter: drop-shadow(0 0 0.5rem #808080);
         }
     }

@@ -1,13 +1,14 @@
 <template>
     <div class="nav">
-        <a href="#footer" class="nav-link">About</a>
+        <a href="#about" class="nav-link">About</a>
         <a href="#partner" class="nav-link">Partner</a>
     </div>
 </template>
 
 <script>
+
 export default {
-    name: 'navbar',
+  name: 'web-nav',
 };
 </script>
 
@@ -17,6 +18,8 @@ export default {
         display: flex;
         justify-content: flex-end;
         color: #1F2138;
+        max-width: 1440px;
+        margin: 0 auto;
         &-link {
             padding: 2rem;    
             position: relative;

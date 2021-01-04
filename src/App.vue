@@ -1,31 +1,36 @@
 <template>
   <div id="app">
-    <navbar />
+    <navigation />
     <hero />
-    <about />
-    <!-- <investors /> -->
+    <services />
+    <vision />
+    <investors />
     <partner />
     <footer-element />
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
 import Partner from './components/Partner'
 import FooterElement from './components/footer'
-import Navbar from './components/navbar'
 import Hero from './components/hero'
-import About from './components/About'
-// import Investors from './components/Investors'
+import Services from './components/Services'
+import Investors from './components/Investors'
+import Vision from './components/vision.vue'
+import Navigation from '@/components/Global/Nav';
+
+Vue.component('navigation', Navigation);
 
 export default {
   name: 'App',
   components: {
     FooterElement,
     Partner,
-    Navbar,
     Hero,
-    About,
-    // Investors,
+    Services,
+    Investors,
+    Vision,
   }
 }
 </script>
@@ -36,6 +41,6 @@ export default {
   #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #F8F9FB;
+    background: #fff;
   }
 </style>
