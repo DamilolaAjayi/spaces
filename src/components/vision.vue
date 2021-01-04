@@ -6,15 +6,15 @@
         <div class="profile--highlights">
             <div class="profile--highlights__list">
                 <img src="@/assets/store-alt-solid.svg" alt="">
-                <p>50,000+ active merchants on SpacesO2O.</p>
+                <p><b>50,000+</b> active merchants on SpacesO2O</p>
             </div>
             <div class="profile--highlights__list">
                 <img src="@/assets/network-wired-solid.svg" alt="">
-                <p>5,000 agents across Nigeria.</p>
+                <p><b>5,000</b> agents across Nigeria</p>
             </div>
             <div class="profile--highlights__list">
                 <img src="@/assets/sellsy-brands.svg" alt="">
-                <p>N9.5 billion in recorded sales.</p>
+                <p><b>N9.5 billion</b> in recorded sales</p>
             </div>
         </div>
     </div>
@@ -28,17 +28,15 @@ export default {
 
 <style lang="scss" scoped>
     .profile {
-        min-height: 70vh;
-        padding: 10rem 8rem 1rem;
+        padding: 10rem 15rem 3rem;
         border-bottom: 0.1rem solid #f2f2f2;
-        max-width: 1200px;
+        max-width: 1440px;
         margin: 0 auto;
         @media screen and (max-width: 992px) {
             padding: 10rem 5rem;
         }
         @media screen and (max-width: 768px) {
             padding: 4rem 3rem;
-            min-height: auto;
         }
         &--text {
             max-width: 85rem;
@@ -72,6 +70,7 @@ export default {
                 }
                 img {
                     margin-right: 0.7rem;
+                    filter: invert(62%) sepia(57%) saturate(4527%) hue-rotate(180deg) brightness(103%) contrast(101%);
                 }
             }
             img {

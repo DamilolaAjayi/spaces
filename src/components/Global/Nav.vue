@@ -3,7 +3,7 @@
     <div class="nav-mobile" v-if="isMobile">
         <img v-if="!menuClicked" src="@/assets/menu.svg" @click="toggleMenu" alt="Menu Icon">
         <img class="close-button" v-else src="@/assets/close-button.svg" @click="toggleMenu" alt="Close Icon">
-        <mobile-nav v-if="showMobileNav" />
+        <mobile-nav v-if="showMobileNav" @menuClicked="toggleMenu" />
     </div>
     <div class="nav-web" v-else>
         <web-nav />

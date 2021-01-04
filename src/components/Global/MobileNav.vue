@@ -1,8 +1,8 @@
 <template>
   <div class="nav-mobile">
     <ul class="nav-mobile-list">
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#partner" class="nav-link">Partner</a></li>
+      <li><a href="#about" class="nav-link" @click="hideNavBody">About</a></li>
+      <li><a href="#partner" class="nav-link" @click="hideNavBody">Partner</a></li>
     </ul>
   </div>
 </template>
@@ -11,6 +11,11 @@
 
 export default {
   name: 'mobile-nav',
+  methods: {
+      hideNavBody() {
+          this.$emit('menuClicked');
+      },
+  },
 };
 </script>
 

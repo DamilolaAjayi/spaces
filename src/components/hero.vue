@@ -11,7 +11,7 @@
                 </div>
                 <div class="spaces-app">
                     <div class="spaces-app-box">
-                        <img src="@/assets/blank-screen-phone-template.png" alt="blank phone screen" class="app-template">
+                        <img src="@/assets/android-phone-template.png" alt="blank phone screen" class="app-template">
                         <img src="@/assets/Dashboard_Merchant.png" alt="spaces app" class="app">
                     </div>
                 </div>
@@ -100,20 +100,17 @@ export default {
             left: 32%;
         }
         @media screen and (max-width: 960px) {
-            left: 50.3%;
+            left: 49.8%;
             margin: 0 auto;
             -webkit-transform: translateX(-50%);
             transform: translateX(-50%)
         }
-        @media screen and (max-width: 600px) {
-            left: 50.8%;
-        }
         &-template {
             position: absolute;
-            left: 29%;
+            left: 30%;
             height: 46.5rem;
-            width: 22rem;
-            filter: drop-shadow(0 0 0.5rem #808080);
+            width: 21.5rem;
+            // filter: drop-shadow(0 0 0.5rem #808080);
             @media screen and (max-width: 960px) {
                 left: 50%;
                 margin: 0 auto;

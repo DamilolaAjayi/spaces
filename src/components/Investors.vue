@@ -28,7 +28,6 @@ export default {
 
 <style lang="scss" scoped>
     .investors{
-        min-height: 65vh;
         padding: 8rem 15rem;
         border-bottom: 0.1rem solid #f2f2f2;
         display: flex;
@@ -37,7 +36,6 @@ export default {
         margin: 0 auto;
         @media screen and (max-width: 600px) {
             flex-direction: column;
-            // padding: 4rem 3rem;
         }
         @media screen and (max-width: 1100px) {
             padding: 8rem 3rem;

@@ -49,7 +49,7 @@ export default {
             p {
                 padding: 3rem 0;
                 text-align: left;
-                letter-spacing: 0.15rem;
+                letter-spacing: 1.2px;
                 @media screen and (max-width: 768px) {
                     font-size: 1.6rem;
                 }
@@ -62,6 +62,5 @@ export default {
     .contact {
         font-weight: bold;
         font-size: 2rem;
-        letter-spacing: -0.05rem;
     }
 </style>

@@ -8,21 +8,21 @@
                 <img src="@/assets/increasing-demand.svg" alt="">
                 <div class="block">
                     <h3>Increasing Demand</h3>
-                   <p>through our wholesale and retail ordering platforms that connect sellers to buyers.</p>
+                   <p>Access to our robust e-commerce platform for wholesale and retail.</p>
                 </div>
             </div>
             <div class="offerings">
                 <img src="@/assets/cash-flow.svg" alt="">
                 <div class="block">
                     <h3>Improving Cashflow</h3>
-                    <p>with credit facilities that ensure business needs are met.</p>
+                    <p>Credit facilities that ensure business needs are met.</p>
                 </div>
             </div>
             <div class="offerings">
                 <img src="@/assets/supply-chain.svg" alt="">
                 <div class="block">
                     <h3>Strengthening Supply Chain</h3>
-                    <p>streamlining the flow of goods from Distributors and Wholesalers to merchants.</p>
+                    <p>Streamlining the flow of goods from distributors and wholesalers to merchants.</p>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@ export default {
         min-height: 100vh;
         padding: 10rem 15rem;
         border-bottom: 0.1rem solid #f2f2f2;
-        max-width: 1200px;
+        max-width: 1440px;
         margin: 0 auto;
         @media screen and (max-width: 1100px) {
             padding: 8rem 3rem;
