@@ -48,7 +48,7 @@ export default {
         width: 100%;
         position: fixed;
         background: white;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px rgba(0,0,0,.1)
     }
     &-content {
       @media screen and (max-width: 767px) {
