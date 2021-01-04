@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="offerings">
-                <img src="@/assets/chain.svg" alt="">
+                <img src="@/assets/supply-chain.svg" alt="">
                 <div class="block">
                     <h3>Strengthening Supply Chain</h3>
                     <p>streamlining the flow of goods from Distributors and Wholesalers to merchants.</p>
@@ -43,7 +43,7 @@ export default {
         max-width: 1200px;
         margin: 0 auto;
         @media screen and (max-width: 1100px) {
-            padding: 8rem 5rem;
+            padding: 8rem 3rem;
         }
         &--text {
             max-width: 85rem;
@@ -52,7 +52,7 @@ export default {
             font-size: 4rem;
             margin-bottom: 4rem;
             @media screen and (max-width: 768px) {
-                font-size: 2.4rem;
+                font-size: 2rem;
             }
         }
     }
@@ -86,6 +86,7 @@ export default {
             width: 150px;
             height: 150px;
             opacity: 0.8;
+            // filter: grayscale(100%);
         }
         h3 {
             font-weight: bold;

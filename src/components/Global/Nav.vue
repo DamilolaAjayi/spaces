@@ -1,14 +1,12 @@
 <template>
   <div class="nav">
-    <div class="nav-content">
-        <div class="nav-mobile" v-if="isMobile">
-            <img v-if="!menuClicked" src="@/assets/menu.svg" @click="toggleMenu" alt="Menu Icon">
-            <img class="close-button" v-else src="@/assets/close-button.svg" @click="toggleMenu" alt="Close Icon">
-            <mobile-nav v-if="showMobileNav" />
-        </div>
-        <div class="nav-web" v-else>
-            <web-nav />
-        </div>
+    <div class="nav-mobile" v-if="isMobile">
+        <img v-if="!menuClicked" src="@/assets/menu.svg" @click="toggleMenu" alt="Menu Icon">
+        <img class="close-button" v-else src="@/assets/close-button.svg" @click="toggleMenu" alt="Close Icon">
+        <mobile-nav v-if="showMobileNav" />
+    </div>
+    <div class="nav-web" v-else>
+        <web-nav />
     </div>
   </div>
 </template>
@@ -41,19 +39,16 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
-    // &-left, &-right , &-logo {
-    //   height: 3.5em;
-    //   display: flex;
-    //   flex-direction: row;
-    //   align-items: center;
-    // }
-    // &-left{
-    //   width: 50%;
-    // }
-    // &-right {
-    //   justify-content: flex-end;
-    //   width: 50%;
-    // }
+    z-index: 3;
+    position: relative;
+    &-mobile {
+        padding: 1rem 1.5rem;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        position: fixed;
+        background: white;
+    }
     &-content {
     //   width: inherit;
       @media screen and (max-width: 767px) {

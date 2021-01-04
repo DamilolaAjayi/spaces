@@ -23,7 +23,7 @@ export default {
         min-height: 50vh;
         border-bottom: 0.1rem solid #f2f2f2;
         display: flex;
-        padding: 6rem 2rem;
+        padding: 6rem 3rem;
         max-width: 1200px;
         margin: 0 auto;
         &__textbox {

@@ -27,7 +27,7 @@ export default {
         padding: 6rem 10rem;
         border-top: 0.1rem solid #f2f2f2;
         @media screen and (max-width: 992px) {
-            padding: 4rem 2rem;
+            padding: 4rem 3rem;
         }
         img {
             max-height: 48px;

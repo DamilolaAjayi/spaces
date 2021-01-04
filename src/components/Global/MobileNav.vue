@@ -17,18 +17,18 @@ export default {
 <style lang="scss" scoped>
   .nav-mobile {
     position: absolute;
-    top: 100%;
+    top: 4rem;
     font-size: 1.2em;
     left: 0px;
     width: 100%;
     height: 100vh;
     margin: 0px;
     background: white;
-    box-shadow: inset 0 2px 15px -9px rgba(68, 57, 57, 0.5);
     .nav-mobile-list {
       text-align: center;
       line-height: 5em;
       background: white;
+      width: 100%;
       :first-child{
         margin-top: 2em;
       }

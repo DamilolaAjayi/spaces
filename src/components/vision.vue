@@ -14,7 +14,7 @@
             </div>
             <div class="profile--highlights__list">
                 <img src="@/assets/sellsy-brands.svg" alt="">
-                <p>N9.5 billion on recorded sales.</p>
+                <p>N9.5 billion in recorded sales.</p>
             </div>
         </div>
     </div>
@@ -37,7 +37,8 @@ export default {
             padding: 10rem 5rem;
         }
         @media screen and (max-width: 768px) {
-            padding: 4rem 2rem;
+            padding: 4rem 3rem;
+            min-height: auto;
         }
         &--text {
             max-width: 85rem;
@@ -46,7 +47,7 @@ export default {
             font-size: 4rem;
             padding-bottom: 4rem;
             @media screen and (max-width: 768px) {
-                font-size: 2.4rem;
+                font-size: 2rem;
             }
             span {
                 border-bottom: 1.5px solid #000;

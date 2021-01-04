@@ -1,11 +1,11 @@
 <template>
     <div class="investors">
-        <div class="investors--block">
+        <!-- <div class="investors--block">
             <h2 class="investors--header">Our Backers</h2>
             <div class="investor">
                 <img src="@/assets/rensource_logo.png" alt="Rensource Energy">
             </div>
-        </div>
+        </div> -->
         <div class="investors--block">
             <h2>In the News</h2>
             <div class="media">
@@ -37,10 +37,10 @@ export default {
         margin: 0 auto;
         @media screen and (max-width: 600px) {
             flex-direction: column;
-            padding: 4rem 2rem;
+            // padding: 4rem 3rem;
         }
         @media screen and (max-width: 1100px) {
-            padding: 8rem 2rem;
+            padding: 8rem 3rem;
         }
         &--block {
             text-align: center;
@@ -72,12 +72,12 @@ export default {
             margin: 2rem auto 0;
         }
         @media screen and (max-width: 768px)  {
-            width: 15rem;
+            width: 24rem;
         }
         img {
             max-height: 10rem;
             @media screen and (max-width: 768px) {
-                max-height: 4rem;
+                max-height: 6rem;
             }
         }
     }
