@@ -20,7 +20,6 @@ export default {
 
 <style lang="scss" scoped>
     .partner {
-        min-height: 50vh;
         border-bottom: 0.1rem solid #f2f2f2;
         display: flex;
         padding: 6rem 3rem;
@@ -33,8 +32,11 @@ export default {
             @media screen and (max-width: 600px) {
                 text-align: left;
                 align-self: left;
-                max-width: 40rem;
                 margin: 0;
+            }
+            @media screen and (max-width: 768px) {
+                text-align: left;
+                max-width: 40rem;
             }
             h3 {
                 font-size: 4rem;

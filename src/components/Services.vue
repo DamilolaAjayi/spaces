@@ -37,7 +37,6 @@ export default {
 
 <style lang="scss" scoped>
     .about {
-        min-height: 100vh;
         padding: 10rem 15rem;
         border-bottom: 0.1rem solid #f2f2f2;
         max-width: 1440px;

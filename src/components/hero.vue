@@ -42,10 +42,12 @@ export default {
     }
     .hero {
         height: 85vh;
+        max-height: 800px;
         padding: 2rem 15rem 0;
         @media screen and (max-width: 1100px) {
             padding: 2rem 4rem 0;
-            height: auto;       
+            height: auto;
+            max-height: none;      
         }
         border-bottom: 0.1rem solid #f2f2f2;
         &--text {
