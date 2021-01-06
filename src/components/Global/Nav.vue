@@ -47,8 +47,8 @@ export default {
         justify-content: flex-end;
         width: 100%;
         position: fixed;
-        background: white;
-        box-shadow: 0 0 10px rgba(0,0,0,.1)
+        background: #f5f7fa;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
     }
     &-content {
       @media screen and (max-width: 767px) {

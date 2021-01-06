@@ -22,17 +22,15 @@ export default {
 <style lang="scss" scoped>
   .nav-mobile {
     position: absolute;
-    top: 4rem;
+    top: 4.8rem;
     font-size: 1.2em;
     left: 0px;
     width: 100%;
     height: 100vh;
     margin: 0px;
-    background: white;
     .nav-mobile-list {
       text-align: center;
-      line-height: 5em;
-      background: white;
+      line-height: 2.5em;
       width: 100%;
       :first-child{
         margin-top: 2em;

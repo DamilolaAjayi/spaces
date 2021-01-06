@@ -1,7 +1,10 @@
 <template>
     <div class="profile">
         <h2 class="profile--text">
-            We have an unparalleled understanding of the <span>informal sector</span>:   
+            We have an unparalleled understanding of the 
+            <a target="_blank" href="https://www.boi.ng/wp-content/uploads/2018/05/BOI-Working-Paper-Series-No2_Economic-Development-through-the-Nigerian-Informal-Sector-A-BOI-perspective.pdf">
+                <span>informal sector</span>
+            </a>:   
         </h2>
         <div class="profile--highlights">
             <div class="profile--highlights__list">
@@ -14,7 +17,7 @@
             </div>
             <div class="profile--highlights__list">
                 <img src="@/assets/sellsy-brands.svg" alt="">
-                <p><b>N9.5 billion</b> in recorded sales</p>
+                <p><b>$1.4 billion</b> in recorded sales</p>
             </div>
         </div>
     </div>
@@ -41,13 +44,15 @@ export default {
         &--text {
             max-width: 85rem;
             line-height: 125%;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 4rem;
             padding-bottom: 4rem;
             @media screen and (max-width: 768px) {
                 font-size: 2rem;
+                padding-bottom: 1rem;
             }
             span {
+                font-weight: 600;
                 border-bottom: 1.5px solid #000;
             }
         }

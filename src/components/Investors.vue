@@ -13,7 +13,7 @@
                     <img src="@/assets/ventures_africa_logo.png" alt="Merchlist featured in Ventures Africa">
                 </a>
                 <a target="_blank" href="https://techcrunch.com/2019/12/17/nigerias-rensource-raises-20m-to-power-african-markets-by-solar/">
-                    <img src="@/assets/tech_crunch_logo.png" alt="Rensource featured in Tech Crunch">
+                    <img src="@/assets/tech_crunch_logo.png" alt="Rensource featured in Tech Crunch" class="tech-crunch">
                 </a>
             </div>
         </div>
@@ -45,6 +45,7 @@ export default {
             h2 {
                 font-weight: 600;
                 font-size: 4rem;
+                margin-right: -10px;
                 @media screen and (max-width: 768px) {
                     font-size: 2rem;
                 }
@@ -64,13 +65,14 @@ export default {
     .media {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-top: 2rem;
-        width: 35rem;
+        width: 30rem;
         @media screen and (max-width: 900px) {
             margin: 2rem auto 0;
         }
         @media screen and (max-width: 768px)  {
-            width: 24rem;
+            width: 20rem;
         }
         img {
             max-height: 10rem;
@@ -79,7 +81,10 @@ export default {
             }
         }
     }
-    .investor {
-        margin: 3.5rem 0;
+    .tech-crunch {
+        width: 100px;
+        @media screen and (min-width: 800px) {
+            width: 140px;
+        }
     }
 </style>

@@ -4,10 +4,12 @@
             <div class="section">
                 <div class="spaces--brief">
                     <img src="@/assets/spaces_logo_lg.png" alt="Large Spaces logo">
-                    <h2 class="hero--text">
-                        Building intelligent systems to enhance African trade.
-                        <span>Spaces</span> is the backbone for indigenous commerce in Africa.
-                    </h2>
+                    <div class="hero--text">
+                        <h2>Building Intelligent Systems to Enhance African Trade.</h2>
+                        <h3>
+                            <span>Spaces</span> is the backbone for informal trade in Africa.
+                        </h3>
+                    </div>
                 </div>
                 <div class="spaces-app">
                     <div class="spaces-app-box">
@@ -51,17 +53,27 @@ export default {
         }
         border-bottom: 0.1rem solid #f2f2f2;
         &--text {
-            max-width: 54rem;
-            font-weight: 400;
+            max-width: 65rem;
             padding: 3rem 0;
             line-height: 30px;
+            h2 {
+                font-size: 2.2rem;
+                font-weight: 500;
+                line-height: 1.4;
+            }
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 400;
+                opacity: 0.9;
+                line-height: 1.8;
+                @media screen and (max-width: 768px) {
+                    line-height: 1.2;
+                    margin-top: 0.5rem;
+                }
+            }
             @media screen and (max-width: 960px) {
                 font-weight: 500;
                 font-size: 2rem;
-            }
-            span {
-                color: #1F2138;
-                font-weight: inherit;
             }
         }
     }
@@ -98,6 +110,7 @@ export default {
         position: absolute;
         top: 6.5%;
         left: 32%;
+        filter: drop-shadow(3px 3px 0.5rem #000000);
         @media screen and (max-width: 1200px) {
             left: 32%;
         }
@@ -112,6 +125,7 @@ export default {
             left: 30%;
             height: 46.5rem;
             width: 21.5rem;
+            filter: invert(0%) sepia(2%) saturate(7%) hue-rotate(311deg) brightness(97%) contrast(102%);
             // filter: drop-shadow(0 0 0.5rem #808080);
             @media screen and (max-width: 960px) {
                 left: 50%;

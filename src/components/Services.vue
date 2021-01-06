@@ -1,7 +1,7 @@
 <template>
     <div class="about" id="about">
         <h2 class="about--text">
-            Businesses exist to make money. We connect businesses to money faster and profitably by:
+            We help our merchants make money by:
         </h2>
         <div class="services">
             <div class="offerings">
@@ -47,11 +47,12 @@ export default {
         &--text {
             max-width: 85rem;
             line-height: 125%;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 4rem;
             margin-bottom: 4rem;
             @media screen and (max-width: 768px) {
                 font-size: 2rem;
+                margin-bottom: 0;
             }
         }
     }
@@ -76,15 +77,19 @@ export default {
             width: auto;
         }
         .block {
-            margin-top: 5.8rem;
+            margin-top: 1.5rem;
             @media screen and (max-width: 768px){
                 margin: 1rem 0 6rem;
             }
         }
         img {
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
             opacity: 0.8;
+            margin-left: -20px;
+            @media screen and (max-width: 600px){
+                margin-left: 0;
+            }
         }
         h3 {
             font-weight: bold;
