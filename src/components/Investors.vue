@@ -10,10 +10,10 @@
             <h2>In the News</h2>
             <div class="media">
                 <a target="_blank" href="http://venturesafrica.com/rensource-launches-platform-to-connect-retailers-and-customers-amid-lockdown/">
-                    <img src="@/assets/ventures_africa_logo.png" alt="Merchlist featured in Ventures Africa">
+                    <img src="@/assets/ventures_africa_logo-min.png" alt="Merchlist featured in Ventures Africa">
                 </a>
                 <a target="_blank" href="https://techcrunch.com/2019/12/17/nigerias-rensource-raises-20m-to-power-african-markets-by-solar/">
-                    <img src="@/assets/tech_crunch_logo.png" alt="Rensource featured in Tech Crunch" class="tech-crunch">
+                    <img src="@/assets/tech_crunch_logo-min.png" alt="Rensource featured in Tech Crunch" class="tech-crunch">
                 </a>
             </div>
         </div>
