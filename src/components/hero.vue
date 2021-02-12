@@ -14,7 +14,7 @@
                 <div class="spaces-app">
                     <div class="spaces-app-box">
                         <img src="@/assets/android-phone-template-min.png" alt="blank phone screen" class="app-template">
-                        <img src="@/assets/Dashboard_Merchant-min.png" alt="spaces app" class="app">
+                        <img src="@/assets/spaces-app.png" alt="spaces app" class="app">
                     </div>
                 </div>
             </div>
