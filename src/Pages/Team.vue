@@ -1,9 +1,13 @@
 <template>
-  <section id="team">
-    <h2>Meet our team</h2>
+  <section id="team" class="team">
+    <h2 class="team__header">Meet our team</h2>
     <div class="team-container">
       <div class="team-member">
-        <img class="team-member__image" src="http://placehold.it/277x277" alt="Spaces CEO" />
+        <img
+          class="team-member__image"
+          src="http://placehold.it/277x277"
+          alt="Spaces CEO"
+        />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
             Lorem Ipsum
@@ -17,7 +21,11 @@
         </div>
       </div>
       <div class="team-member">
-        <img class="team-member__image" src="http://placehold.it/277x277" alt="Spaces COO" />
+        <img
+          class="team-member__image"
+          src="http://placehold.it/277x277"
+          alt="Spaces COO"
+        />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
             Lorem Ipsum
@@ -31,7 +39,11 @@
         </div>
       </div>
       <div class="team-member">
-        <img class="team-member__image" src="http://placehold.it/277x277" alt="Spaces CTO" />
+        <img
+          class="team-member__image"
+          src="http://placehold.it/277x277"
+          alt="Spaces CTO"
+        />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
             Lorem Ipsum
@@ -45,7 +57,11 @@
         </div>
       </div>
       <div class="team-member">
-        <img class="team-member__image" src="http://placehold.it/277x277" alt="Spaces CMO" />
+        <img
+          class="team-member__image"
+          src="http://placehold.it/277x277"
+          alt="Spaces CMO"
+        />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
             Lorem Ipsum
@@ -69,24 +85,56 @@ export default {
 </script>
 
 <style scoped>
+.team {
+  text-align: center;
+}
 .team-container {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
 }
-.team-member-card span {
-  margin-right: -8px;
-  width: 35px;
+.team-member {
+  width: 20rem;
+  margin: 0 auto;
 }
-.team-member__image {
-  border-radius: 20px;
-  margin-bottom: 2rem;
-}
-.team-member-card__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.team-member-card span img {
-  width: 100%;
+  .team-member-card span {
+    margin-right: -8px;
+    width: 35px;
+  }
+  .team-member__image {
+    border-radius: 50%;
+    margin-bottom: 2rem;
+  }
+  .team-member-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .team-member-card span img {
+    width: 100%;
+  }
+@media screen and (min-width: 768px) {
+  .team__header {
+    margin-bottom: 7rem;
+  }
+  .team-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .team-member-card span {
+    margin-right: -8px;
+    width: 35px;
+  }
+  .team-member__image {
+    border-radius: 20px;
+    margin-bottom: 2rem;
+  }
+  .team-member-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .team-member-card span img {
+    width: 100%;
+  }
 }
 </style>

@@ -87,6 +87,7 @@ export default {
 
 .nav-logo img {
   height: 25px;
+  width: auto;
 }
 .nav-left,
 .nav-right,

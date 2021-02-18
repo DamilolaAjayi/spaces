@@ -1,5 +1,7 @@
-<template>
-    
+<template> 
+    <main id="purpose">
+        <h2>Why Use Spaces</h2>
+    </main>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div class="web-nav">
-    <a href="#product" class="web-nav-link">Product</a>
+    <a href="#products" class="web-nav-link">Products</a>
     <a href="#purpose" class="web-nav-link">Purpose</a>
     <a href="#team" class="web-nav-link">Team</a>
     <a href="#partner" class="web-nav-link">Partner</a>
