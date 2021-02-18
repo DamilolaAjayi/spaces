@@ -3,7 +3,7 @@
         <div class="wrapper">
             <div class="section">
                 <div class="spaces--brief">
-                    <img src="@/assets/spaces_logo_lg.png" alt="Large Spaces logo">
+                    <img src="@/assets/spaces_logo_lg-min.png" alt="Large Spaces logo">
                     <div class="hero--text">
                         <h2>Building Intelligent Systems to Enhance African Trade.</h2>
                         <h3>
@@ -13,8 +13,8 @@
                 </div>
                 <div class="spaces-app">
                     <div class="spaces-app-box">
-                        <img src="@/assets/android-phone-template.png" alt="blank phone screen" class="app-template">
-                        <img src="@/assets/Dashboard_Merchant.png" alt="spaces app" class="app">
+                        <img src="@/assets/android-phone-template-min.png" alt="blank phone screen" class="app-template">
+                        <img src="@/assets/spaces-app.png" alt="spaces app" class="app">
                     </div>
                 </div>
             </div>

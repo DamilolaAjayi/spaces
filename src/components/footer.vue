@@ -1,7 +1,7 @@
 <template>
     <div class="container" id="footer">
         <div class="wrapper">
-            <img src="@/assets/spaces_logo.png" alt="spaces logo">
+            <img src="@/assets/spaces_logo-min.png" alt="spaces logo">
             <div class="spaces--info">
                 <div>
                     <a target="_blank" href="https://www.linkedin.com/company/spaceso2o/">
