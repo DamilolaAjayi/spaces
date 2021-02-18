@@ -1,0 +1,22 @@
+:root {
+  --primaryOne: #22A8FF;
+  --primaryTwo: #1F2138;
+
+  --neutralOne: #333;
+  --neutralTwo: #828282;
+  --neutralThree: #c9c8c8;
+  --neutralFour: #f2efef;
+  --neutralFive: #f6f6f6;
+  --neutralSix: #fff;
+
+  --accentOne: #0018b6;
+  --accentTwo: #c0d4e4;
+  --accentThree: #e5e7fa;
+  --accentFour: #4744ab;
+  --accentFive: #6c6c6c;
+
+  --semanticOne: #ffffff;
+  --semanticTwo: #fafdff;
+
+  --primary-gradient: linear-gradient(116.44deg, #0018b6, #3a8df1, #27ccc3);
+}
