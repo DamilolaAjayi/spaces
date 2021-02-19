@@ -12,7 +12,7 @@
           finance, manage your logistics and grow your business quickly.
         </p>
         <button v-if="!isMobile" class="s-button" @mouseover="animateButton" @mouseleave="removeButtonAnimation">
-            <span :class="{'animate-btn-text' : animateButtonChevron}">Download App</span>
+            <p class="button__text" :class="{'animate-btn-text' : animateButtonChevron}">Download App</p>
             <i class="fas fa-chevron-circle-right" :class="{'chevron-r' : animateButtonChevron}"></i>
         </button>
         <a class="app-link" v-else>
@@ -56,15 +56,55 @@ mixins: [IsMobile],
         '<img src="http://placehold.it/600x400" alt="" />',
       ],
       animateButtonChevron: false,
+      dataText: [ 
+        "Empowering small merchants to grow big profits." 
+        ],
     };
   },
+  beforeMount() {
+    window.addEventListener("DOMContentLoaded", this.domLoaded);
+  },
   methods: {
-      animateButton() {
-          this.animateButtonChevron = true;
-      },
-      removeButtonAnimation() {
-          this.animateButtonChevron = false;
-      },
+    domLoaded() {
+      this.startTextAnimation(0);
+    },
+    typeWriter(text, i, fnCallback) {
+      const self = this;
+      if (i < (text.length)) {
+        // add next character to h1
+       document.querySelector("h2").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+  
+        // wait for a while and call this function again for next character
+        setTimeout(function() {
+          self.typeWriter(text, i + 1, fnCallback)
+        }, 80);
+      }
+      else if (typeof fnCallback == 'function') {
+        // call callback after timeout
+        setTimeout(fnCallback, 1500);
+      }
+    },
+    startTextAnimation(i) {
+      const self = this;
+      if (typeof this.dataText[i] == 'undefined'){
+        setTimeout(function() {
+          self.startTextAnimation(0);
+        }, 20000);
+      }
+      if (i < this.dataText[i].length) {
+        // text exists! start typewriter animation
+       this.typeWriter(this.dataText[i], 0, function(){
+         // after callback (and whole text has been animated), start next text
+         self.startTextAnimation(i + 1);
+       });
+      }
+    },
+    animateButton() {
+        this.animateButtonChevron = true;
+    },
+    removeButtonAnimation() {
+        this.animateButtonChevron = false;
+    },
   },
 };
 </script>
@@ -77,6 +117,10 @@ mixins: [IsMobile],
     font-size: 2.8rem;
     font-weight: 300;
     position: relative;
+}
+.button__text {
+  display: inline;
+  margin: 0;
 }
 .hero-page__brief {
     padding: 3rem 0;
@@ -149,10 +193,23 @@ mixins: [IsMobile],
         max-width: 50rem;
         margin-bottom: 4rem;
     }
+    .hero-page__textbox h2{
+      min-height: 14rem;
+    }
     .hero-page__carousel {
         max-width: 600px;
         margin: 0;
     }
+    span {
+      border-right: .05em solid;
+      animation: caret 1s steps(1) infinite;
+    }
+
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
 }
 @media screen and (max-width: 767px) {
     main {

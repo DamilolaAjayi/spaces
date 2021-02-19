@@ -12,12 +12,16 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import VueSmoothScroll from 'vue2-smooth-scroll'
 import Navigation from '@/components/Global/Navigation/Nav';
 import Home from '@/Pages/Home';
 import Products from '@/Pages/Products';
 import WhySpaces from '@/Pages/WhySpaces';
 import Team from '@/Pages/Team';
 import Partner from '@/Pages/Partner';
+
+Vue.use(VueSmoothScroll);
 
 export default {
   name: 'App',

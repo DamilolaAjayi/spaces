@@ -1,9 +1,9 @@
 <template>
   <div class="web-nav">
-    <a href="#products" class="web-nav-link">Products</a>
-    <a href="#purpose" class="web-nav-link">Purpose</a>
-    <a href="#team" class="web-nav-link">Team</a>
-    <a href="#partner" class="web-nav-link">Partner</a>
+    <a href="#products" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Products</a>
+    <a href="#purpose" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Purpose</a>
+    <a href="#team" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Team</a>
+    <a href="#partner" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Partner</a>
   </div>
 </template>
 

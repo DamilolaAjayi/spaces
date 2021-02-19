@@ -1,15 +1,15 @@
 <template>
   <div class="nav-mobile">
     <ul class="nav-mobile-list">
-      <li><a href="#products" class="nav-link" @click="hideNavBody">Products</a></li>
+      <li><a href="#products" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 1000, offset: -50 }">Products</a></li>
       <li>
-        <a href="#purpose" class="nav-link" @click="hideNavBody">Purpose</a>
+        <a href="#purpose" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 1000, offset: -50 }">Purpose</a>
       </li>
       <li>
-        <a href="#team" class="nav-link" @click="hideNavBody">Team</a>
+        <a href="#team" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 1000, offset: -50 }">Team</a>
       </li>
       <li>
-        <a href="#partner" class="nav-link" @click="hideNavBody">Partner</a>
+        <a href="#partner" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 1000, offset: -50 }">Partner</a>
       </li>
     </ul>
   </div>

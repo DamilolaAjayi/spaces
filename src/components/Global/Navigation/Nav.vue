@@ -2,7 +2,7 @@
   <div class="nav" :class="{ 'nav-scrolled': !view.atTopOfPage }">
     <div class="nav-left">
       <div class="nav-logo">
-        <a href="#home">
+        <a href="#home" v-smooth-scroll="{ duration: 1000, offset: -70 }">
           <img src="@/assets/spaces_logo-min.png" alt="Spaces Logo" />
         </a>
       </div>
