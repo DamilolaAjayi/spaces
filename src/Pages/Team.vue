@@ -1,5 +1,5 @@
 <template>
-  <section id="team" class="team">
+  <section id="team" class="team section-container">
     <h2 class="team__header">Meet our team</h2>
     <div class="team-container">
       <div class="team-member">
@@ -88,12 +88,15 @@ export default {
 .team {
   text-align: center;
 }
+.team__header {
+  margin-bottom: 3rem;
+}
 .team-container {
   text-align: center;
 }
 .team-member {
   width: 20rem;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
 }
   .team-member-card span {
     margin-right: -8px;
@@ -102,6 +105,7 @@ export default {
   .team-member__image {
     border-radius: 50%;
     margin-bottom: 2rem;
+    object-fit: cover;
   }
   .team-member-card__header {
     display: flex;
