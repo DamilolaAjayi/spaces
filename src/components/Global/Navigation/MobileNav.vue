@@ -31,6 +31,7 @@ export default {
   position: absolute;
   top: 4.8rem;
   font-size: 1.2em;
+  background: var(--semanticTwo);
   left: 0px;
   width: 100%;
   height: 100vh;
@@ -41,7 +42,11 @@ export default {
   line-height: 2.5em;
   width: 100%;
 }
+.nav-mobile-list li{
+    padding: 2rem 0;
+    font-size: 2rem;
+}
 .nav-mobile-list:first-child {
-  margin-top: 2em;
+  margin-top: 3rem;
 }
 </style>

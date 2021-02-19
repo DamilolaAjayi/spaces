@@ -9,7 +9,7 @@
     </div>
     <div class="nav-right">
       <div class="nav-content">
-        <div class="nav-mobile" v-if="isMobile">
+        <div class="mobile-nav" v-if="isMobile">
           <img
             v-if="!menuClicked"
             src="@/assets/menu.svg"
@@ -23,7 +23,7 @@
             @click="toggleMenu"
             alt="Close Icon"
           />
-          <mobile-nav v-if="showMobileNav" />
+          <mobile-nav v-if="showMobileNav" @menuClicked="closeMobileNav" />
         </div>
         <div class="nav-web" v-else>
           <web-nav />
@@ -57,6 +57,10 @@ export default {
     window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
+    closeMobileNav() {
+      this.showMobileNav = false;
+      this.menuClicked = false;
+    },
     handleScroll() {
       if (window.pageYOffset > 0) {
         if (this.view.atTopOfPage) this.view.atTopOfPage = false;
@@ -74,7 +78,6 @@ export default {
 
 <style scoped>
 .nav {
-  /* height: 3.5em; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -84,7 +87,15 @@ export default {
   padding: 2rem 6%;
   background-color: var(--semanticTwo);
 }
-
+.mobile-nav {
+  /* padding: 1.2rem 2.2rem; */
+  /* display: flex;
+  justify-content: flex-end; */
+  /* width: 100%; */
+  /* position: fixed; */
+  background: #f5f7fa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 .nav-logo img {
   height: 25px;
   width: auto;

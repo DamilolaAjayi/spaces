@@ -36,7 +36,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'products',
+};
 </script>
 
 <style scoped>
@@ -49,6 +51,7 @@ export default {};
 .products-item {
     text-align: center;
     margin-bottom: 2rem;
+    margin-right: 1.3rem;
 }
 .products-item img {
     width: 100px;
@@ -60,7 +63,7 @@ export default {};
 .products-grid {
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    justify-content: space-around;
     padding: 5rem 0 3rem;
 }
 .app-link {
@@ -83,6 +86,9 @@ export default {};
     .products-item img {
         width: auto;
     }
+    .products-item {
+        margin-right: 4rem;
+    }
   .products-section__textbox {
     max-width: 50rem;
   }
@@ -92,7 +98,7 @@ export default {};
   .products-grid {
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    justify-content: flex-start;
     padding: 5rem 0;
   }
 }
