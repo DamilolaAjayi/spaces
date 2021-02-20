@@ -23,7 +23,7 @@
             @click="toggleMenu"
             alt="Close Icon"
           />
-          <nav-mobile v-if="showMobileNav" />
+          <mobile-nav v-if="showMobileNav" @closeMobileNav="closeMobileNav"/>
         </div>
         <div class="nav-web" v-else>
           <web-nav />
@@ -36,13 +36,13 @@
 <script>
 import IsMobile from "@/mixins/IsMobile";
 import WebNav from "./WebNav";
-import NavMobile from './NavMobile';
+import MobileNav from './MobileNav';
 
 export default {
   mixins: [IsMobile],
   components: {
     WebNav,
-    NavMobile,
+    MobileNav,
   },
   data() {
     return {
@@ -86,15 +86,6 @@ export default {
   z-index: 10;
   padding: 2rem 6%;
   background-color: var(--semanticTwo);
-}
-.mobile-nav {
-  /* padding: 1.2rem 2.2rem; */
-  /* display: flex;
-  justify-content: flex-end; */
-  /* width: 100%; */
-  /* position: fixed; */
-  background: #f5f7fa;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .nav-logo img {
   height: 25px;
