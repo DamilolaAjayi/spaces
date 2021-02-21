@@ -89,7 +89,6 @@
 <script>
 import IsMobile from "@/mixins/IsMobile";
 import { VueAgile } from 'vue-agile'
-/* eslint-disable */
 
 export default {
   name: "why-spaces",
@@ -122,6 +121,9 @@ export default {
     .company-purpose-block__image {
       width: 250px;
       max-height: 20rem;
+    }
+    .company-purpose-block__image img {
+      border-radius: 6px;
     }
 @media screen and (min-width: 768px) {
   .section-container {

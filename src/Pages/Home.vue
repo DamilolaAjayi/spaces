@@ -6,6 +6,22 @@
           <h2>
             Empowering small merchants to grow big profits.
           </h2>
+          <div class="hero-page__carousel" v-if="isMobile">
+            <agile 
+            :autoplay="true"
+            :speed="1000"
+            >
+              <div class="hero-page__carousel__image">
+                <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Merchant in Shop" />
+              </div>
+              <div class="hero-page__carousel__image">
+                <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
+              </div>
+              <div class="hero-page__carousel__image">
+                <img src="@/assets/images/homepage/marketplace.jpg" alt="Marketplace" />
+              </div>
+            </agile>
+          </div>
             <transition
             mode="out-in"
             enter-active-class="animate__animated animate__fadeIn">
@@ -30,7 +46,7 @@
           </a>
         </p>
       </div>
-      <div class="hero-page__carousel">
+      <div class="hero-page__carousel" v-if="!isMobile">
         <agile 
         :autoplay="true"
         :speed="1000"
@@ -139,6 +155,8 @@ export default {
 }
 .hero-page__textbox h2 {
   color: var(--primaryOne);
+  min-height: 10.2rem;
+  margin-bottom: 2rem;
 }
 .app-link .fas {
   padding-left: 0.5rem;
@@ -152,7 +170,7 @@ export default {
 }
 .hero-page__carousel {
   max-width: 300px;
-  margin: 0;
+  margin: 0 auto;
 }
 @keyframes animateButton {
   15% {
@@ -182,6 +200,7 @@ export default {
   .hero-page__textbox h2 {
     min-height: 14rem;
     color: var(--primaryOne);
+    margin: 0;
   }
   .hero-page__carousel {
     max-width: 600px;
@@ -206,6 +225,11 @@ export default {
 @media screen and (max-width: 767px) {
   main {
     min-height: auto;
+  }
+  .hero-page__carousel__image {
+    height: auto;
+    object-fit: cover;
+    width: 30rem;
   }
 }
 </style>
