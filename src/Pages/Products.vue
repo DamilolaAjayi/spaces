@@ -1,36 +1,38 @@
 <template>
-  <main id="products" class="products-section section-container">
-    <div class="products-section__textbox">
-      <h2>All the products in one easy to use app!</h2>
-      <section class="products-grid">
-        <div class="products-item" @mouseover="boldenText">
-          <img src="http://placehold.it/100x100" alt="MyShop Icon" />
-          <figcaption>Myshop</figcaption>
-        </div>
-        <div class="products-item" @mouseover="boldenText">
-          <img src="http://placehold.it/100x100" alt="MerchBuy Icon" />
-          <figcaption>Merchbuy</figcaption>
-        </div>
-        <div class="products-item" @mouseover="boldenText">
-          <img src="http://placehold.it/100x100" alt="Merchlist Icon" />
-          <figcaption>Merchlist</figcaption>
-        </div>
-        <div class="products-item" @mouseover="boldenText">
-          <img src="http://placehold.it/100x100" alt="Warenext Icon" />
-          <figcaption>Warenext</figcaption>
-        </div>
-        <div class="products-item" @mouseover="boldenText">
-          <img src="http://placehold.it/100x100" alt="Agency Banking Icon" />
-          <figcaption>Agency Banking</figcaption>
-        </div>
-      </section>
-      <a class="app-link">
-        <span>Download App</span>
-        <i class="fas fa-external-link-square-alt"></i>
-      </a>
-    </div>
-    <div class="products-image">
-      <img src="http://placehold.it/600x400" alt="" />
+  <main id="products">
+    <div class="products-section section-container">
+      <div class="products-section__textbox">
+        <h2>All the products in one easy to use app!</h2>
+        <section class="products-grid">
+          <div class="products-item" @mouseover="boldenText">
+            <img src="http://placehold.it/100x100" alt="MyShop Icon" />
+            <figcaption>Myshop</figcaption>
+          </div>
+          <div class="products-item" @mouseover="boldenText">
+            <img src="http://placehold.it/100x100" alt="MerchBuy Icon" />
+            <figcaption>Merchbuy</figcaption>
+          </div>
+          <div class="products-item" @mouseover="boldenText">
+            <img src="http://placehold.it/100x100" alt="Merchlist Icon" />
+            <figcaption>Merchlist</figcaption>
+          </div>
+          <div class="products-item" @mouseover="boldenText">
+            <img src="http://placehold.it/100x100" alt="Warenext Icon" />
+            <figcaption>Warenext</figcaption>
+          </div>
+          <div class="products-item" @mouseover="boldenText">
+            <img src="http://placehold.it/100x100" alt="Agency Banking Icon" />
+            <figcaption>Agency Banking</figcaption>
+          </div>
+        </section>
+        <a class="app-link">
+          <span>Download App</span>
+          <i class="fas fa-external-link-square-alt"></i>
+        </a>
+      </div>
+      <div class="products-image">
+        <img src="http://placehold.it/600x400" alt="" />
+      </div>
     </div>
   </main>
 </template>
@@ -87,6 +89,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   .products-item img {
     width: auto;

@@ -11,14 +11,14 @@
           provide a broader assortment for your clients, facilitate access to
           finance, manage your logistics and grow your business quickly.
         </p>
-        <button v-if="!isMobile" class="s-button" @mouseover="animateButton" @mouseleave="removeButtonAnimation">
+        <!-- <button v-if="!isMobile" class="s-button" @mouseover="animateButton" @mouseleave="removeButtonAnimation">
             <p class="button__text" :class="{'animate-btn-text' : animateButtonChevron}">Download App</p>
-            <i class="fas fa-chevron-circle-right" :class="{'chevron-r' : animateButtonChevron}"></i>
+            <i class="fas fa-external-link-square-alt" :class="{'chevron-r' : animateButtonChevron}"></i>
         </button>
         <a class="app-link" v-else>
          <span>Download App</span>
           <i class="fas fa-external-link-square-alt"></i>
-        </a>
+        </a> -->
       </div>
       <div class="hero-page__carousel">
           <carousel :mouse-drag="false" :per-page="1" :autoplay="true" :speed="1500" :loop="true" :autoplayDirection="'forward'">
@@ -114,6 +114,8 @@ mixins: [IsMobile],
     width: 100%;
     max-width: 34.6rem;
     height: 7.4rem;
+    background: white;
+    color: var(--primaryOne);
     font-size: 2.8rem;
     font-weight: 300;
     position: relative;
@@ -141,8 +143,6 @@ mixins: [IsMobile],
     padding-left: 0.5rem;
 }
 .hero-page {
-    display: flex;
-    flex-direction: column;
     margin-top: 10rem;
 }
 .hero-page__textbox {
@@ -153,7 +153,7 @@ mixins: [IsMobile],
     max-width: 90%;
     margin: 0 auto;
 }
-.fa-chevron-circle-right {
+.fa-external-link-square-alt {
     position: absolute;
     top: 32%;
     padding-left: 1rem;
@@ -179,10 +179,11 @@ mixins: [IsMobile],
 }
 @media screen and (min-width: 768px) {
     .hero-page {
-        flex-direction: row;
+        display: flex;
         justify-content: space-between;
         margin-top: 8rem;
         padding-top: 5rem;
+        padding-bottom: 5rem;
     }
     .hero-page__brief {
         padding: 3rem 0;
@@ -199,6 +200,10 @@ mixins: [IsMobile],
     .hero-page__carousel {
         max-width: 600px;
         margin: 0;
+        min-height: 45rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
     }
     span {
       border-right: .05em solid;

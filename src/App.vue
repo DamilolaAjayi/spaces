@@ -7,6 +7,7 @@
       <why-spaces />
       <team />
       <partner />
+      <el-footer />
     </div>
   </div>
 </template>
@@ -20,6 +21,7 @@ import Products from '@/Pages/Products';
 import WhySpaces from '@/Pages/WhySpaces';
 import Team from '@/Pages/Team';
 import Partner from '@/Pages/Partner';
+import ElFooter from '@/components/ElFooter';
 
 Vue.use(VueSmoothScroll);
 
@@ -32,6 +34,7 @@ export default {
     WhySpaces,
     Team,
     Partner,
+    ElFooter,
   }
 };
 </script>
@@ -41,15 +44,10 @@ export default {
 <style src="./assets/css/main.css"></style>
 
 <style>
-.container {
-  max-width: 90%;
-  margin: 0 auto;
-}
 @media screen and (min-width: 768px) {
   .container {
     max-width: 144rem;
     margin: 0 auto;
-    padding: 0 6%;
   }
 }
 

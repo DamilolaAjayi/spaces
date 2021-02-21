@@ -1,7 +1,9 @@
 :root {
-  --primaryOne: #22A8FF;
+  --primaryOne: #089EFF;
   --primaryTwo: #1F2138;
   --primaryThree: #089eff;
+
+  --hoverPrimaryOne: #099DFC;
 
   --neutralOne: #000000;
   --neutralTwo: #828282;

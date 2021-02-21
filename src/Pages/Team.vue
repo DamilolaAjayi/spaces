@@ -116,6 +116,10 @@ export default {
     width: 100%;
   }
 @media screen and (min-width: 768px) {
+  .team {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
   .team__header {
     margin-bottom: 7rem;
   }

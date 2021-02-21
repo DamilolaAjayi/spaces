@@ -56,6 +56,7 @@ export default {};
 }
 .company-about__section {
   text-align: center;
+  background: var(--semanticOne);
 }
 .company-portfolio__card {
   overflow: hidden;
@@ -80,6 +81,10 @@ export default {};
     text-decoration: none;
 }
 @media screen and (min-width: 768px) {
+  .company-about__section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
   .company-portfolio {
     display: flex;
     justify-content: space-between;

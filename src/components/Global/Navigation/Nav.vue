@@ -85,7 +85,7 @@ export default {
   font-weight: 500;
   z-index: 10;
   padding: 2rem 6%;
-  background-color: var(--semanticTwo);
+  background-color: var(--semanticOne);
 }
 .nav-logo img {
   height: 25px;
