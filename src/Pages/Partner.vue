@@ -167,4 +167,10 @@ export default {
     border-radius: 6px;
   }
 }
+@media screen and (max-width: 767px) {
+  .section-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
 </style>

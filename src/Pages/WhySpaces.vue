@@ -12,7 +12,7 @@
         >
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
-                <h3>Increased
+                <h3>Increase
                   <br>Demand</h3>
               </div>
               <div class="company-purpose-block__image">
@@ -21,8 +21,8 @@
             </div>
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
-                <h3>Improved 
-                 <br>Cashflow</h3>
+                <h3>Improve 
+                 <br>Cash flows</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/cashflow.jpg" alt="" />
@@ -54,7 +54,7 @@
             <img src="@/assets/images/demand.jpg" alt="" />
           </div>
           <div class="company-purpose__textbox">
-            <h3>Increased Demand</h3>
+            <h3>Increase Demand</h3>
           </div>
         </div>
         <div class="company-purpose__block">
@@ -62,7 +62,7 @@
             <img src="@/assets/images/cashflow.jpg" alt="" />
           </div>
           <div class="company-purpose__textbox">
-            <h3>Improved Cashflow</h3>
+            <h3>Improve Cash flows</h3>
           </div>
         </div>
         <div class="company-purpose__block">
@@ -120,7 +120,7 @@ export default {
       font-size: 2rem;
     }
     .company-purpose-block__image {
-      width: 200px;
+      width: 250px;
       max-height: 20rem;
     }
 @media screen and (min-width: 768px) {
@@ -170,5 +170,19 @@ export default {
   width: 600px;
   max-height: 40rem;
 }
+}
+@media screen  and (max-width: 767px) {
+  .section-container {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .company-purpose__block {
+    align-items: center;
+    padding: 4rem 0;
+  }
+  .company-purpose__block__image {
+    margin-bottom: 1rem;
+  }
 }
 </style>

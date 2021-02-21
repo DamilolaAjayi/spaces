@@ -153,7 +153,6 @@ export default {
 .hero-page__carousel {
   max-width: 300px;
   margin: 0;
-  float: right;
 }
 @keyframes animateButton {
   15% {
@@ -188,6 +187,7 @@ export default {
     max-width: 600px;
     margin: 0;
     min-height: 45rem;
+    float: right;
   }
   .set-min-height {
     min-height: 29.6rem;

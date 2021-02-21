@@ -103,7 +103,7 @@ export default {
     width: 35px;
   }
   .team-member__image {
-    border-radius: 50%;
+    border-radius: 2rem;
     margin-bottom: 2rem;
     object-fit: cover;
     height: 200px;
@@ -116,6 +116,9 @@ export default {
   }
   .team-member-card span img {
     width: 100%;
+  }
+  .team-member-card__role {
+    margin-top: 0.2rem;
   }
 @media screen and (min-width: 768px) {
   .team {
@@ -153,6 +156,12 @@ export default {
   }
   .team-member-card span img {
     width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .team {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 </style>
