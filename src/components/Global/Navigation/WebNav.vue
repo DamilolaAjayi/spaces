@@ -2,7 +2,7 @@
   <div class="web-nav">
     <a href="#products" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Products</a>
     <a href="#purpose" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Purpose</a>
-    <a href="#team" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Team</a>
+    <a href="#people" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">People</a>
     <a href="#partner" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Partner</a>
   </div>
 </template>

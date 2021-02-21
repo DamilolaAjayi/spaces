@@ -1,77 +1,77 @@
 <template>
-  <section id="team" class="team section-container">
-    <h2 class="team__header">Meet our team</h2>
+  <section id="people" class="team section-container">
+    <h2 class="team__header">Executive team</h2>
     <div class="team-container">
       <div class="team-member">
         <img
           class="team-member__image"
-          src="http://placehold.it/277x277"
-          alt="Spaces CEO"
+          src="@/assets/images/people/anu-adasolum.jpg"
+          alt="Spaces CEO Anu Adasolum"
         />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
-            Lorem Ipsum
+            Anu Adasolum
             <span>
-              <a href="#">
+              <a target="_blank" href="https://www.linkedin.com/in/anu-adasolum-46754a19/">
                 <img src="@/assets/linkedin-logo.png" alt="" />
               </a>
             </span>
           </h4>
-          <p></p>
+          <p class="team-member-card__role">CEO</p>
         </div>
       </div>
       <div class="team-member">
         <img
           class="team-member__image"
-          src="http://placehold.it/277x277"
-          alt="Spaces COO"
+          src="@/assets/images/people/funto-faleye.jpg"
+          alt="Spaces COO Funto Faleye"
         />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
-            Lorem Ipsum
+            Funto Faleye
             <span>
-              <a href="#">
+              <a target="_blank" href="https://www.linkedin.com/in/funto-faleye-b08a4059/">
                 <img src="@/assets/linkedin-logo.png" alt="" />
               </a>
             </span>
           </h4>
-          <p></p>
+          <p class="team-member-card__role">COO</p>
         </div>
       </div>
       <div class="team-member">
         <img
           class="team-member__image"
-          src="http://placehold.it/277x277"
-          alt="Spaces CTO"
+          src="@/assets/images/people/omokhafe-dirisu.jpeg"
+          alt="Omokhafe Dirisu Spaces CCO"
         />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
-            Lorem Ipsum
+            Omokhafe Dirisu
             <span>
-              <a href="#">
+              <a target="_blank" href="https://www.linkedin.com/in/omokhafe-dirisu-25119747/">
                 <img src="@/assets/linkedin-logo.png" alt="" />
               </a>
             </span>
           </h4>
-          <p></p>
+          <p class="team-member-card__role">CCO</p>
         </div>
       </div>
       <div class="team-member">
         <img
           class="team-member__image"
-          src="http://placehold.it/277x277"
-          alt="Spaces CMO"
+          src="@/assets/images/people/adegbenga-adeye.jpg"
+          alt="Adegbenga Adeye Spaces CTO"
         />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
-            Lorem Ipsum
+            Adegbenga Adeye
             <span>
-              <a href="#">
+              <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
                 <img src="@/assets/linkedin-logo.png" alt="" />
               </a>
             </span>
           </h4>
-          <p></p>
+          <p class="team-member-card__role">CTO</p>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
 
 <script>
 export default {
-  name: "spaces-team",
+  name: 'people',
 };
 </script>
 
@@ -106,6 +106,8 @@ export default {
     border-radius: 50%;
     margin-bottom: 2rem;
     object-fit: cover;
+    height: 200px;
+    width: 200px;
   }
   .team-member-card__header {
     display: flex;
@@ -136,10 +138,18 @@ export default {
     border-radius: 20px;
     margin-bottom: 2rem;
   }
+  .team-member-card__role {
+    font-size: 1.4rem;
+    margin: 0;
+    text-align: left;
+    opacity: 0.7;
+    font-weight: 400;
+  }
   .team-member-card__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: 500;
   }
   .team-member-card span img {
     width: 100%;

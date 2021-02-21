@@ -5,7 +5,7 @@
       <home />
       <products />
       <why-spaces />
-      <team />
+      <people />
       <partner />
       <el-footer />
     </div>
@@ -19,7 +19,7 @@ import Navigation from '@/components/Global/Navigation/Nav';
 import Home from '@/Pages/Home';
 import Products from '@/Pages/Products';
 import WhySpaces from '@/Pages/WhySpaces';
-import Team from '@/Pages/Team';
+import People from '@/Pages/People';
 import Partner from '@/Pages/Partner';
 import ElFooter from '@/components/ElFooter';
 
@@ -32,7 +32,7 @@ export default {
     Home,
     Products,
     WhySpaces,
-    Team,
+    People,
     Partner,
     ElFooter,
   }

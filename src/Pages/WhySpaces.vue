@@ -5,89 +5,126 @@
         <h2>Why Use Spaces</h2>
         <img class="purpose__header-image" src="@/assets/Underline-5-Blue.png" alt="">
       </header>
-      <div class="company-purpose">
-        <carousel
-          :mouse-drag="false"
-          :per-page="1"
+      <div class="company-purpose" v-if="!isMobile">
+        <agile
           :autoplay="true"
-          :speed="500"
-          :loop="true"
-          :autoplayDirection="'forward'"
+          :speed="1000"
         >
-          <slide>
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
-                <h3>Increased Demand</h3>
-                <!-- <p class="company-purpose__brief">
-                  Access to our robust e-commerce platform for wholesale and
-                  retail.
-                </p> -->
+                <h3>Increased
+                  <br>Demand</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/demand.jpg" alt="" />
               </div>
             </div>
-          </slide>
-          <slide>
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
-                <h3>Improved Cashflow</h3>
-                <!-- <p class="company-purpose__brief">Credit facilities that ensure business needs are met.</p> -->
+                <h3>Improved 
+                 <br>Cashflow</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/cashflow.jpg" alt="" />
               </div>
             </div>
-          </slide>
-          <slide>
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
-                <h3>Streamlined logistics</h3>
-                <!-- <p class="company-purpose__brief">
-                  Streamlining the flow of goods from distributors and wholesalers
-                  to merchants.
-                </p> -->
+                <h3>Streamlined
+                  <br>logistics</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/logistics.jpg" alt="" />
               </div>
             </div>
-          </slide>
-          <slide>
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
-                <h3>Automatic savings</h3>
-                <!-- <p class="company-purpose__brief">
-                  Streamlining the flow of goods from distributors and wholesalers
-                  to merchants.
-                </p> -->
+                <h3>Automatic
+                  <br>savings</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/savings.jpg" alt="" />
               </div>
             </div>
-          </slide>
-        </carousel>
+        </agile>
+      </div>
+      <div v-else>
+        <div class="company-purpose__block">
+          <div class="company-purpose-block__image">
+            <img src="@/assets/images/demand.jpg" alt="" />
+          </div>
+          <div class="company-purpose__textbox">
+            <h3>Increased Demand</h3>
+          </div>
+        </div>
+        <div class="company-purpose__block">
+          <div class="company-purpose-block__image">
+            <img src="@/assets/images/cashflow.jpg" alt="" />
+          </div>
+          <div class="company-purpose__textbox">
+            <h3>Improved Cashflow</h3>
+          </div>
+        </div>
+        <div class="company-purpose__block">
+          <div class="company-purpose-block__image">
+            <img src="@/assets/images/logistics.jpg" alt="" />
+          </div>
+          <div class="company-purpose__textbox">
+            <h3>Streamlined logistics</h3>
+          </div>
+        </div>
+        <div class="company-purpose__block">
+          <div class="company-purpose-block__image">
+            <img src="@/assets/images/savings.jpg" alt="" />
+          </div>
+          <div class="company-purpose__textbox">
+            <h3>Automatic savings</h3>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 </template>
 
 <script>
+import IsMobile from "@/mixins/IsMobile";
+import { VueAgile } from 'vue-agile'
 /* eslint-disable */
-import { Carousel, Slide } from "vue-carousel";
 
 export default {
   name: "why-spaces",
   components: {
-    Carousel,
-    Slide,
+    agile: VueAgile,
   },
+  mixins: [IsMobile],
 };
 </script>
 
 <style scoped>
-.section-container {
+    main {
+        min-height: auto;
+    }
+    .purpose__header-image {
+        height: 30px;
+        margin-top: -8px;
+        max-width: 75%;
+    }
+    .company-purpose__block {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .company-purpose__textbox h3 {
+      font-weight: 400;
+      font-size: 2rem;
+    }
+    .company-purpose-block__image {
+      width: 200px;
+      max-height: 20rem;
+    }
+@media screen and (min-width: 768px) {
+  .section-container {
   background-color: var(--semanticTwo);
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -112,17 +149,18 @@ export default {
 .company-purpose__block {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  flex-direction: row;
 }
 .company-purpose__textbox {
-  padding-top: 5rem;
-  text-align: left;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   max-width: 40rem;
 }
 .company-purpose__textbox h3 {
-  width: max-content;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primaryOne);
+  font-weight: 600;
+  font-size: 4rem;
 }
 .company-purpose__brief {
   font-size: 2rem;
@@ -132,9 +170,5 @@ export default {
   width: 600px;
   max-height: 40rem;
 }
-@media screen and (max-width: 767px) {
-    main {
-        min-height: auto;
-    }
 }
 </style>
