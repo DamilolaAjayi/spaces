@@ -203,5 +203,8 @@ export default {
   .company-purpose__block__image {
     margin-bottom: 1rem;
   }
+  .company-purpose-block__image img {
+    border-radius: 6px;
+  }
 }
 </style>
