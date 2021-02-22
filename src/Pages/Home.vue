@@ -2,7 +2,7 @@
   <main id="home">
     <div class="hero-page section-container">
       <div class="hero-page__textbox">
-        <div class="set-min-height">
+        <div>
           <h2>
             Empowering small merchants to grow big profits. 
           </h2>
@@ -30,7 +30,7 @@
             <transition
             mode="out-in"
             enter-active-class="animate__animated animate__fadeInLeft">
-              <p class="hero-page__brief" v-show="headerAnimationDone">
+              <p class="hero-page__brief" v-if="headerAnimationDone">
                 Over
                   <ICountUp
                     :delay="delay"
@@ -59,27 +59,29 @@
         </p>
         </transition>
       </div>
-      <transition            
-      mode="out-in"
-      enter-active-class="animate__animated animate__fadeIn"
-      >
-        <div class="hero-page__carousel" v-if="!isMobile && headerAnimationDone">
-          <agile 
-          :autoplay="true"
-          :speed="1000"
-          >
-            <div class="hero-page__carousel__image">
-              <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Merchant in Shop" />
-            </div>
-            <div class="hero-page__carousel__image">
-              <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
-            </div>
-            <div class="hero-page__carousel__image">
-              <img src="@/assets/images/homepage/marketplace.jpg" alt="Marketplace" />
-            </div>
-          </agile>
-        </div>
-      </transition>
+      <div class="hero-page__carousel-parent">
+        <transition            
+        mode="out-in"
+        enter-active-class="animate__animated animate__fadeIn"
+        >
+          <div class="hero-page__carousel" v-if="!isMobile && headerAnimationDone">
+            <agile 
+            :autoplay="true"
+            :speed="1000"
+            >
+              <div class="hero-page__carousel__image">
+                <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Merchant in Shop" />
+              </div>
+              <div class="hero-page__carousel__image">
+                <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
+              </div>
+              <div class="hero-page__carousel__image">
+                <img src="@/assets/images/homepage/marketplace.jpg" alt="Marketplace" />
+              </div>
+            </agile>
+          </div>
+        </transition>
+      </div>
     </div>
   </main>
 </template>
@@ -101,7 +103,7 @@ export default {
   data() {
     return {
       dataText: 'Empowering small merchants to grow big profits.',
-      headerAnimationDone: true,
+      headerAnimationDone: false,
       delay: 1000,
       endVal: 100000,
       runanimation: false,
@@ -115,9 +117,9 @@ export default {
       }
     };
   },
-  // beforeMount() {
-  //   window.addEventListener("DOMContentLoaded", this.domLoaded);
-  // },
+  beforeMount() {
+    window.addEventListener("DOMContentLoaded", this.domLoaded);
+  },
   methods: {
     onReady: function(instance) {
       const that = this;
@@ -140,6 +142,9 @@ export default {
       }
       if (i === text.length) {
         this.headerAnimationDone = true;
+        setTimeout(() => {
+          this.startTextAnimation();
+        }, 3000);
       }
     },
     startTextAnimation() {
@@ -234,9 +239,8 @@ export default {
   padding: 3rem 0;
   margin: 0;
   line-height: 1.2;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  min-height: 15.6rem;
 }
 .hero-page__brief span {
   min-width: 6rem;
@@ -257,7 +261,6 @@ export default {
   max-width: 300px;
 }
 .hero-page__carousel__image img {
-  border-radius: 6px;
   z-index: 5;
 }
 @media screen and (min-width: 768px) {
@@ -266,13 +269,27 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin-top: 8rem;
-    /* padding-top: 5rem; */
+    min-height: 50rem;
     padding-bottom: 5rem;
-    /* min-height: 100vh; */
   }
   .hero-page__brief {
     padding: 1rem 0 3rem;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
+  }
+  .hero-page__carousel-parent {
+    position: relative;
+  }
+  .hero-page__carousel::before {
+    display: block;
+    content: "";
+    width: 610px;
+    height: 410px;
+    border: 4px solid var(--typeOne);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    border-radius: 4px;
+    z-index: -1;
   }
   .hero-page__textbox {
     color: black;
@@ -280,7 +297,7 @@ export default {
     margin-bottom: 4rem;
   }
   .hero-page__textbox h2 {
-    min-height: 5rem;
+    min-height: 6.4rem;
     margin-top: 20rem;
     margin: 0;
   }
@@ -290,9 +307,6 @@ export default {
     min-height: 45rem;
     float: right;
   }
-  /* .set-min-height {
-    min-height: 29.6rem;
-  } */
   h2 span {
     border-right: 0.05em solid;
     animation: caret 1s steps(1) infinite;
@@ -306,7 +320,7 @@ export default {
 }
 @media screen and (max-width: 767px) {
   main {
-    min-height: 100vh;
+    min-height: 60rem;
   }
   .section-container {
     padding-bottom: 0;

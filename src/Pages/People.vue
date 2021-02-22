@@ -158,9 +158,6 @@ export default {
   width: 20rem;
   margin: 0 auto 3rem;
 }
-.head-marketing {
-  width: 25rem;
-}
 .team-member:nth-child(1) .team-member__image {
   animation-delay: 5ms;
 }
@@ -225,6 +222,9 @@ export default {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+  .head-marketing {
+    width: 25rem;
+  }
   .team-container {
     display: flex;
     flex-direction: row;
@@ -244,7 +244,6 @@ export default {
   }
   .team-member-card__role {
     font-size: 1.4rem;
-    font-weight: 500;
     margin: 0;
     text-align: left;
     font-weight: 400;
@@ -260,7 +259,7 @@ export default {
 }
 @media screen and (max-width: 767px) {
   .team {
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-bottom: 4rem;
   }
   .team-member__image {

@@ -88,9 +88,6 @@ export default {
   .group {
     display: flex;
   }
-.purpose__header {
-  margin-bottom: 2rem;
-}
   .section-container {
     background-color: var(--semanticTwo);
   }
@@ -173,7 +170,7 @@ export default {
 @media screen  and (max-width: 767px) {
   .section-container {
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-bottom: 4rem;
   }
   .company-purpose__block {
@@ -191,7 +188,7 @@ export default {
   }
   .company-purpose__textbox h3 {
     padding-bottom: 0.5rem;
-    border-bottom: 0.5px solid var(--primaryOne);
+    border-bottom: 0.5px solid var(--typeOne);
   }
   .purpose__header-image {
       max-width: 75%;

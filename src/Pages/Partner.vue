@@ -7,7 +7,7 @@
           mode="in-out"
           enter-active-class="animate__animated animate__flipInX"
           >
-          <h4 v-if="true" class="subtitle">
+          <h4 v-if="runanimation" class="subtitle">
            We have an unparalleled understanding of the informal sector
           </h4>
         </transition>
@@ -21,7 +21,7 @@
             <ICountUp
               :delay="delay"
               :endVal="endVal"
-              :duration="200"
+              :duration="300"
               :options="options"
               @ready="onReady"
             />
@@ -90,19 +90,29 @@ export default {
         this.onReady(instance);
       }, 10000);
     },
+    handleScroll() {
+      if (window.pageYOffset > 2000) {
+        this.runanimation = true;
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
 .company-about__header {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .company-about__header h3 {
     width: max-content;
     margin: 0 auto;
     font-size: 3rem;
 }
+  .company-about__header img {
+      height: 2.5rem;
+      width: 32rem;
+      margin-top: -5px;
+  }
 .company-about__section {
   text-align: center;
   background: var(--semanticTwo);
@@ -114,10 +124,10 @@ export default {
   margin: 0 auto;
   z-index: 9;
   background: var(--semanticOne);
-  box-shadow: 1px 1px 4px #8C7B7B;
+  box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
   border-radius: 6px;
   margin-bottom: 2rem;
-  background-image: linear-gradient(to top, #c9c8c8 #fafdff);
+  background-image: linear-gradient(to top, #E5F4FF, #fff);
 }
 .subtitle {
   color: var(--primaryTwo);
@@ -145,6 +155,9 @@ p {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+  .company-about__header {
+      margin-bottom: 2rem;
+  }
   .company-about__header img {
       height: 2.5rem;
       width: 32rem;
@@ -155,15 +168,10 @@ p {
     justify-content: space-between;
     margin-top: 6rem;
   }
-  .company-portfolio__card {
-    box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
-    border-radius: 6px;
-    background-image: linear-gradient(to top, #E5F4FF, #fff);
-  }
 }
 @media screen and (max-width: 767px) {
   .section-container {
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-bottom: 4rem;
   }
 }

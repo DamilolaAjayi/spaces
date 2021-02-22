@@ -2,29 +2,25 @@
   <main id="products">
     <div class="products-section section-container">
       <div class="products-section__textbox">
-        <h3>All the products in one easy to use
-          <transition>
-            <span class="animate__animated animate__tada" v-if="runanimation">
-              app!
-            </span>
-          </transition>
-          </h3>
+        <h3>
+          All the products in one easy to use App!
+        </h3>
         <section class="products-grid">
           <transition
           mode="out-in"
           enter-active-class="animate__animated animate__fadeIn"
           >
-            <div class="products-item" v-show="showMyShop">
+            <div class="products-item">
               <img src="@/assets/images/product-icons/myshop.svg" alt="MyShop Icon" class="products-item__image" />
               <figcaption>Myshop</figcaption>
-              <p>Store management software for merchants to track daily business transactions – sales, debts, inventory, receiving reports on their business growth</p>
+              <p>Store management software for micro and small enterprises to track daily business transactions – sales, debts, inventory; helping them grow their profits faster.</p>
             </div>
           </transition>
           <transition
           mode="out-in"
           enter-active-class="animate__animated animate__fadeIn"
           >
-            <div class="products-item" v-show="showMerchBuy">
+            <div class="products-item">
               <img src="@/assets/images/product-icons/merchbuy.svg" alt="MerchBuy Icon" class="products-item__image" />
               <figcaption>Merchbuy</figcaption>
               <p>B2B trade platform connecting manufacturers, distributors, retailers, and wholesalers while offering secure payments and hassle-free logistics</p>
@@ -34,17 +30,17 @@
           mode="out-in"
           enter-active-class="animate__animated animate__fadeIn"
           >
-            <div class="products-item" v-show="showMerchlist">
+            <div class="products-item">
               <img src="@/assets/images/product-icons/merchlist.svg" alt="Merchlist Icon" class="products-item__image" />
               <figcaption>Merchlist</figcaption>
-              <p>Automates online listings of merchant’s inventory via a consumer-facing website</p>
+              <p>Automates online listings of merchant’s inventory via a consumer-facing website, growing demand and revenue for them.</p>
             </div>
           </transition>
           <transition
           mode="out-in"
           enter-active-class="animate__animated animate__fadeIn"
           >
-            <div class="products-item" v-show="showAgencyBanking">
+            <div class="products-item">
               <img src="@/assets/images/product-icons/agency-banking.svg" alt="Agency Banking Icon" class="products-item__image" />
               <figcaption>Agency Banking</figcaption>
               <p>Enabling agents earn money by offering financial services in their communities </p>
@@ -54,7 +50,7 @@
           mode="out-in"
           enter-active-class="animate__animated animate__fadeIn"
           >
-            <div class="products-item" v-show="showWarenext">
+            <div class="products-item">
               <img src="@/assets/images/product-icons/warenext.svg" alt="Warenext Icon" class="products-item__image" />
               <figcaption>Warenext</figcaption>
               <p>Logistics marketplace that allows users see and understand the cost of moving goods from one location and so conduct logistics part of their business easily</p>
@@ -76,48 +72,6 @@ import 'animate.css';
 
 export default {
   name: 'products',
-  data() {
-    return {
-      runanimation: false,
-      showMyShop: false,
-      showMerchBuy: false,
-      showMerchlist: false,
-      showWarenext: false,
-      showAgencyBanking: false,
-    };
-  },
-  beforeMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  watch: {
-    runanimation(value) {
-      if (value) {
-        this.showMyShop = true;
-        setTimeout(() => {
-          this.showMerchBuy = true;
-        }, 80);
-        setTimeout(() => {
-          this.showMerchlist = true;
-        }, 240);
-        setTimeout(() => {
-          this.showAgencyBanking = true;
-        }, 360);
-        setTimeout(() => {
-          this.showWarenext = true;
-        }, 480);
-      }
-    }
-  },
-  methods: {
-    checkOffset() {
-      console.log(window.pageYOffset);
-    },
-    handleScroll() {
-      if (window.pageYOffset > 490) {
-        this.runanimation = true;
-      }
-    },
-  }
 };
 </script>
 
@@ -145,9 +99,15 @@ export default {
 .products-item__image:hover {
   box-shadow: 0px 5px 10px rgb(0 0 0 / 2%);
 }
+.products-section__textbox h3 {
+  text-align: center;
+}
 .products-item figcaption {
   font-size: 1.4rem;
   margin-top: 0.4rem;
+  border-bottom: 0.5px solid var(--typeOne);
+  padding-bottom: 0.2rem;
+  width: max-content;
 }
 .button-block {
   text-align: center;
@@ -159,9 +119,6 @@ export default {
   }
   .products-item__image {
     width: auto;
-  }
-  .products-section__textbox h3 {
-    text-align: center;
   }
   .products-item__image:hover {
     box-shadow: 5px 5px 10px rgb(0 0 0 / 2%);
@@ -189,7 +146,7 @@ export default {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 3rem 0 3rem;
+    padding: 3rem 0 1rem;
   }
 }
 </style>

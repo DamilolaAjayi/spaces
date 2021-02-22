@@ -113,7 +113,7 @@ export default {
 .nav-content {
   width: inherit;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 959px) {
   .nav-content {
     display: flex;
     justify-content: flex-end;
