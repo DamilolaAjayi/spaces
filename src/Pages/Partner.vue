@@ -1,26 +1,21 @@
 <template>
   <section class="company-about__section section-container" id="partner">
       <header class="company-about__header">
-        <h2>Why partner with us</h2>
-          <transition
+        <h3>Why partner with us</h3>
+        <img src="@/assets/Underline-5-Blue.png" alt="">
+        <transition
           mode="in-out"
           enter-active-class="animate__animated animate__flipInX"
           >
-          <h3 v-if="runanimation">
-          We have an unparalleled understanding of the
-          <a
-              target="_blank"
-              href="https://www.boi.ng/wp-content/uploads/2018/05/BOI-Working-Paper-Series-No2_Economic-Development-through-the-Nigerian-Informal-Sector-A-BOI-perspective.pdf"
-          >
-              informal sector
-          </a>
-          </h3>
+          <h4 v-if="true" class="subtitle">
+           We have an unparalleled understanding of the informal sector
+          </h4>
         </transition>
       </header>
     <div class="company-portfolio">
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/product.svg" alt="">
-          <h4>
+          <p>
               You have a product or service you want to provide to 
           <strong>
             <ICountUp
@@ -32,27 +27,27 @@
             />
           </strong>
           merchants?
-          </h4>
+          </p>
       </div>
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/performance.svg" alt="">
-          <h4>
+          <p>
               You want to track performance and preferences for your product or service?
-          </h4>
+          </p>
       </div>
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/distribution.svg" alt="">
-          <h4>
+          <p>
               Largest informal distribution channel in Africa. 
-          </h4>
+          </p>
       </div>
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/merchants.svg" alt="">
-          <h4>
-              <strong>100,000</strong> active merchants, 
-              <strong>10,000</strong> agents across Nigeria, <br>
+          <p>
+              <strong>100,000</strong> active merchants
+              <strong>10,000</strong> agents across Nigeria<br>
               <strong>$1.5 billion</strong> in recorded sales
-          </h4>
+          </p>
       </div>
     </div>
   </section>
@@ -104,8 +99,8 @@ export default {
     margin-bottom: 2rem;
 }
 .company-about__header h3 {
-    margin: 4rem 0;
-    opacity: 0.7;
+    width: max-content;
+    margin: 0 auto;
     font-size: 3rem;
 }
 .company-about__section {
@@ -114,7 +109,7 @@ export default {
 }
 .company-portfolio__card {
   overflow: hidden;
-  padding: 3rem 2rem;
+  padding: 3rem 0 2rem;
   width: 250px;
   margin: 0 auto;
   z-index: 9;
@@ -123,6 +118,9 @@ export default {
   border-radius: 6px;
   margin-bottom: 2rem;
   background-image: linear-gradient(to top, #c9c8c8 #fafdff);
+}
+.subtitle {
+  color: var(--primaryTwo);
 }
 .company-portfolio__card img {
   width: 10rem;
@@ -133,10 +131,24 @@ export default {
   text-align: left;
   margin-top: 2rem;
 }
+p {
+  text-align: left;
+  color: var(--primaryOne);
+  font-weight: 500;
+  padding-bottom: 0;
+  margin-top: 1.5rem;
+  border-top: 0.2px solid rgba(201, 200, 200, 0.3);
+  padding: 1.5rem;
+}
 @media screen and (min-width: 768px) {
   .company-about__section {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+  .company-about__header img {
+      height: 2.5rem;
+      width: 32rem;
+      margin-top: -5px;
   }
   .company-portfolio {
     display: flex;
@@ -144,13 +156,9 @@ export default {
     margin-top: 6rem;
   }
   .company-portfolio__card {
-    overflow: hidden;
-    width: 250px;
-    z-index: 9;
-    background: var(--semanticOne);
     box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
     border-radius: 6px;
-    background-image: linear-gradient(to top, #fafdff, #fff);
+    background-image: linear-gradient(to top, #E5F4FF, #fff);
   }
 }
 @media screen and (max-width: 767px) {

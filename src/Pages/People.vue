@@ -1,6 +1,9 @@
 <template>
   <section id="people" class="team section-container">
-    <h2 class="team__header">Executive team</h2>
+    <header class="people">
+      <h3 class="team__header">Executive team</h3>
+      <img src="@/assets/Underline-5-Blue.png" alt="" class="header__underline">
+    </header>
     <div class="team-container">
       <div class="team-member">
         <img
@@ -41,19 +44,19 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/omokhafe-dirisu.jpeg"
-          alt="Omokhafe Dirisu Spaces CCO"
+          src="@/assets/images/people/abimbola-dasilva.jpeg"
+          alt="Abimbola Dasilva Spaces Head of BI &amp; Customer Service"
         />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
-            Omokhafe Dirisu
+            Abimbola Dasilva
             <span>
-              <a target="_blank" href="https://www.linkedin.com/in/omokhafe-dirisu-25119747/">
+              <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
                 <img src="@/assets/linkedin-logo.png" alt="" />
               </a>
             </span>
           </h4>
-          <p class="team-member-card__role">CCO</p>
+          <p class="team-member-card__role">Head of BI & Customer Service</p>
         </div>
       </div>
       <div class="team-member">
@@ -75,6 +78,62 @@
         </div>
       </div>
     </div>
+    <div class="team-container team-container-2">
+      <div class="team-member">
+        <img
+          class="team-member__image"
+          src="@/assets/images/people/afolashakin-ajayi.jpeg"
+          alt="Afolashakin Ajayi Spaces Head of Products"
+        />
+        <div class="team-member-card">
+          <h4 class="team-member-card__header">
+            Afolashakin Ajayi
+            <span>
+              <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
+                <img src="@/assets/linkedin-logo.png" alt="" />
+              </a>
+            </span>
+          </h4>
+          <p class="team-member-card__role">Head of Products</p>
+        </div>
+      </div>
+      <div class="team-member head-marketing">
+        <img
+          class="team-member__image"
+          src="@/assets/images/people/edidiong-uwemakpan.jpeg"
+          alt="Edidiong Uwemakpan Spaces Head of Marketing"
+        />
+        <div class="team-member-card">
+          <h4 class="team-member-card__header">
+            Edidiong Uwemakpan
+            <span>
+              <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
+                <img src="@/assets/linkedin-logo.png" alt="" />
+              </a>
+            </span>
+          </h4>
+          <p class="team-member-card__role">Head of Marketing</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img
+          class="team-member__image"
+          src="@/assets/images/people/omokhafe-dirisu.jpeg"
+          alt="Omokhafe Dirisu Spaces CCO"
+        />
+        <div class="team-member-card">
+          <h4 class="team-member-card__header">
+            Omokhafe Dirisu
+            <span>
+              <a target="_blank" href="https://www.linkedin.com/in/omokhafe-dirisu-25119747/">
+                <img src="@/assets/linkedin-logo.png" alt="" />
+              </a>
+            </span>
+          </h4>
+          <p class="team-member-card__role">CCO</p>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -89,7 +148,8 @@ export default {
   text-align: center;
 }
 .team__header {
-  margin-bottom: 3rem;
+  width: max-content;
+  margin: 0 auto;
 }
 .team-container {
   text-align: center;
@@ -97,6 +157,9 @@ export default {
 .team-member {
   width: 20rem;
   margin: 0 auto 3rem;
+}
+.head-marketing {
+  width: 25rem;
 }
 .team-member:nth-child(1) .team-member__image {
   animation-delay: 5ms;
@@ -127,6 +190,14 @@ export default {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
+  .header__underline {
+      height: 2.5rem;
+      width: 20rem;
+      margin-top: -8px;
+  }
+  .people {
+    margin-bottom: 2rem;
+  }
   .team-member-card__header {
     display: flex;
     align-items: center;
@@ -154,9 +225,6 @@ export default {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-  .team__header {
-    margin-bottom: 7rem;
-  }
   .team-container {
     display: flex;
     flex-direction: row;
@@ -170,20 +238,21 @@ export default {
     border-radius: 20px;
     margin-bottom: 2rem;
   }
+  .team-container-2 {
+    max-width: 80%;
+    margin: 0 auto;
+  }
   .team-member-card__role {
     font-size: 1.4rem;
     font-weight: 500;
     margin: 0;
     text-align: left;
-    opacity: 0.7;
     font-weight: 400;
   }
   .team-member-card__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 2rem;
-    font-weight: 500;
   }
   .team-member-card span img {
     width: 100%;

@@ -2,13 +2,13 @@
   <main id="products">
     <div class="products-section section-container">
       <div class="products-section__textbox">
-        <h2>All the products in one easy to use
+        <h3>All the products in one easy to use
           <transition>
             <span class="animate__animated animate__tada" v-if="runanimation">
               app!
             </span>
           </transition>
-          </h2>
+          </h3>
         <section class="products-grid">
           <transition
           mode="out-in"
@@ -17,6 +17,7 @@
             <div class="products-item" v-show="showMyShop">
               <img src="@/assets/images/product-icons/myshop.svg" alt="MyShop Icon" class="products-item__image" />
               <figcaption>Myshop</figcaption>
+              <p>Store management software for merchants to track daily business transactions – sales, debts, inventory, receiving reports on their business growth</p>
             </div>
           </transition>
           <transition
@@ -26,6 +27,7 @@
             <div class="products-item" v-show="showMerchBuy">
               <img src="@/assets/images/product-icons/merchbuy.svg" alt="MerchBuy Icon" class="products-item__image" />
               <figcaption>Merchbuy</figcaption>
+              <p>B2B trade platform connecting manufacturers, distributors, retailers, and wholesalers while offering secure payments and hassle-free logistics</p>
             </div>
           </transition>
           <transition
@@ -35,15 +37,7 @@
             <div class="products-item" v-show="showMerchlist">
               <img src="@/assets/images/product-icons/merchlist.svg" alt="Merchlist Icon" class="products-item__image" />
               <figcaption>Merchlist</figcaption>
-            </div>
-          </transition>
-          <transition
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeIn"
-          >
-            <div class="products-item" v-show="showWarenext">
-              <img src="@/assets/images/product-icons/warenext.svg" alt="Warenext Icon" class="products-item__image" />
-              <figcaption>Warenext</figcaption>
+              <p>Automates online listings of merchant’s inventory via a consumer-facing website</p>
             </div>
           </transition>
           <transition
@@ -53,16 +47,25 @@
             <div class="products-item" v-show="showAgencyBanking">
               <img src="@/assets/images/product-icons/agency-banking.svg" alt="Agency Banking Icon" class="products-item__image" />
               <figcaption>Agency Banking</figcaption>
+              <p>Enabling agents earn money by offering financial services in their communities </p>
+            </div>
+          </transition>
+          <transition
+          mode="out-in"
+          enter-active-class="animate__animated animate__fadeIn"
+          >
+            <div class="products-item" v-show="showWarenext">
+              <img src="@/assets/images/product-icons/warenext.svg" alt="Warenext Icon" class="products-item__image" />
+              <figcaption>Warenext</figcaption>
+              <p>Logistics marketplace that allows users see and understand the cost of moving goods from one location and so conduct logistics part of their business easily</p>
             </div>
           </transition>
         </section>
-        <a class="app-link" target="_blank" href="http://onelink.to/qahauh"> 
-          <span>Download App</span>
-          <i class="fas fa-external-link-square-alt"></i>
-        </a>
-      </div>
-      <div class="products-image">
-        <img src="@/assets/images/spaces-user.jpeg" alt="" />
+        <div class="button-block">
+          <a class="s-button" target="_blank" href="http://onelink.to/qahauh">
+          Download App
+          </a>
+        </div>
       </div>
     </div>
   </main>
@@ -97,10 +100,10 @@ export default {
           this.showMerchlist = true;
         }, 240);
         setTimeout(() => {
-          this.showWarenext = true;
+          this.showAgencyBanking = true;
         }, 360);
         setTimeout(() => {
-          this.showAgencyBanking = true;
+          this.showWarenext = true;
         }, 480);
       }
     }
@@ -119,12 +122,9 @@ export default {
 </script>
 
 <style scoped>
-.s-button {
-  width: 28rem;
-}
 .products-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .products-image {
   max-width: 250px;
@@ -133,82 +133,63 @@ export default {
   box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
 }
 .products-item {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
-  margin-right: 1.3rem;
+  max-width: 20rem;
   z-index: 8;
 }
 .products-item__image {
   border-radius: 12px;
   box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
-  border: 0.3px solid var(--semanticFive);
 }
 .products-item__image:hover {
   box-shadow: 0px 5px 10px rgb(0 0 0 / 2%);
 }
 .products-item figcaption {
   font-size: 1.4rem;
+  margin-top: 0.4rem;
 }
-.products-grid {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 5rem 0 3rem;
-}
-.app-link {
-  font-size: 1.8rem;
-}
-.app-link .fas {
-  padding-left: 0.5rem;
+.button-block {
+  text-align: center;
+  margin: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .products-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
   .products-item:hover {
     font-weight: 600;
   }
   .products-item__image {
     width: auto;
   }
+  .products-section__textbox h3 {
+    text-align: center;
+  }
   .products-item__image:hover {
     box-shadow: 5px 5px 10px rgb(0 0 0 / 2%);
   }
-  .products-item {
-    margin-right: 4rem;
-  }
-  .products-section__textbox {
-    max-width: 50rem;
+  p {
+    text-align: left;
   }
   .products-image {
     max-width: 600px;
     height: 450px;
   }
   .products-grid {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5rem 0;
-    min-height: 38rem;
-  }
-  .app-link {
-    margin-left: -3rem;
-    display: block;
-    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 3rem;
+    width: 100%;
+    padding: 3rem 0 0;
   }
 }
 @media screen and (max-width: 767px) {
-  .app-link {
-    display: block;
-    text-align: center;
-    color: var(--primaryOne);
-  }
   .products-image {
     margin: 5rem auto 0;
+  }
+  .products-grid {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 0 3rem;
   }
 }
 </style>

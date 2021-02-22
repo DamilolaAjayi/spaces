@@ -1,10 +1,12 @@
 :root {
-  --primaryOne: #089EFF;
-  --primaryTwo: #1F2138;
+  --primaryOne: #1F2138;
+  --primaryTwo: #76788E;
   --primaryThree: #089eff;
   --primaryFour:  #1281CA;
 
   --hoverPrimaryOne: #099DFC;
+
+  --typeOne: #22A8FF;
 
   --neutralOne: #000000;
   --neutralTwo: #828282;

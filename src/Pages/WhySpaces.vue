@@ -2,7 +2,7 @@
   <main id="purpose">
     <div class="company section-container">
       <header class="purpose__header">
-        <h2>Why Use Spaces</h2>
+        <h3>Why Use Spaces</h3>
         <img class="purpose__header-image" src="@/assets/Underline-5-Blue.png" alt="">
       </header>
       <div class="company-purpose" v-if="!isMobile">
@@ -12,41 +12,25 @@
         >
         <div class="group">
             <div class="company-purpose__block">
-              <div class="company-purpose__textbox">
-                <h3>Increase
-                  demand</h3>
-              </div>
               <div class="company-purpose-block__image">
-                <img src="@/assets/images/demand.jpg" alt="" />
+                <img src="@/assets/images/increase-demand-1.svg" alt="" />
               </div>
             </div>
             <div class="company-purpose__block">
-              <div class="company-purpose__textbox">
-                <h3>Improve 
-                 cash flows</h3>
-              </div>
               <div class="company-purpose-block__image">
-                <img src="@/assets/images/cashflow.jpg" alt="" />
+                <img src="@/assets/images/improvecash-flows-1.svg" alt="" />
               </div>
             </div>
         </div>
         <div class="group">
             <div class="company-purpose__block">
-              <div class="company-purpose__textbox">
-                <h3>Streamlined
-                  logistics</h3>
-              </div>
               <div class="company-purpose-block__image">
-                <img src="@/assets/images/logistics.jpg" alt="" />
+                <img src="@/assets/images/streamlined-logistics-1.svg" alt="" />
               </div>
             </div>
             <div class="company-purpose__block">
-              <div class="company-purpose__textbox">
-                <h3>Automatic
-                  savings</h3>
-              </div>
               <div class="company-purpose-block__image">
-                <img src="@/assets/images/savings.jpg" alt="" />
+                <img src="@/assets/images/automatic-savings-1.svg" alt="" />
               </div>
             </div>
         </div>
@@ -72,9 +56,6 @@
         <div class="company-purpose__block">
           <div class="company-purpose-block__image">
             <img src="@/assets/images/logistics.jpg" alt="" />
-          </div>
-          <div class="company-purpose__textbox">
-            <h3>Streamlined logistics</h3>
           </div>
         </div>
         <div class="company-purpose__block">
@@ -147,9 +128,8 @@ export default {
   max-width: 100%;
 }
 .purpose__header-image {
-    height: 30px;
-    margin-top: -8px;
-    width: 100%;
+    height: 2.5rem;
+    width: 20rem;
 }
 .company-purpose {
   margin: 0 auto;

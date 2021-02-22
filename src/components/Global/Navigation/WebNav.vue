@@ -28,7 +28,7 @@ export default {
   text-align: left;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 .web-nav-link:last-child {
   padding-right: 0;

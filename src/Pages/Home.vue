@@ -32,7 +32,6 @@
             enter-active-class="animate__animated animate__fadeInLeft">
               <p class="hero-page__brief" v-show="headerAnimationDone">
                 Over
-                <strong v-if="headerAnimationDone">
                   <ICountUp
                     :delay="delay"
                     :endVal="endVal"
@@ -40,27 +39,22 @@
                     :options="options"
                     @ready="onReady"
                   />
-                </strong>
                 retailers have put their trust in Spaces to digitize and
                 grow their business. 
-                <strong>Track your sales</strong>,
-                &nbsp;
-                <strong>know your customers</strong>, and let
+                Track your sales, know your customers, and let
                 Spaces help you access 
-                <strong>finance, manage logistics, and reach a wider
-                market</strong> 
+                finance, manage logistics, and reach a wider
+                market
               </p>
             </transition>
         </div>
         <transition
             mode="out-in"
             enter-active-class="animate__animated animate__fadeInLeftBig"
-            class="app-link"
         >
         <p v-show="headerAnimationDone">
-          <a class="app-link" target="_blank" href="http://onelink.to/qahauh">
+          <a class="s-button" target="_blank" href="http://onelink.to/qahauh">
           Download App
-            <i class="fas fa-external-link-square-alt"></i>
           </a>
         </p>
         </transition>
@@ -107,7 +101,7 @@ export default {
   data() {
     return {
       dataText: 'Empowering small merchants to grow big profits.',
-      headerAnimationDone: false,
+      headerAnimationDone: true,
       delay: 1000,
       endVal: 100000,
       runanimation: false,
@@ -121,9 +115,9 @@ export default {
       }
     };
   },
-  beforeMount() {
-    window.addEventListener("DOMContentLoaded", this.domLoaded);
-  },
+  // beforeMount() {
+  //   window.addEventListener("DOMContentLoaded", this.domLoaded);
+  // },
   methods: {
     onReady: function(instance) {
       const that = this;
@@ -173,7 +167,7 @@ export default {
 		transition-duration: .3s;
 }
 .agile__nav-button:hover {
-			color: var(--primaryOne);
+			color: var(--typeOne);
 }
 .agile__dot {
   margin: 0 10px;
@@ -192,11 +186,11 @@ export default {
 			width: 10px;
 }
 .agile__dot--current button {
-	background-color: var(--primaryOne);
+	background-color: var(--typeOne);
   border-radius: 50%;
 }
 .agile__dot--current, .agile__dot:hover {
-	background-color: var(--primaryOne);
+	background-color: var(--typeOne);
   border-radius: 50%;
 }
 .slide {
@@ -236,27 +230,21 @@ export default {
   color: var(--primaryOne);
 }
 .hero-page__brief {
+  color: var(--primaryTwo);
   padding: 3rem 0;
   margin: 0;
-  font-size: 1.6rem;
+  line-height: 1.2;
+  font-size: 1.8rem;
+  font-weight: 500;
   min-height: 15.6rem;
 }
-.s-button span {
-  margin-left: -10px;
-}
-.app-link {
-  font-size: 1.8rem;
-  animation: fadeInLeftBig;
-  animation-timing-function: ease;
-  animation-duration: 2s;
+.hero-page__brief span {
+  min-width: 6rem;
+  display: inline-block;
 }
 .hero-page__textbox h2 {
-  color: var(--primaryOne);
   min-height: 10.2rem;
   margin-bottom: 2rem;
-}
-.app-link .fas {
-  padding-left: 0.5rem;
 }
 .hero-page {
   margin-top: 10rem;
@@ -276,15 +264,15 @@ export default {
   .hero-page {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 8rem;
-    padding-top: 5rem;
+    /* padding-top: 5rem; */
     padding-bottom: 5rem;
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
   .hero-page__brief {
-    padding: 3rem 0;
-    font-size: 1.6rem;
-    margin: 1rem 0;
+    padding: 1rem 0 3rem;
+    font-size: 2.4rem;
   }
   .hero-page__textbox {
     color: black;
@@ -292,8 +280,8 @@ export default {
     margin-bottom: 4rem;
   }
   .hero-page__textbox h2 {
-    min-height: 14rem;
-    color: var(--primaryOne);
+    min-height: 5rem;
+    margin-top: 20rem;
     margin: 0;
   }
   .hero-page__carousel {
@@ -302,9 +290,9 @@ export default {
     min-height: 45rem;
     float: right;
   }
-  .set-min-height {
+  /* .set-min-height {
     min-height: 29.6rem;
-  }
+  } */
   h2 span {
     border-right: 0.05em solid;
     animation: caret 1s steps(1) infinite;
@@ -330,9 +318,6 @@ export default {
   }
   .hero-page__carousel__image img {
     height: 20rem;
-  }
-  .app-link {
-    color: var(--primaryOne);
   }
 }
 </style>
