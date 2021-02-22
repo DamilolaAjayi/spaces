@@ -23,7 +23,7 @@
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
                 <h3>Improve 
-                 cash flows</h3>
+                 cash flows 💸</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/cashflow.jpg" alt="" />
@@ -34,7 +34,7 @@
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
                 <h3>Streamlined
-                  logistics</h3>
+                  logistics 🚚</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/logistics.jpg" alt="" />
@@ -43,7 +43,7 @@
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
                 <h3>Automatic
-                  savings</h3>
+                  savings 💰</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/savings.jpg" alt="" />
@@ -66,7 +66,7 @@
             <img src="@/assets/images/cashflow.jpg" alt="" />
           </div>
           <div class="company-purpose__textbox">
-            <h3>Improve cash flows</h3>
+            <h3>Improve cash flows 💸</h3>
           </div>
         </div>
         <div class="company-purpose__block">
@@ -74,7 +74,7 @@
             <img src="@/assets/images/logistics.jpg" alt="" />
           </div>
           <div class="company-purpose__textbox">
-            <h3>Streamlined logistics</h3>
+            <h3>Streamlined logistics 🚚</h3>
           </div>
         </div>
         <div class="company-purpose__block">
@@ -82,7 +82,7 @@
             <img src="@/assets/images/savings.jpg" alt="" />
           </div>
           <div class="company-purpose__textbox">
-            <h3>Automatic savings</h3>
+            <h3>Automatic savings 💰</h3>
           </div>
         </div>
       </div>

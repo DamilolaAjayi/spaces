@@ -4,7 +4,7 @@
       <div class="hero-page__textbox">
         <div class="set-min-height">
           <h2>
-            Empowering small merchants to grow big profits.
+            Empowering small merchants to grow big profits. 
           </h2>
           <transition
             mode="out-in"
