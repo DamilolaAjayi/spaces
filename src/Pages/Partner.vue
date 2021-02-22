@@ -26,7 +26,7 @@
             <ICountUp
               :delay="delay"
               :endVal="endVal"
-              :duration="100"
+              :duration="200"
               :options="options"
               @ready="onReady"
             />
@@ -119,7 +119,7 @@ export default {
   margin: 0 auto;
   z-index: 9;
   background: var(--semanticOne);
-  box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
+  box-shadow: 1px 1px 4px #8C7B7B;
   border-radius: 6px;
   margin-bottom: 2rem;
   background-image: linear-gradient(to top, #c9c8c8 #fafdff);

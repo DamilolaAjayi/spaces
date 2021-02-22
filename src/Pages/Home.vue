@@ -36,6 +36,7 @@
                   <ICountUp
                     :delay="delay"
                     :endVal="endVal"
+                    :duration="200"
                     :options="options"
                     @ready="onReady"
                   />
@@ -226,9 +227,6 @@ export default {
 </style>
 
 <style scoped>
-.hero-page {
-  min-height: 100vh;
-}
 .hero-page__carousel__image {
   height: 40rem;
 	object-fit: cover;
@@ -239,6 +237,7 @@ export default {
 }
 .hero-page__brief {
   padding: 3rem 0;
+  margin: 0;
   font-size: 1.6rem;
   min-height: 15.6rem;
 }
@@ -264,7 +263,7 @@ export default {
 }
 .hero-page__textbox {
   color: black;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 .hero-page__carousel {
   max-width: 300px;
@@ -285,6 +284,7 @@ export default {
   .hero-page__brief {
     padding: 3rem 0;
     font-size: 1.6rem;
+    margin: 1rem 0;
   }
   .hero-page__textbox {
     color: black;
@@ -319,6 +319,9 @@ export default {
 @media screen and (max-width: 767px) {
   main {
     min-height: auto;
+  }
+  .section-container {
+    padding-bottom: 0;
   }
   .hero-page__carousel__image {
     height: auto;

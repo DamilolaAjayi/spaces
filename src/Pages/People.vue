@@ -194,5 +194,8 @@ export default {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+  .team-member__image {
+    box-shadow: 1px 1px 4px #8C7B7B;
+  }
 }
 </style>

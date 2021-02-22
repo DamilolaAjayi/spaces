@@ -107,6 +107,9 @@ export default {
   .group {
     display: flex;
   }
+.purpose__header {
+  margin-bottom: 2rem;
+}
   .section-container {
     background-color: var(--semanticTwo);
   }
@@ -164,8 +167,6 @@ export default {
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  /* position: absolute;
-  top: 20px; */
   color: var(--primaryTwo);
 }
 .company-purpose__textbox h3 {
@@ -198,13 +199,20 @@ export default {
   }
   .company-purpose__block {
     align-items: center;
-    padding: 4rem 0;
+    padding: 4rem 0 0;
   }
-  .company-purpose__block__image {
-    margin-bottom: 1rem;
+  .company-purpose__textbox {
+    margin-top: 0.5rem;
+  }
+  .company-purpose-block__image {
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
   }
   .company-purpose-block__image img {
     border-radius: 6px;
+  }
+  .company-purpose__textbox h3 {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2px solid var(--primaryOne);
   }
 }
 </style>

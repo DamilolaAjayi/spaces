@@ -128,6 +128,9 @@ export default {
 }
 .products-image {
   max-width: 250px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
 }
 .products-item {
   text-align: center;
@@ -184,9 +187,6 @@ export default {
   .products-image {
     max-width: 600px;
     height: 450px;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
   }
   .products-grid {
     display: inline-flex;
@@ -208,7 +208,7 @@ export default {
     color: var(--primaryOne);
   }
   .products-image {
-    margin: 2rem auto 0;
+    margin: 5rem auto 0;
   }
 }
 </style>
