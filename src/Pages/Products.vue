@@ -205,6 +205,7 @@ export default {
   .app-link {
     display: block;
     text-align: center;
+    color: var(--primaryOne);
   }
   .products-image {
     margin: 2rem auto 0;

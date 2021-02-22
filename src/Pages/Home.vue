@@ -328,5 +328,8 @@ export default {
   .hero-page__carousel__image img {
     height: 20rem;
   }
+  .app-link {
+    color: var(--primaryOne);
+  }
 }
 </style>
