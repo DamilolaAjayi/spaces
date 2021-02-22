@@ -119,7 +119,6 @@ export default {
     .purpose__header-image {
         height: 30px;
         margin-top: -8px;
-        max-width: 75%;
     }
     .company-purpose__block {
       display: flex;
@@ -213,6 +212,9 @@ export default {
   .company-purpose__textbox h3 {
     padding-bottom: 0.5rem;
     border-bottom: 0.5px solid var(--primaryOne);
+  }
+  .purpose__header-image {
+      max-width: 75%;
   }
 }
 </style>
