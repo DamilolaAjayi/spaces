@@ -30,4 +30,7 @@ export default {
   line-height: 2.4rem;
   font-weight: 500;
 }
+.web-nav-link:last-child {
+  padding-right: 0;
+}
 </style>

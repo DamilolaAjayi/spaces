@@ -26,6 +26,7 @@
             <ICountUp
               :delay="delay"
               :endVal="endVal"
+              :duration="100"
               :options="options"
               @ready="onReady"
             />
@@ -48,16 +49,11 @@
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/merchants.svg" alt="">
           <h4>
-              <strong>100k</strong> active merchants, 
+              <strong>100,000</strong> active merchants, 
               <strong>10,000</strong> agents across Nigeria, <br>
               <strong>$1.5 billion</strong> in recorded sales
           </h4>
       </div>
-    </div>
-    <div class="spaces-contact">
-      <a target="_blank" :href="`mailto:info@spaces.io`" class="contact"
-        >info@spaces.io</a
-      >
     </div>
   </section>
 </template>
@@ -70,9 +66,10 @@ export default {
   },
   data() {
     return {
-      delay: 1000,
+      delay: 1500,
       endVal: 100000,
       runanimation: false,
+      instance: null,
       options: {
         useEasing: true,
         useGrouping: true,
@@ -87,20 +84,16 @@ export default {
     window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
-    checkOffset() {
-      console.log(window.pageYOffset);
+    onReady(instance) {
+      this.instance = instance;
+      this.rerunCountUp(instance)
     },
-    onReady: function(instance) {
-      const that = this;
-      instance.update(that.endVal + 0);
-    },
-    handleScroll() {
-      if (window.pageYOffset > 2299) {
-        this.onReady();
-      }
-      if (window.pageYOffset > 2199) {
-        this.runanimation = true;
-      }
+    rerunCountUp(instance) {
+      instance.reset();
+      instance.start();
+      setTimeout(() => {
+        this.onReady(instance);
+      }, 10000);
     },
   },
 };
@@ -114,7 +107,6 @@ export default {
     margin: 4rem 0;
     opacity: 0.7;
     font-size: 3rem;
-    /* color: var(--primaryOne); */
 }
 .company-about__section {
   text-align: center;
@@ -125,28 +117,21 @@ export default {
   padding: 3rem 2rem;
   width: 250px;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 9;
   background: var(--semanticOne);
-  box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
+  box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
   border-radius: 6px;
   margin-bottom: 2rem;
+  background-image: linear-gradient(to top, #c9c8c8 #fafdff);
 }
 .company-portfolio__card img {
   width: 10rem;
-  /* text-align: left; */
   border-radius: 4px;
+  filter: drop-shadow(0 0 0.4rem #c9c8c8);
 }
 .company-portfolio__card h4 {
   text-align: left;
   margin-top: 2rem;
-}
-.spaces-contact {
-    margin-top: 2rem;
-}
-.contact {
-    font-size: 2rem;
-    font-weight: 600;
-    text-decoration: none;
 }
 @media screen and (min-width: 768px) {
   .company-about__section {
@@ -161,10 +146,11 @@ export default {
   .company-portfolio__card {
     overflow: hidden;
     width: 250px;
-    z-index: 2;
+    z-index: 9;
     background: var(--semanticOne);
-    box-shadow: 0px 1px 6px rgb(0 0 0 / 6%);
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
     border-radius: 6px;
+    background-image: linear-gradient(to top, #fafdff, #fff);
   }
 }
 @media screen and (max-width: 767px) {

@@ -133,9 +133,9 @@ export default {
   text-align: center;
   margin-bottom: 2rem;
   margin-right: 1.3rem;
+  z-index: 8;
 }
 .products-item__image {
-  /* width: 100px; */
   border-radius: 12px;
   box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
   border: 0.3px solid var(--semanticFive);
@@ -154,11 +154,6 @@ export default {
 }
 .app-link {
   font-size: 1.8rem;
-  color: var(--primaryOne);
-}
-.app-link:hover {
-  color: var(--primaryTwo);
-  opacity: 1;
 }
 .app-link .fas {
   padding-left: 0.5rem;
@@ -190,6 +185,8 @@ export default {
     max-width: 600px;
     height: 450px;
     overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
   }
   .products-grid {
     display: inline-flex;
@@ -198,8 +195,10 @@ export default {
     padding: 5rem 0;
     min-height: 38rem;
   }
-  @keyframes float {
-    
+  .app-link {
+    margin-left: -3rem;
+    display: block;
+    text-align: center;
   }
 }
 @media screen and (max-width: 767px) {

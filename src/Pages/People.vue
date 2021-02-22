@@ -98,6 +98,18 @@ export default {
   width: 20rem;
   margin: 0 auto 3rem;
 }
+.team-member:nth-child(1) .team-member__image {
+  animation-delay: 5ms;
+}
+.team-member:nth-child(2) .team-member__image {
+  animation-delay: 1000ms;
+}
+.team-member:nth-child(3) .team-member__image {
+  animation-delay: 5ms;
+}
+.team-member:nth-child(4) .team-member__image {
+  animation-delay: 1000ms;
+}
   .team-member-card span {
     margin-right: -8px;
     width: 35px;
@@ -108,6 +120,12 @@ export default {
     object-fit: cover;
     height: 200px;
     width: 200px;
+    box-shadow: 1px 1px 6px rgb(8 158 255 / 15%);
+    animation: float 1.5s;
+    position: relative;
+    animation-delay: 5ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
   .team-member-card__header {
     display: flex;
@@ -119,6 +137,17 @@ export default {
   }
   .team-member-card__role {
     margin-top: 0.2rem;
+  }
+  @keyframes float {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 5px;
+    }
+    100% {
+      top: 0px;
+    }
   }
 @media screen and (min-width: 768px) {
   .team {
@@ -143,6 +172,7 @@ export default {
   }
   .team-member-card__role {
     font-size: 1.4rem;
+    font-weight: 500;
     margin: 0;
     text-align: left;
     opacity: 0.7;
@@ -152,6 +182,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 2rem;
     font-weight: 500;
   }
   .team-member-card span img {

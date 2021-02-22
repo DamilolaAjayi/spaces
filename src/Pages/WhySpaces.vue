@@ -10,10 +10,11 @@
           :autoplay="true"
           :speed="1000"
         >
+        <div class="group">
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
                 <h3>Increase
-                  <br>Demand</h3>
+                  demand</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/demand.jpg" alt="" />
@@ -22,16 +23,18 @@
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
                 <h3>Improve 
-                 <br>Cash flows</h3>
+                 cash flows</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/cashflow.jpg" alt="" />
               </div>
             </div>
+        </div>
+        <div class="group">
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
                 <h3>Streamlined
-                  <br>logistics</h3>
+                  logistics</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/logistics.jpg" alt="" />
@@ -40,12 +43,13 @@
             <div class="company-purpose__block">
               <div class="company-purpose__textbox">
                 <h3>Automatic
-                  <br>savings</h3>
+                  savings</h3>
               </div>
               <div class="company-purpose-block__image">
                 <img src="@/assets/images/savings.jpg" alt="" />
               </div>
             </div>
+        </div>
         </agile>
       </div>
       <div v-else>
@@ -54,7 +58,7 @@
             <img src="@/assets/images/demand.jpg" alt="" />
           </div>
           <div class="company-purpose__textbox">
-            <h3>Increase Demand</h3>
+            <h3>Increase demand</h3>
           </div>
         </div>
         <div class="company-purpose__block">
@@ -62,7 +66,7 @@
             <img src="@/assets/images/cashflow.jpg" alt="" />
           </div>
           <div class="company-purpose__textbox">
-            <h3>Improve Cash flows</h3>
+            <h3>Improve cash flows</h3>
           </div>
         </div>
         <div class="company-purpose__block">
@@ -100,6 +104,12 @@ export default {
 </script>
 
 <style scoped>
+  .group {
+    display: flex;
+  }
+  .section-container {
+    background-color: var(--semanticTwo);
+  }
     main {
         min-height: auto;
     }
@@ -120,14 +130,9 @@ export default {
     }
     .company-purpose-block__image {
       width: 250px;
-      max-height: 20rem;
-    }
-    .company-purpose-block__image img {
-      border-radius: 6px;
     }
 @media screen and (min-width: 768px) {
   .section-container {
-  background-color: var(--semanticTwo);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -150,27 +155,39 @@ export default {
 }
 .company-purpose__block {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  width: 100%;
+  position: relative;
 }
 .company-purpose__textbox {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  max-width: 40rem;
+  margin-bottom: 1rem;
+  /* position: absolute;
+  top: 20px; */
+  color: var(--primaryTwo);
 }
 .company-purpose__textbox h3 {
   font-weight: 600;
   font-size: 4rem;
+  color: var(--primaryFour);
 }
 .company-purpose__brief {
   font-size: 2rem;
   font-weight: 400;
 }
 .company-purpose-block__image {
-  width: 600px;
-  max-height: 40rem;
+  width: 100%;
+  max-height: 35rem;
+  height: 35rem;
+  border: 5px solid var(--semanticFour);
+  overflow: hidden;
+}
+.company-purpose-block__image {
+  /* make top blur for header text*/
+  /* background: linear-gradient(#fff, #020202, transparent), url("../assets/images/cashflow.jpg") no-repeat center; */
+  /* background-image: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%)!important; */
 }
 }
 @media screen  and (max-width: 767px) {

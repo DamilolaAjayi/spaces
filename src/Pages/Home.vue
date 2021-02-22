@@ -6,28 +6,40 @@
           <h2>
             Empowering small merchants to grow big profits.
           </h2>
-          <div class="hero-page__carousel" v-if="isMobile">
-            <agile 
-            :autoplay="true"
-            :speed="1000"
-            >
-              <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Merchant in Shop" />
-              </div>
-              <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
-              </div>
-              <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/marketplace.jpg" alt="Marketplace" />
-              </div>
-            </agile>
-          </div>
+          <transition
+            mode="out-in"
+            enter-active-class="animate__animated animate__fadeIn"
+          >
+            <div class="hero-page__carousel" v-if="isMobile && headerAnimationDone">
+              <agile 
+              :autoplay="true"
+              :speed="1000"
+              >
+                <div class="hero-page__carousel__image">
+                  <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Merchant in Shop" />
+                </div>
+                <div class="hero-page__carousel__image">
+                  <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
+                </div>
+                <div class="hero-page__carousel__image">
+                  <img src="@/assets/images/homepage/marketplace.jpg" alt="Marketplace" />
+                </div>
+              </agile>
+            </div>
+          </transition>
             <transition
             mode="out-in"
-            enter-active-class="animate__animated animate__fadeIn">
-              <p class="hero-page__brief" v-if="headerAnimationDone">
+            enter-active-class="animate__animated animate__fadeInLeft">
+              <p class="hero-page__brief" v-show="headerAnimationDone">
                 Over
-                <strong>100,000</strong>
+                <strong v-if="headerAnimationDone">
+                  <ICountUp
+                    :delay="delay"
+                    :endVal="endVal"
+                    :options="options"
+                    @ready="onReady"
+                  />
+                </strong>
                 retailers have put their trust in Spaces to digitize and
                 grow their business. 
                 <strong>Track your sales</strong>,
@@ -39,34 +51,46 @@
               </p>
             </transition>
         </div>
-        <p>
-          <a class="app-link">
+        <transition
+            mode="out-in"
+            enter-active-class="animate__animated animate__fadeInLeftBig"
+            class="app-link"
+        >
+        <p v-show="headerAnimationDone">
+          <a class="app-link" target="_blank" href="http://onelink.to/qahauh">
           Download App
             <i class="fas fa-external-link-square-alt"></i>
           </a>
         </p>
+        </transition>
       </div>
-      <div class="hero-page__carousel" v-if="!isMobile">
-        <agile 
-        :autoplay="true"
-        :speed="1000"
-        >
-          <div class="hero-page__carousel__image">
-            <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Merchant in Shop" />
-          </div>
-          <div class="hero-page__carousel__image">
-            <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
-          </div>
-          <div class="hero-page__carousel__image">
-            <img src="@/assets/images/homepage/marketplace.jpg" alt="Marketplace" />
-          </div>
-        </agile>
-      </div>
+      <transition            
+      mode="out-in"
+      enter-active-class="animate__animated animate__fadeIn"
+      >
+        <div class="hero-page__carousel" v-if="!isMobile && headerAnimationDone">
+          <agile 
+          :autoplay="true"
+          :speed="1000"
+          >
+            <div class="hero-page__carousel__image">
+              <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Merchant in Shop" />
+            </div>
+            <div class="hero-page__carousel__image">
+              <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
+            </div>
+            <div class="hero-page__carousel__image">
+              <img src="@/assets/images/homepage/marketplace.jpg" alt="Marketplace" />
+            </div>
+          </agile>
+        </div>
+      </transition>
     </div>
   </main>
 </template>
 
 <script>
+import ICountUp from 'vue-countup-v2';
 import IsMobile from "@/mixins/IsMobile";
 import { VueAgile } from 'vue-agile'
 import 'animate.css';
@@ -76,24 +100,34 @@ export default {
   name: 'Home',
   components: {
     agile: VueAgile,
+    ICountUp,
   },
   mixins: [IsMobile],
   data() {
     return {
-      data: [
-        '<img src="http://placehold.it/600x400" alt="" />',
-        '<img src="http://placehold.it/600x400" alt="" />',
-        '<img src="http://placehold.it/600x400" alt="" />',
-      ],
-      animateButtonChevron: false,
       dataText: 'Empowering small merchants to grow big profits.',
       headerAnimationDone: false,
+      delay: 1000,
+      endVal: 100000,
+      runanimation: false,
+      options: {
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.',
+        prefix: '',
+        suffix: '',
+      }
     };
   },
   beforeMount() {
     window.addEventListener("DOMContentLoaded", this.domLoaded);
   },
   methods: {
+    onReady: function(instance) {
+      const that = this;
+      instance.update(that.endVal + 0);
+    },
     domLoaded() {
       this.startTextAnimation();
     },
@@ -117,23 +151,84 @@ export default {
         // text exists! start typewriter animation
       this.typeWriter(this.dataText, 0);
     },
-    animateButton() {
-      this.animateButtonChevron = true;
-    },
-    removeButtonAnimation() {
-      this.animateButtonChevron = false;
-    },
   },
 };
 </script>
 
 <style>
-.agile__actions button {
+.agile {
+  width: 100%;
+}
+.agile__actions {
+	margin-top: 20px;
+  text-align: center;
+}
+.agile__nav-button {
+		background: transparent;
+		border: none;
+		color: #ccc;
+		cursor: pointer;
+		font-size: 24px;
+		transition-duration: .3s;
+}
+.agile__nav-button:hover {
+			color: var(--primaryOne);
+}
+.agile__dot {
+  margin: 0 10px;
+}
+.agile__dot button {
+			background-color: #eee;
+			border: none;
+			border-radius: 50%;
+			cursor: pointer;
+			height: 10px;
+			font-size: 0;
+			line-height: 0;
+			margin: 0;
+			padding: 0;
+			transition-duration: .3s;
+			width: 10px;
+}
+.agile__dot--current button {
+	background-color: var(--primaryOne);
+  border-radius: 50%;
+}
+.agile__dot--current, .agile__dot:hover {
+	background-color: var(--primaryOne);
+  border-radius: 50%;
+}
+.slide {
+	align-items: center;
+	color: #fff;
+	display: flex;
+	height: 300px;
+	justify-content: center;
+}
+
+.agile__nav-button {
   display: none;
 }
+.agile__dots {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+  padding: 0;
+  white-space: nowrap;
+}
+
 </style>
 
 <style scoped>
+.hero-page {
+  min-height: 100vh;
+}
 .hero-page__carousel__image {
   height: 40rem;
 	object-fit: cover;
@@ -152,6 +247,9 @@ export default {
 }
 .app-link {
   font-size: 1.8rem;
+  animation: fadeInLeftBig;
+  animation-timing-function: ease;
+  animation-duration: 2s;
 }
 .hero-page__textbox h2 {
   color: var(--primaryOne);
@@ -170,15 +268,10 @@ export default {
 }
 .hero-page__carousel {
   max-width: 300px;
-  margin: 0 auto;
 }
-@keyframes animateButton {
-  15% {
-    right: 50px;
-  }
-  100% {
-    right: 30px;
-  }
+.hero-page__carousel__image img {
+  border-radius: 6px;
+  z-index: 5;
 }
 @media screen and (min-width: 768px) {
   .hero-page {
@@ -187,6 +280,7 @@ export default {
     margin-top: 8rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    min-height: 100vh;
   }
   .hero-page__brief {
     padding: 3rem 0;
@@ -211,7 +305,7 @@ export default {
   .set-min-height {
     min-height: 29.6rem;
   }
-  span {
+  h2 span {
     border-right: 0.05em solid;
     animation: caret 1s steps(1) infinite;
   }
@@ -230,6 +324,9 @@ export default {
     height: auto;
     object-fit: cover;
     width: 30rem;
+  }
+  .hero-page__carousel__image img {
+    height: 20rem;
   }
 }
 </style>
