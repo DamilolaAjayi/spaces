@@ -1,10 +1,10 @@
 <template>
   <div class="nav__dropdown">
     <div class="nav-dropdown__list">
-      <a href="#products" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300, offset: 80 }">Products</a>
-      <a href="#purpose" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300, offset: 80 }">Purpose</a>
-      <a href="#people" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300, offset: 80 }">People</a>
-      <a href="#partner" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300, offset: 80 }">Partner</a>
+      <a href="#products" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300, offset: 150 }">Products</a>
+      <a href="#purpose" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300, offset: 250 }">Purpose</a>
+      <a href="#people" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300, offset: 250 }">People</a>
+      <a href="#partner" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300, offset: 250 }">Partner</a>
     </div>
   </div>
 </template>

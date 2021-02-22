@@ -318,7 +318,7 @@ export default {
 }
 @media screen and (max-width: 767px) {
   main {
-    min-height: auto;
+    min-height: 100vh;
   }
   .section-container {
     padding-bottom: 0;
