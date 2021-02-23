@@ -87,6 +87,9 @@ export default {
   width: 100%;
   outline: var(--primaryTwo);
 }
+section {
+  margin-top: 1rem;
+}
 .footer {
   padding: 3rem 6% 2rem;
   margin: 0 auto;

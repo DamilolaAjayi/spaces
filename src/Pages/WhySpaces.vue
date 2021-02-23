@@ -39,31 +39,22 @@
       <div v-else>
         <div class="company-purpose__block">
           <div class="company-purpose-block__image">
-            <img src="@/assets/images/demand.jpg" alt="" />
-          </div>
-          <div class="company-purpose__textbox">
-            <h3>Increase demand</h3>
+            <img src="@/assets/images/increase-demand-1.svg" alt="" />
           </div>
         </div>
         <div class="company-purpose__block">
           <div class="company-purpose-block__image">
-            <img src="@/assets/images/cashflow.jpg" alt="" />
-          </div>
-          <div class="company-purpose__textbox">
-            <h3>Improve cash flows</h3>
+            <img src="@/assets/images/improvecash-flows-1.svg" alt="" />
           </div>
         </div>
         <div class="company-purpose__block">
           <div class="company-purpose-block__image">
-            <img src="@/assets/images/logistics.jpg" alt="" />
+            <img src="@/assets/images/streamlined-logistics-1.svg" alt="" />
           </div>
         </div>
         <div class="company-purpose__block">
           <div class="company-purpose-block__image">
-            <img src="@/assets/images/savings.jpg" alt="" />
-          </div>
-          <div class="company-purpose__textbox">
-            <h3>Automatic savings</h3>
+            <img src="@/assets/images/automatic-savings-1.svg" alt="" />
           </div>
         </div>
       </div>
