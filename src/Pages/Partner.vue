@@ -106,7 +106,6 @@ export default {
 .company-about__header h3 {
     width: max-content;
     margin: 0 auto;
-    font-size: 3rem;
 }
   .company-about__header img {
       height: 2.5rem;
@@ -173,6 +172,12 @@ p {
   .section-container {
     padding-top: 3rem;
     padding-bottom: 4rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  .company-about__header img {
+    width: 23rem;
   }
 }
 </style>

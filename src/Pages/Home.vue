@@ -6,6 +6,7 @@
           <h2>
             Empowering small merchants to grow big profits. 
           </h2>
+          <div class="hero-page__carousel-parent">
           <transition
             mode="out-in"
             enter-active-class="animate__animated animate__fadeIn"
@@ -27,6 +28,7 @@
               </agile>
             </div>
           </transition>
+          </div>
             <transition
             mode="out-in"
             enter-active-class="animate__animated animate__fadeInLeft">
@@ -259,6 +261,21 @@ export default {
 }
 .hero-page__carousel {
   max-width: 300px;
+}  
+.hero-page__carousel-parent {
+  position: relative;
+}
+.hero-page__carousel::before {
+  display: block;
+  content: "";
+  width: 306px;
+  height: 206px;
+  border: 2px solid var(--typeOne);
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  border-radius: 4px;
+  z-index: -1;
 }
 .hero-page__carousel__image img {
   z-index: 5;
@@ -281,9 +298,6 @@ export default {
     background: var(--neutralTwo);
     box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
     border-radius: 10px;
-  }
-  .hero-page__carousel-parent {
-    position: relative;
   }
   .hero-page__carousel::before {
     display: block;
