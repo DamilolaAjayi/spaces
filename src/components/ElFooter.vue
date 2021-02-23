@@ -163,5 +163,9 @@ a {
   .footer-press__spaces-logo {
     width: 14rem;
   }
+  a {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
 }
 </style>
