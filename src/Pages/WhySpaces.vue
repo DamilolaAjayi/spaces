@@ -82,6 +82,9 @@ export default {
   .section-container {
     background-color: var(--semanticTwo);
   }
+  .purpose__header {
+    margin-bottom: -2rem;
+  }
     main {
         min-height: auto;
     }
@@ -152,17 +155,13 @@ export default {
   border: 5px solid var(--semanticFour);
   overflow: hidden;
 }
-.company-purpose-block__image {
-  /* make top blur for header text*/
-  /* background: linear-gradient(#fff, #020202, transparent), url("../assets/images/cashflow.jpg") no-repeat center; */
-  /* background-image: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%)!important; */
-}
 }
 @media screen  and (max-width: 767px) {
   .section-container {
     text-align: center;
     padding-top: 3rem;
     padding-bottom: 4rem;
+    width: 100%;
   }
   .company-purpose__block {
     align-items: center;
@@ -182,7 +181,9 @@ export default {
     border-bottom: 0.5px solid var(--typeOne);
   }
   .purpose__header-image {
-      max-width: 75%;
+      height: 2.5rem;
+      width: 20rem;
+      margin-top: -8px;
   }
 }
 </style>

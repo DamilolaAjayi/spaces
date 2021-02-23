@@ -52,7 +52,7 @@
             mode="out-in"
             enter-active-class="animate__animated animate__fadeInLeftBig"
         >
-        <p v-show="headerAnimationDone">
+        <p v-show="headerAnimationDone" class="button-block">
           <a class="s-button" target="_blank" href="http://onelink.to/qahauh">
           Download App
           </a>
@@ -231,9 +231,6 @@ export default {
 	object-fit: cover;
   width: 60rem;
 }
-.inline-paragraph {
-  color: var(--primaryOne);
-}
 .hero-page__brief {
   color: var(--primaryTwo);
   padding: 3rem 0;
@@ -241,6 +238,9 @@ export default {
   line-height: 1.2;
   font-size: 1.6rem;
   font-weight: 500;
+}
+.s-button {
+  line-height: 1.7;
 }
 .hero-page__brief span {
   min-width: 6rem;
@@ -263,6 +263,9 @@ export default {
 .hero-page__carousel__image img {
   z-index: 5;
 }
+.button-block {
+  margin-top: 2rem;
+}
 @media screen and (min-width: 768px) {
   .hero-page {
     display: flex;
@@ -273,8 +276,11 @@ export default {
     padding-bottom: 5rem;
   }
   .hero-page__brief {
-    padding: 1rem 0 3rem;
+    padding: 1rem 0 1rem;
     font-size: 1.6rem;
+    background: var(--neutralTwo);
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
+    border-radius: 10px;
   }
   .hero-page__carousel-parent {
     position: relative;
@@ -298,8 +304,8 @@ export default {
   }
   .hero-page__textbox h2 {
     min-height: 6.4rem;
-    margin-top: 20rem;
-    margin: 0;
+    /* margin-top: 20rem; */
+    /* margin: 0; */
   }
   .hero-page__carousel {
     max-width: 600px;

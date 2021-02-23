@@ -13,7 +13,7 @@
             <div class="products-item">
               <img src="@/assets/images/product-icons/myshop.svg" alt="MyShop Icon" class="products-item__image" />
               <figcaption>Myshop</figcaption>
-              <p>Store management software for micro and small enterprises to track daily business transactions – sales, debts, inventory; helping them grow their profits faster.</p>
+              <p>Store management software for micro and small enterprises to track daily business transactions – sales, debts, inventory; helping them grow their profits faster</p>
             </div>
           </transition>
           <transition
@@ -33,7 +33,7 @@
             <div class="products-item">
               <img src="@/assets/images/product-icons/merchlist.svg" alt="Merchlist Icon" class="products-item__image" />
               <figcaption>Merchlist</figcaption>
-              <p>Automates online listings of merchant’s inventory via a consumer-facing website, growing demand and revenue for them.</p>
+              <p>Automates online listings of merchant’s inventory via a consumer-facing website, growing demand and revenue for them</p>
             </div>
           </transition>
           <transition
@@ -89,11 +89,18 @@ export default {
 .products-item {
   text-align: left;
   margin-bottom: 2rem;
-  max-width: 20rem;
+  max-width: 23rem;
+  padding: 1rem;
+  width: 100%;
   z-index: 8;
+  border: 0.5px solid rgba(34, 168, 255, 0.3);
+  border-radius: 4px;
+  box-sizing: content-box;
+  box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
 }
 .products-item__image {
   border-radius: 12px;
+  object-fit: cover;
   box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
 }
 .products-item__image:hover {
@@ -112,6 +119,10 @@ export default {
 .button-block {
   text-align: center;
   margin: 1rem;
+}
+.s-button {
+  line-height: 1.7;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .products-item:hover {

@@ -105,7 +105,9 @@
         />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
+          <span>
             Edidiong Uwemakpan
+          </span>
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
                 <img src="@/assets/linkedin-logo.png" alt="" />
@@ -264,6 +266,9 @@ export default {
   }
   .team-member__image {
     box-shadow: 1px 1px 4px #8C7B7B;
+  }
+  .team-member-card__role {
+    width: max-content;
   }
 }
 </style>

@@ -57,6 +57,14 @@ export default {
   components: {
     MailchimpSubscribe,
   },
+  methods: {
+    onError() {
+
+    },
+    onSuccess() {
+
+    },
+  }
 };
 </script>
 
@@ -116,11 +124,12 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 21rem;
+  width: 11rem;
   margin-top: 1rem;
 }
 .footer__media img {
-  width: 10rem;
+  width: 5rem;
+  opacity: 0.8;
 }
 .footer__contact {
   text-align: left;
