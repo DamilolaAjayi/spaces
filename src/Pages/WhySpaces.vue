@@ -37,7 +37,32 @@
         </agile>
       </div>
       <div v-else>
-        <div class="company-purpose__block">
+        <agile
+          :autoplay="true"
+          :speed="1000"
+        >
+            <div class="company-purpose__block">
+              <div class="company-purpose-block__image">
+                <img src="@/assets/images/increase-demand-1.svg" alt="" />
+              </div>
+            </div>
+            <div class="company-purpose__block">
+              <div class="company-purpose-block__image">
+                <img src="@/assets/images/improvecash-flows-1.svg" alt="" />
+              </div>
+            </div>
+            <div class="company-purpose__block">
+              <div class="company-purpose-block__image">
+                <img src="@/assets/images/streamlined-logistics-1.svg" alt="" />
+              </div>
+            </div>
+            <div class="company-purpose__block">
+              <div class="company-purpose-block__image">
+                <img src="@/assets/images/automatic-savings-1.svg" alt="" />
+              </div>
+            </div>
+        </agile>
+        <!-- <div class="company-purpose__block">
           <div class="company-purpose-block__image">
             <img src="@/assets/images/increase-demand-1.svg" alt="" />
           </div>
@@ -56,7 +81,7 @@
           <div class="company-purpose-block__image">
             <img src="@/assets/images/automatic-savings-1.svg" alt="" />
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </main>
@@ -103,7 +128,7 @@ export default {
       font-size: 2rem;
     }
     .company-purpose-block__image {
-      width: 250px;
+      width: 28rem;
     }
 @media screen and (min-width: 768px) {
   .section-container {

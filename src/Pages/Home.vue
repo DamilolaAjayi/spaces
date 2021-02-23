@@ -11,19 +11,19 @@
             mode="out-in"
             enter-active-class="animate__animated animate__fadeIn"
           >
-            <div class="hero-page__carousel" v-if="isMobile && headerAnimationDone">
+            <div class="hero-page__carousel" v-if="IsPhone && headerAnimationDone">
               <agile 
               :autoplay="true"
               :speed="1000"
               >
                 <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Merchant in Shop" />
+                  <img src="@/assets/images/homepage/cobbler.jpg" alt="Cobbler" />
+                </div>
+                <div class="hero-page__carousel__image">
+                  <img src="@/assets/images/homepage/merchant-with-app.jpeg" alt="Merchant with app" />
                 </div>
                 <div class="hero-page__carousel__image">
                   <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
-                </div>
-                <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/marketplace.jpg" alt="Marketplace" />
                 </div>
               </agile>
             </div>
@@ -41,12 +41,10 @@
                     :options="options"
                     @ready="onReady"
                   />
-                retailers have put their trust in Spaces to digitize and
-                grow their business. 
-                Track your sales, know your customers, and let
-                Spaces help you access 
-                finance, manage logistics, and reach a wider
-                market
+                  merchants have put their trust in Spaces to grow their business and increase their income.<br>
+                  <br>
+                  Spaces helps you track your sales, provide insights on your customers, and manage logistics all
+                  while providing access to finance a broader market for your products.
               </p>
             </transition>
         </div>
@@ -66,19 +64,19 @@
         mode="out-in"
         enter-active-class="animate__animated animate__fadeIn"
         >
-          <div class="hero-page__carousel" v-if="!isMobile && headerAnimationDone">
+          <div class="hero-page__carousel" v-if="!IsPhone && headerAnimationDone">
             <agile 
             :autoplay="true"
             :speed="1000"
             >
               <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Merchant in Shop" />
+                <img src="@/assets/images/homepage/cobbler.jpg" alt="cobbler" />
+              </div>
+              <div class="hero-page__carousel__image">
+                  <img src="@/assets/images/homepage/merchant-with-app.jpeg" alt="Merchant with spaces app" />
               </div>
               <div class="hero-page__carousel__image">
                 <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
-              </div>
-              <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/marketplace.jpg" alt="Marketplace" />
               </div>
             </agile>
           </div>
@@ -90,7 +88,7 @@
 
 <script>
 import ICountUp from 'vue-countup-v2';
-import IsMobile from "@/mixins/IsMobile";
+import IsPhone from "@/mixins/IsPhone";
 import { VueAgile } from 'vue-agile'
 import 'animate.css';
 
@@ -101,7 +99,7 @@ export default {
     agile: VueAgile,
     ICountUp,
   },
-  mixins: [IsMobile],
+  mixins: [IsPhone],
   data() {
     return {
       dataText: 'Empowering small merchants to grow big profits.',
@@ -204,7 +202,7 @@ export default {
 	align-items: center;
 	color: #fff;
 	display: flex;
-	height: 300px;
+	height: 30rem;
 	justify-content: center;
 }
 
@@ -229,9 +227,9 @@ export default {
 
 <style scoped>
 .hero-page__carousel__image {
-  height: 40rem;
+  max-height: 40rem;
 	object-fit: cover;
-  width: 60rem;
+  max-width: 60rem;
 }
 .hero-page__brief {
   color: var(--primaryTwo);
@@ -259,9 +257,6 @@ export default {
   color: black;
   margin-bottom: 6rem;
 }
-.hero-page__carousel {
-  max-width: 300px;
-}  
 .hero-page__carousel-parent {
   position: relative;
 }
@@ -279,6 +274,7 @@ export default {
 }
 .hero-page__carousel__image img {
   z-index: 5;
+  height: 40rem;
 }
 .button-block {
   margin-top: 2rem;
@@ -288,9 +284,12 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 9rem;
     min-height: 50rem;
     padding-bottom: 5rem;
+  }
+  .hero-page__carousel-parent {
+    width: 50%;
   }
   .hero-page__brief {
     padding: 1rem 0 1rem;
@@ -302,8 +301,10 @@ export default {
   .hero-page__carousel::before {
     display: block;
     content: "";
-    width: 610px;
-    height: 410px;
+    width: 102%;
+    max-width: 61rem;
+    max-height: 41rem;
+    height: 100%;
     border: 4px solid var(--typeOne);
     position: absolute;
     top: -5px;
@@ -313,19 +314,17 @@ export default {
   }
   .hero-page__textbox {
     color: black;
-    max-width: 50rem;
+    max-width: 40%;
     margin-bottom: 4rem;
   }
   .hero-page__textbox h2 {
     min-height: 6.4rem;
-    /* margin-top: 20rem; */
-    /* margin: 0; */
   }
   .hero-page__carousel {
-    max-width: 600px;
+    width: 100%;
+    max-width: 60rem;
     margin: 0;
     min-height: 45rem;
-    float: right;
   }
   h2 span {
     border-right: 0.05em solid;
@@ -348,10 +347,12 @@ export default {
   .hero-page__carousel__image {
     height: auto;
     object-fit: cover;
-    width: 30rem;
   }
   .hero-page__carousel__image img {
     height: 20rem;
   }
+  .hero-page__carousel {
+    max-width: 30rem;
+  }  
 }
 </style>

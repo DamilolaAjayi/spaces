@@ -1,7 +1,7 @@
 <template>
   <section id="people" class="team section-container">
     <header class="people">
-      <h3 class="team__header">Executive team</h3>
+      <h3 class="team__header">Team</h3>
       <img src="@/assets/Underline-5-Blue.png" alt="" class="header__underline">
     </header>
     <div class="team-container">
@@ -20,7 +20,7 @@
               </a>
             </span>
           </h4>
-          <p class="team-member-card__role">CEO</p>
+          <p class="team-member-card__role">Co-Founder &amp; CEO</p>
         </div>
       </div>
       <div class="team-member">
@@ -51,7 +51,7 @@
           <h4 class="team-member-card__header">
             Abimbola Dasilva
             <span>
-              <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
+              <a target="_blank" href="https://www.linkedin.com/in/da-silva-abimbola-566a525b/">
                 <img src="@/assets/linkedin-logo.png" alt="" />
               </a>
             </span>
@@ -78,7 +78,7 @@
         </div>
       </div>
     </div>
-    <div class="team-container team-container-2">
+    <div class="team-container">
       <div class="team-member">
         <img
           class="team-member__image"
@@ -89,7 +89,7 @@
           <h4 class="team-member-card__header">
             Afolashakin Ajayi
             <span>
-              <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
+              <a target="_blank" href="https://www.linkedin.com/in/afolashakinajayi/">
                 <img src="@/assets/linkedin-logo.png" alt="" />
               </a>
             </span>
@@ -97,7 +97,7 @@
           <p class="team-member-card__role">Head of Products</p>
         </div>
       </div>
-      <div class="team-member head-marketing">
+      <div class="team-member">
         <img
           class="team-member__image"
           src="@/assets/images/people/edidiong-uwemakpan.jpeg"
@@ -109,7 +109,7 @@
             Edidiong Uwemakpan
           </span>
             <span>
-              <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
+              <a target="_blank" href="https://www.linkedin.com/in/didiuwem/">
                 <img src="@/assets/linkedin-logo.png" alt="" />
               </a>
             </span>
@@ -133,6 +133,24 @@
             </span>
           </h4>
           <p class="team-member-card__role">CCO</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img
+          class="team-member__image"
+          src="@/assets/images/people/ademola-adesina.jpg"
+          alt="Ademola Adesina Spaces CCO"
+        />
+        <div class="team-member-card">
+          <h4 class="team-member-card__header">
+            Ademola Adesina
+            <span>
+              <a target="_blank" href="https://www.linkedin.com/in/aadesina/">
+                <img src="@/assets/linkedin-logo.png" alt="" />
+              </a>
+            </span>
+          </h4>
+          <p class="team-member-card__role">Co-Founder &amp; President</p>
         </div>
       </div>
     </div>
@@ -160,18 +178,6 @@ export default {
   width: 20rem;
   margin: 0 auto 3rem;
 }
-.team-member:nth-child(1) .team-member__image {
-  animation-delay: 5ms;
-}
-.team-member:nth-child(2) .team-member__image {
-  animation-delay: 1000ms;
-}
-.team-member:nth-child(3) .team-member__image {
-  animation-delay: 5ms;
-}
-.team-member:nth-child(4) .team-member__image {
-  animation-delay: 1000ms;
-}
   .team-member-card span {
     margin-right: -8px;
     width: 35px;
@@ -183,15 +189,11 @@ export default {
     height: 200px;
     width: 200px;
     box-shadow: 1px 1px 6px rgb(8 158 255 / 15%);
-    animation: float 1.5s;
     position: relative;
-    animation-delay: 5ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
   }
   .header__underline {
       height: 2.5rem;
-      width: 20rem;
+      width: 10rem;
       margin-top: -8px;
   }
   .people {
@@ -208,24 +210,10 @@ export default {
   .team-member-card__role {
     margin-top: 0.2rem;
   }
-  @keyframes float {
-    0% {
-      top: 0px;
-    }
-    50% {
-      top: 5px;
-    }
-    100% {
-      top: 0px;
-    }
-  }
 @media screen and (min-width: 768px) {
   .team {
     padding-top: 5rem;
     padding-bottom: 5rem;
-  }
-  .head-marketing {
-    width: 25rem;
   }
   .team-container {
     display: flex;
@@ -239,10 +227,6 @@ export default {
   .team-member__image {
     border-radius: 20px;
     margin-bottom: 2rem;
-  }
-  .team-container-2 {
-    max-width: 80%;
-    margin: 0 auto;
   }
   .team-member-card__role {
     font-size: 1.4rem;

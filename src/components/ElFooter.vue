@@ -15,7 +15,7 @@
       </section>
     </div>
     <div class="footer__newsletter">
-      <h4>TradeSpaces</h4>
+      <h4>Spaces</h4>
       <p>Sign up to our newsletter to learn about trade in Africa.</p>
       <mailchimp-subscribe
         url="#"
@@ -43,8 +43,7 @@
       <a href="tel:+234-901-474-5515" class="footer-contact__mobile">+234 901 474 5515</a>
       <a class="app-link">
         <span>Download App</span>
-        <i class="fas fa-external-link-square-alt"></i>
-      </a>
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-square-alt" class="svg-inline--fa fa-external-link-square-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>      </a>
     </div>
   </footer>
 </template>
@@ -161,19 +160,25 @@ h2 {
 a {
   font-size: 1.8rem;
 }
-.app-link .fas {
+.app-link {
+  display: flex;
+  align-items: center;
+}
+.app-link svg {
     padding-left: 0.5rem;
+    width: 15.75px;
+    height: 18px;
+    box-sizing: content-box;
 }
 @media screen and (max-width: 767px) {
   .footer {
     flex-direction: column;
-    padding-bottom: 4rem;
   }
   .footer__press, .footer__newsletter, .footer__contact {
     max-width: 30rem;
     margin-left: 0;
     width: auto;
-    margin-top: 1.2rem;
+    margin: 1.2rem 0;
   }
   .footer-press__spaces-logo {
     width: 14rem;
@@ -181,6 +186,10 @@ a {
   a {
     font-size: 1.5rem;
     font-weight: 400;
+  }
+  .app-link svg {
+      width: 12.75px;
+      height: 1.5rem;
   }
 }
 </style>
