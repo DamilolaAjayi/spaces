@@ -17,7 +17,7 @@
               :speed="1000"
               >
                 <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/merchant-with-app.jpeg" alt="Merchant with app" />
+                  <img src="@/assets/images/homepage/merchant-with-app-min.jpeg" alt="Merchant with app" />
                 </div>
                 <div class="hero-page__carousel__image">
                   <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Pepper Merchant" />
@@ -70,7 +70,7 @@
             :speed="1000"
             >
               <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/merchant-with-app.jpeg" alt="Merchant with spaces app" />
+                <img src="@/assets/images/homepage/merchant-with-app-min.jpeg" alt="Merchant with spaces app" />
               </div>
               <div class="hero-page__carousel__image">
                 <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Pepper Merchant" />
