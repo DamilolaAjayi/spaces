@@ -32,7 +32,8 @@
             <transition
             mode="out-in"
             enter-active-class="animate__animated animate__fadeInLeft">
-              <p class="hero-page__brief" v-if="headerAnimationDone">
+            <div class="hero-page__brief" v-if="headerAnimationDone">
+              <p class="hero-page-brief__text">
                 Over
                   <ICountUp
                     :delay="delay"
@@ -41,11 +42,13 @@
                     :options="options"
                     @ready="onReady"
                   />
-                  merchants have put their trust in Spaces to grow their business and increase their income.<br>
-                  <br>
-                  Spaces helps you track your sales, provide insights on your customers, and manage logistics all
-                  while providing access to finance a broader market for your products.
+                  merchants have put their trust in Spaces to grow their business and increase their income.                
               </p>
+              <p class="hero-page-brief__text">
+                Spaces helps you track your sales, provide insights on your customers, and manage logistics all
+                while providing access to finance a broader market for your products.
+              </p>
+            </div>
             </transition>
         </div>
         <transition
@@ -234,15 +237,19 @@ export default {
 .hero-page__brief {
   color: var(--primaryTwo);
   padding: 3rem 0;
-  margin: 0;
-  line-height: 1.2;
+}
+.hero-page-brief__text {
   font-size: 1.6rem;
   font-weight: 500;
+  line-height: 1.2;
+}
+.hero-page-brief__text:first-child {
+  margin-bottom: 1rem;
 }
 .s-button {
   line-height: 1.7;
 }
-.hero-page__brief span {
+.hero-page-brief__text span {
   min-width: 6rem;
   display: inline-block;
 }
@@ -293,7 +300,6 @@ export default {
   }
   .hero-page__brief {
     padding: 1rem 0 1rem;
-    font-size: 1.6rem;
     background: var(--neutralTwo);
     box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
     border-radius: 10px;
