@@ -25,12 +25,12 @@
         <div class="group">
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="@/assets/images/streamlined-logistics-1.svg" alt="" />
+                <img src="@/assets/images/automatic-savings-grey.svg" alt="" />
               </div>
             </div>
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="@/assets/images/automatic-savings-1.svg" alt="" />
+                <img src="@/assets/images/automatic-savings-white.svg" alt="" />
               </div>
             </div>
         </div>
@@ -53,12 +53,12 @@
             </div>
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="@/assets/images/streamlined-logistics-1.svg" alt="" />
+                <img src="@/assets/images/automatic-savings-grey.svg" alt="" />
               </div>
             </div>
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="@/assets/images/automatic-savings-1.svg" alt="" />
+                <img src="@/assets/images/automatic-savings-white.svg" alt="" />
               </div>
             </div>
         </agile>
