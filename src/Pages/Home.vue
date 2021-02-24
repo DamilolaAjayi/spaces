@@ -17,13 +17,13 @@
               :speed="1000"
               >
                 <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/cobbler.jpg" alt="Cobbler" />
-                </div>
-                <div class="hero-page__carousel__image">
                   <img src="@/assets/images/homepage/merchant-with-app.jpeg" alt="Merchant with app" />
                 </div>
                 <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
+                  <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Pepper Merchant" />
+                </div>
+                <div class="hero-page__carousel__image">
+                  <img src="@/assets/images/homepage/cobbler.jpg" alt="Cobbler" />
                 </div>
               </agile>
             </div>
@@ -70,13 +70,13 @@
             :speed="1000"
             >
               <div class="hero-page__carousel__image">
+                <img src="@/assets/images/homepage/merchant-with-app.jpeg" alt="Merchant with spaces app" />
+              </div>
+              <div class="hero-page__carousel__image">
+                <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Pepper Merchant" />
+              </div>
+              <div class="hero-page__carousel__image">
                 <img src="@/assets/images/homepage/cobbler.jpg" alt="cobbler" />
-              </div>
-              <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/merchant-with-app.jpeg" alt="Merchant with spaces app" />
-              </div>
-              <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/pepper-merchant.jpg" alt="Pepper Merchant" />
               </div>
             </agile>
           </div>
