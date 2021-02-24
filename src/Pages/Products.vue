@@ -9,7 +9,7 @@
             <div class="products-item">
               <img src="@/assets/images/product-icons/myshop.svg" alt="MyShop Icon" class="products-item__image" />
               <figcaption>Myshop</figcaption>
-              <p>Store management software for micro and small enterprises to track daily business transactions – sales, debts, inventory; helping them grow their profits faster</p>
+              <p>Store management software for you to track daily business transactions - sales, debts, inventory and analytics; helping you grow your profits faster</p>
             </div>
             <div class="products-item">
               <img src="@/assets/images/product-icons/merchbuy.svg" alt="MerchBuy Icon" class="products-item__image" />
@@ -19,17 +19,17 @@
             <div class="products-item">
               <img src="@/assets/images/product-icons/merchlist.svg" alt="Merchlist Icon" class="products-item__image" />
               <figcaption>Merchlist</figcaption>
-              <p>Automates online listings of merchant’s inventory via a consumer-facing website, growing demand and revenue for them</p>
+              <p>Automates online listings of merchant inventory via a consumer-facing website, helping you grow demand and revenue</p>
             </div>
             <div class="products-item">
               <img src="@/assets/images/product-icons/agency-banking.svg" alt="Agency Banking Icon" class="products-item__image" />
               <figcaption>Agency Banking</figcaption>
-              <p>Enabling agents earn money by offering financial services in their communities </p>
+              <p>Enabling merchants and agents to earn money by offering financial services within their community</p>
             </div>
             <div class="products-item">
               <img src="@/assets/images/product-icons/warenext.svg" alt="Warenext Icon" class="products-item__image" />
               <figcaption>Warenext</figcaption>
-              <p>Logistics marketplace that allows users see and understand the cost of moving goods from one location and so conduct logistics part of their business easily</p>
+              <p>Logistics marketplace that allows users transparency into the costs and procurement of warehousing, transportation, and fulfillment services for critical merchant inventory</p>
             </div>
         </section>
         <div class="button-block">

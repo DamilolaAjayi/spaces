@@ -46,7 +46,7 @@
               </p>
               <p class="hero-page-brief__text">
                 Spaces helps you track your sales, provide insights on your customers, and manage logistics all
-                while providing access to finance a broader market for your products.
+                while providing access to finance and a broader market for your products.
               </p>
             </div>
             </transition>

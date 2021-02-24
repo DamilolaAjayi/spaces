@@ -44,9 +44,9 @@
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/merchants.svg" alt="">
           <p>
-              <strong>100,000</strong> active merchants
-              <strong>10,000</strong> agents across Nigeria<br>
-              <strong>$1.5 billion</strong> in recorded sales
+              Over [<strong>100,000</strong>] active merchants<br>
+              Over [<strong>10,000</strong>] agents across Nigeria<br>
+              Over <strong>$1.5 billion</strong> in recorded sales
           </p>
       </div>
     </div>
@@ -122,7 +122,7 @@ export default {
 .company-portfolio__card {
   overflow: hidden;
   padding: 3rem 0 2rem;
-  width: 250px;
+  width: 25rem;
   margin: 0 auto;
   z-index: 9;
   background: var(--semanticOne);
@@ -159,6 +159,9 @@ p {
   }
   .company-about__header {
       margin-bottom: 2rem;
+  }
+  .company-portfolio__card:last-of-type {
+    width: 30rem;
   }
   .company-about__header img {
       height: 2.5rem;

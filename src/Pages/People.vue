@@ -38,7 +38,7 @@
               </a>
             </span>
           </h4>
-          <p class="team-member-card__role">COO</p>
+          <p class="team-member-card__role">Chief Operating Officer</p>
         </div>
       </div>
       <div class="team-member">
@@ -56,7 +56,7 @@
               </a>
             </span>
           </h4>
-          <p class="team-member-card__role">Head of BI & Customer Service</p>
+          <p class="team-member-card__role">Head of BI &amp; Customer Service</p>
         </div>
       </div>
       <div class="team-member">
@@ -74,7 +74,7 @@
               </a>
             </span>
           </h4>
-          <p class="team-member-card__role">CTO</p>
+          <p class="team-member-card__role">Chief Technical Officer</p>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@
               </a>
             </span>
           </h4>
-          <p class="team-member-card__role">Head of Products</p>
+          <p class="team-member-card__role">Head of Product</p>
         </div>
       </div>
       <div class="team-member">
@@ -132,7 +132,7 @@
               </a>
             </span>
           </h4>
-          <p class="team-member-card__role">CCO</p>
+          <p class="team-member-card__role">Chief Commercial Officer</p>
         </div>
       </div>
       <div class="team-member">
