@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" :class="{'modal-is-open' : openModal}">
     <div class="footer__press">
       <img src="@/assets/spaces-lg.png" alt="spaces logo" class="footer-press__spaces-logo">
       <section>
@@ -41,22 +41,49 @@
       <h4 class="footer-contact__header">Contact:</h4>
       <a target="_blank" :href="`mailto:info@spaces.io`" class="footer-contact__email">info@spaces.io</a>
       <a href="tel:+234-901-474-5515" class="footer-contact__mobile">+234 901 474 5515</a>
-      <a class="app-link">
-        <span>Download App</span>
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-square-alt" class="svg-inline--fa fa-external-link-square-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>      </a>
+      <div class="download-app">
+        <a class="app-link" @click="openDownloadAppModal">
+          <span>Download App</span>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-square-alt" class="svg-inline--fa fa-external-link-square-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>      
+        </a>
+      </div>    
     </div>
+    <el-dialog width="400px" :visible.sync="downloadSpacesAppVisible" :show-close="false" :append-to-body="true">
+      <download-spaces-app />
+    </el-dialog>
   </footer>
 </template>
 
 <script>
 import MailchimpSubscribe from 'vue-mailchimp-subscribe';
+import { Dialog } from 'element-ui';
+import DownloadSpacesApp from '../components/Global/DownloadSpacesApp';
+import 'element-ui/lib/theme-chalk/dialog.css';
 
 export default {
   name: 'el-footer',
+  props: {
+    openModal: Boolean,
+  },
   components: {
     MailchimpSubscribe,
+    ElDialog: Dialog,
+    DownloadSpacesApp,
+  },
+  data() {
+    return {
+      downloadSpacesAppVisible: false,
+    };
+  },
+  watch: {
+    downloadSpacesAppVisible(value) {
+      this.$emit('modal-is-open', value);
+    },
   },
   methods: {
+    openDownloadAppModal() {
+      this.downloadSpacesAppVisible = true;
+    },
     onError() {
 
     },
@@ -66,6 +93,18 @@ export default {
   }
 };
 </script>
+
+<style>
+.el-dialog {
+  border-radius: 6px;
+}
+.el-dialog__body {
+  padding: 0;
+}
+.el-dialog__header {
+  padding: 0;
+}
+</style>
 
 <style scoped>
 .footer-bg {
@@ -117,10 +156,8 @@ a:hover {
   margin-bottom: 1rem;
 }
 .footer__press {
-  text-align: left;
-}
-.footer__press {
   width: 30%;
+  text-align: left;
 }
 .footer__media {
   display: flex;
@@ -153,6 +190,9 @@ a:hover {
 }
 h2, h3, h4, p, a {
   color: var(--semanticOne);
+}
+.download-app {
+  margin-top: 3rem;
 }
 h2 {
   margin-bottom: 2rem;

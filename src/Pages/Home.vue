@@ -1,6 +1,6 @@
 <template>
   <main id="home">
-    <div class="hero-page section-container">
+    <div class="hero-page section-container" :class="{'modal-is-open' : openModal}">
       <div class="hero-page__textbox">
         <div>
           <h2>
@@ -17,13 +17,13 @@
               :speed="1000"
               >
                 <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/merchant-with-app-min.jpeg" alt="Merchant with app" />
+                  <img src="@/assets/images/homepage/merchant-with-app-min.png" alt="Merchant with app" />
                 </div>
                 <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Pepper Merchant" />
+                  <img src="@/assets/images/homepage/merchant-in-shop.png" alt="Pepper Merchant" />
                 </div>
                 <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/cobbler.jpg" alt="Cobbler" />
+                  <img src="@/assets/images/homepage/cobbler.png" alt="Cobbler" />
                 </div>
               </agile>
             </div>
@@ -56,7 +56,7 @@
             enter-active-class="animate__animated animate__fadeInLeftBig"
         >
         <p v-show="headerAnimationDone" class="button-block">
-          <a class="s-button" target="_blank" href="http://onelink.to/qahauh">
+          <a class="s-button" target="_blank" @click="openDownloadAppModal">
           Download App
           </a>
         </p>
@@ -73,34 +73,44 @@
             :speed="1000"
             >
               <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/merchant-with-app-min.jpeg" alt="Merchant with spaces app" />
+                <img src="@/assets/images/homepage/merchant-with-app-min.png" alt="Merchant with spaces app" />
               </div>
               <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/merchant-in-shop.jpg" alt="Pepper Merchant" />
+                <img src="@/assets/images/homepage/merchant-in-shop.png" alt="Pepper Merchant" />
               </div>
               <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/cobbler.jpg" alt="cobbler" />
+                <img src="@/assets/images/homepage/cobbler.png" alt="cobbler" />
               </div>
             </agile>
           </div>
         </transition>
       </div>
     </div>
+    <el-dialog width="400px" :visible.sync="downloadSpacesAppVisible" :show-close="false" :modal-append-to-body="true">
+      <download-spaces-app />
+    </el-dialog>
   </main>
 </template>
 
 <script>
 import ICountUp from 'vue-countup-v2';
 import IsPhone from "@/mixins/IsPhone";
-import { VueAgile } from 'vue-agile'
+import { VueAgile } from 'vue-agile';
 import 'animate.css';
-
+import { Dialog } from 'element-ui';
+import DownloadSpacesApp from '../components/Global/DownloadSpacesApp';
+import 'element-ui/lib/theme-chalk/dialog.css';
 
 export default {
   name: 'Home',
+  props: {
+    openModal: Boolean,
+  },
   components: {
     agile: VueAgile,
     ICountUp,
+    ElDialog: Dialog,
+    DownloadSpacesApp,
   },
   mixins: [IsPhone],
   data() {
@@ -117,13 +127,22 @@ export default {
         decimal: '.',
         prefix: '',
         suffix: '',
-      }
+      },
+      downloadSpacesAppVisible: false,
     };
+  },
+  watch: {
+    downloadSpacesAppVisible(value) {
+      this.$emit('modal-is-open', value);
+    },
   },
   beforeMount() {
     window.addEventListener("DOMContentLoaded", this.domLoaded);
   },
   methods: {
+    openDownloadAppModal() {
+      this.downloadSpacesAppVisible = true;
+    },
     onReady: function(instance) {
       const that = this;
       instance.update(that.endVal + 0);
@@ -225,10 +244,23 @@ export default {
   padding: 0;
   white-space: nowrap;
 }
-
+.el-dialog {
+  border-radius: 6px;
+}
+.el-dialog__body {
+  padding: 0;
+}
+.el-dialog__header {
+  padding: 0;
+}
 </style>
 
 <style scoped>
+.modal-is-open {
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+  opacity: 1;
+}
 .hero-page__carousel__image {
   max-height: 40rem;
 	object-fit: cover;

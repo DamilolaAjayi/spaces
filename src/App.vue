@@ -2,12 +2,12 @@
   <div id="app" class="app">
     <navigation />
     <div class="container">
-      <home />
-      <products />
-      <why-spaces />
-      <people />
-      <partner />
-      <el-footer />
+      <home :openModal="openModal" @modal-is-open="modalIsOpen" />
+      <products :openModal="openModal" @modal-is-open="modalIsOpen" />
+      <why-spaces :openModal="openModal" @modal-is-open="modalIsOpen" />
+      <people :openModal="openModal" @modal-is-open="modalIsOpen" />
+      <partner :openModal="openModal" @modal-is-open="modalIsOpen" />
+      <el-footer :openModal="openModal" @modal-is-open="modalIsOpen" />
     </div>
   </div>
 </template>
@@ -35,7 +35,17 @@ export default {
     People,
     Partner,
     ElFooter,
-  }
+  },
+  data() {
+    return {
+      openModal: false,
+    };
+  },
+  methods: {
+    modalIsOpen(value) {
+      this.openModal = value;
+    },
+  },
 };
 </script>
 
@@ -44,6 +54,14 @@ export default {
 <style src="./assets/css/main.css"></style>
 
 <style>
+.modal-is-open {
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+  opacity: 1;
+}
+.el-dialog {
+  max-width: 90%;
+}
 @media screen and (min-width: 768px) {
   .container {
     max-width: 144rem;

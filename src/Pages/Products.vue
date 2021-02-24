@@ -1,77 +1,80 @@
 <template>
-  <main id="products">
+  <main id="products" :class="{'modal-is-open' : openModal}">
     <div class="products-section section-container">
       <div class="products-section__textbox">
         <h3>
           All the products in one easy to use App!
         </h3>
         <section class="products-grid">
-          <transition
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeIn"
-          >
             <div class="products-item">
               <img src="@/assets/images/product-icons/myshop.svg" alt="MyShop Icon" class="products-item__image" />
               <figcaption>Myshop</figcaption>
               <p>Store management software for micro and small enterprises to track daily business transactions – sales, debts, inventory; helping them grow their profits faster</p>
             </div>
-          </transition>
-          <transition
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeIn"
-          >
             <div class="products-item">
               <img src="@/assets/images/product-icons/merchbuy.svg" alt="MerchBuy Icon" class="products-item__image" />
               <figcaption>Merchbuy</figcaption>
               <p>B2B trade platform connecting manufacturers, distributors, retailers, and wholesalers while offering secure payments and hassle-free logistics</p>
             </div>
-          </transition>
-          <transition
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeIn"
-          >
             <div class="products-item">
               <img src="@/assets/images/product-icons/merchlist.svg" alt="Merchlist Icon" class="products-item__image" />
               <figcaption>Merchlist</figcaption>
               <p>Automates online listings of merchant’s inventory via a consumer-facing website, growing demand and revenue for them</p>
             </div>
-          </transition>
-          <transition
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeIn"
-          >
             <div class="products-item">
               <img src="@/assets/images/product-icons/agency-banking.svg" alt="Agency Banking Icon" class="products-item__image" />
               <figcaption>Agency Banking</figcaption>
               <p>Enabling agents earn money by offering financial services in their communities </p>
             </div>
-          </transition>
-          <transition
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeIn"
-          >
             <div class="products-item">
               <img src="@/assets/images/product-icons/warenext.svg" alt="Warenext Icon" class="products-item__image" />
               <figcaption>Warenext</figcaption>
               <p>Logistics marketplace that allows users see and understand the cost of moving goods from one location and so conduct logistics part of their business easily</p>
             </div>
-          </transition>
         </section>
         <div class="button-block">
-          <a class="s-button" target="_blank" href="http://onelink.to/qahauh">
+          <a class="s-button" @click="openDownloadAppModal">
           Download App
           </a>
         </div>
       </div>
     </div>
+    <el-dialog width="400px" :visible.sync="downloadSpacesAppVisible" :show-close="false" :append-to-body="true">
+      <download-spaces-app />
+    </el-dialog>
   </main>
 </template>
 
 <script>
 import 'animate.css';
+import { Dialog } from 'element-ui';
+import DownloadSpacesApp from '../components/Global/DownloadSpacesApp';
+import 'element-ui/lib/theme-chalk/dialog.css';
 
 export default {
   name: 'products',
+  props: {
+    openModal: Boolean,
+  },
+  components: {
+    ElDialog: Dialog,
+    DownloadSpacesApp,
+  },
+  data() {
+    return {
+      downloadSpacesAppVisible: false,
+    };
+  },
+  watch: {
+    downloadSpacesAppVisible(value) {
+      this.$emit('modal-is-open', value);
+    },
+  },
+  methods: {
+    openDownloadAppModal() {
+      this.downloadSpacesAppVisible = true;
+    },
+  }
 };
 </script>
 

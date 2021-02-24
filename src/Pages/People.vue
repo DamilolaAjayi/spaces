@@ -1,5 +1,5 @@
 <template>
-  <section id="people" class="team section-container">
+  <section id="people" class="team section-container" :class="{'modal-is-open' : openModal}">
     <header class="people">
       <h3 class="team__header">Team</h3>
       <img src="@/assets/Underline-5-Blue.png" alt="" class="header__underline">
@@ -120,7 +120,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/omokhafe-dirisu.jpeg"
+          src="@/assets/images/people/omokhafe-dirisuu.jpeg"
           alt="Omokhafe Dirisu Spaces CCO"
         />
         <div class="team-member-card">
@@ -160,6 +160,9 @@
 <script>
 export default {
   name: 'people',
+  props: {
+    openModal: Boolean,
+  },
 };
 </script>
 

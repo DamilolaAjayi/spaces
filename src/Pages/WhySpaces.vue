@@ -1,5 +1,5 @@
 <template>
-  <main id="purpose">
+  <main id="purpose" :class="{'modal-is-open' : openModal}">
     <div class="company section-container">
       <header class="purpose__header">
         <h3>Why Use Spaces</h3>
@@ -62,26 +62,6 @@
               </div>
             </div>
         </agile>
-        <!-- <div class="company-purpose__block">
-          <div class="company-purpose-block__image">
-            <img src="@/assets/images/increase-demand-1.svg" alt="" />
-          </div>
-        </div>
-        <div class="company-purpose__block">
-          <div class="company-purpose-block__image">
-            <img src="@/assets/images/improvecash-flows-1.svg" alt="" />
-          </div>
-        </div>
-        <div class="company-purpose__block">
-          <div class="company-purpose-block__image">
-            <img src="@/assets/images/streamlined-logistics-1.svg" alt="" />
-          </div>
-        </div>
-        <div class="company-purpose__block">
-          <div class="company-purpose-block__image">
-            <img src="@/assets/images/automatic-savings-1.svg" alt="" />
-          </div>
-        </div> -->
       </div>
     </div>
   </main>
@@ -92,7 +72,10 @@ import IsMobile from "@/mixins/IsMobile";
 import { VueAgile } from 'vue-agile'
 
 export default {
-  name: "why-spaces",
+  name: 'why-spaces',
+  props: {
+    openModal: Boolean,
+  },
   components: {
     agile: VueAgile,
   },

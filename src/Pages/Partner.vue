@@ -1,5 +1,5 @@
 <template>
-  <section class="company-about__section section-container" id="partner">
+  <section class="company-about__section section-container" id="partner" :class="{'modal-is-open' : openModal}">
       <header class="company-about__header">
         <h3>Why partner with us</h3>
         <img src="@/assets/Underline-5-Blue.png" alt="">
@@ -58,6 +58,9 @@ import ICountUp from 'vue-countup-v2';
 export default {
   components: {
     ICountUp,
+  },
+  props: {
+    openModal: Boolean,
   },
   data() {
     return {
