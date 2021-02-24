@@ -15,7 +15,7 @@
       </section>
     </div>
     <div class="footer__newsletter">
-      <h4>Spaces</h4>
+      <h4>Newsletter</h4>
       <p>Sign up to our newsletter to learn about trade in Africa.</p>
       <mailchimp-subscribe
         url="#"
