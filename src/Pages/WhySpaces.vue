@@ -2,7 +2,7 @@
   <main id="purpose" :class="{'modal-is-open' : openModal}">
     <div class="company section-container">
       <header class="purpose__header">
-        <h3>Why Use Spaces</h3>
+        <h3>Why Use Spaces?</h3>
         <img class="purpose__header-image" src="@/assets/Underline-5-Blue.png" alt="">
       </header>
       <div class="company-purpose" v-if="!isMobile">
@@ -97,8 +97,9 @@ export default {
         min-height: auto;
     }
     .purpose__header-image {
-        height: 30px;
-        margin-top: -8px;
+      height: 2.5rem;
+      width: 20rem;
+      margin-top: -8px;
     }
     .company-purpose__block {
       display: flex;
@@ -127,8 +128,7 @@ export default {
   max-width: 100%;
 }
 .purpose__header-image {
-    height: 2.5rem;
-    width: 20rem;
+    width: 25rem;
 }
 .company-purpose {
   margin: 0 auto;
@@ -187,11 +187,6 @@ export default {
   .company-purpose__textbox h3 {
     padding-bottom: 0.5rem;
     border-bottom: 0.5px solid var(--typeOne);
-  }
-  .purpose__header-image {
-      height: 2.5rem;
-      width: 20rem;
-      margin-top: -8px;
   }
 }
 </style>

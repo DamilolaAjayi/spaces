@@ -30,6 +30,10 @@ export default {
 .logo {
     padding-top: 2rem;
     text-align: center;
+    background: var(--neutralTwo);
+    min-height: 5.5rem;
+    border-bottom: 0.1px solid var(--semanticTwo);
+    border-radius: 6px 6px 0 0;
 }
 img {
     width: 15rem;

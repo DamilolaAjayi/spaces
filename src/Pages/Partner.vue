@@ -16,7 +16,7 @@
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/product.svg" alt="">
           <p>
-              You have a product or service you want to provide to 
+              Do you have a product or service you want to provide to 
           <strong>
             <ICountUp
               :delay="delay"
@@ -32,7 +32,7 @@
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/performance.svg" alt="">
           <p>
-              You want to track performance and preferences for your product or service?
+              Do you want to track performance and preferences for your product or service?
           </p>
       </div>
       <div class="company-portfolio__card">
