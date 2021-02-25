@@ -34,7 +34,6 @@
             enter-active-class="animate__animated animate__fadeInLeft">
             <div class="hero-page__brief" v-if="headerAnimationDone">
               <p class="hero-page-brief__text">
-                Over
                   <ICountUp
                     :delay="delay"
                     :endVal="endVal"
@@ -118,7 +117,7 @@ export default {
       dataText: 'Empowering small merchants to grow big profits.',
       headerAnimationDone: false,
       delay: 1000,
-      endVal: 100000,
+      endVal: 109733,
       runanimation: false,
       options: {
         useEasing: true,
@@ -319,7 +318,7 @@ export default {
     width: 50%;
   }
   .hero-page__brief {
-    padding: 1rem 0 1rem;
+    padding: 1rem;
     background: var(--neutralTwo);
     box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
     border-radius: 10px;
