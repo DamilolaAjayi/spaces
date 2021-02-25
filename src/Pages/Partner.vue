@@ -1,7 +1,7 @@
 <template>
   <section class="company-about__section section-container" id="partner" :class="{'modal-is-open' : openModal}">
       <header class="company-about__header">
-        <h3>Why partner with us</h3>
+        <h3>Why partner with us?</h3>
         <img src="@/assets/Underline-5-Blue.png" alt="">
         <transition
           mode="in-out"
@@ -16,7 +16,7 @@
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/product.svg" alt="">
           <p>
-              Do you have a product or service you want to provide to 
+              You have a product or service you want to provide to over 
           <strong>
             <ICountUp
               :delay="delay"
@@ -26,27 +26,19 @@
               @ready="onReady"
             />
           </strong>
-          merchants?
+          merchants.
           </p>
       </div>
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/performance.svg" alt="">
           <p>
-              Do you want to track performance and preferences for your product or service?
+              You want to track performance and preferences for your product or service.
           </p>
       </div>
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/distribution.svg" alt="">
           <p>
-              Largest informal distribution channel in Africa. 
-          </p>
-      </div>
-      <div class="company-portfolio__card">
-          <img src="@/assets/images/partner/merchants.svg" alt="">
-          <p>
-              Over [<strong>100,000</strong>] active merchants<br>
-              Over [<strong>10,000</strong>] agents across Nigeria<br>
-              Over <strong>$1.5 billion</strong> in recorded sales
+              Largest informal distribution channel in Africa with over $1.5b in recorded sales and 10,000 agents across Nigeria.
           </p>
       </div>
     </div>
@@ -160,9 +152,6 @@ p {
   .company-about__header {
       margin-bottom: 2rem;
   }
-  .company-portfolio__card:last-of-type {
-    width: 30rem;
-  }
   .company-about__header img {
       height: 2.5rem;
       width: 32rem;
@@ -171,7 +160,8 @@ p {
   .company-portfolio {
     display: flex;
     justify-content: space-between;
-    margin-top: 6rem;
+    margin: 6rem auto 0;
+    max-width: 100rem;
   }
 }
 @media screen and (max-width: 767px) {

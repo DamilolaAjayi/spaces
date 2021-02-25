@@ -45,7 +45,7 @@
         <img
           class="team-member__image"
           src="@/assets/images/people/abimbola-dasilva.jpeg"
-          alt="Abimbola Dasilva Spaces Head of BI &amp; Customer Service"
+          alt="Abimbola Dasilva Spaces Head of Business Intelligence &amp; Customer Experience"
         />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
@@ -56,7 +56,7 @@
               </a>
             </span>
           </h4>
-          <p class="team-member-card__role">Head of BI &amp; Customer Service</p>
+          <p class="team-member-card__role">Head of Business Intelligence &amp; Customer Experience</p>
         </div>
       </div>
       <div class="team-member">
@@ -74,7 +74,7 @@
               </a>
             </span>
           </h4>
-          <p class="team-member-card__role">Chief Technical Officer</p>
+          <p class="team-member-card__role">Chief Technology Officer</p>
         </div>
       </div>
     </div>
@@ -256,6 +256,8 @@ export default {
   }
   .team-member-card__role {
     width: max-content;
+    max-width: 20rem;
+    text-align: left;
   }
 }
 </style>
