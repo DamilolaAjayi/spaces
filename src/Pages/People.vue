@@ -2,13 +2,13 @@
   <section id="people" class="team section-container" :class="{'modal-is-open' : openModal}">
     <header class="people">
       <h3 class="team__header">Team</h3>
-      <img src="@/assets/Underline-5-Blue.png" alt="" class="header__underline">
+      <img src="https://ik.imagekit.io/7dkc9ii1v1r/Underline-5-Blue_FOHOHoKip.png" alt="" class="header__underline">
     </header>
     <div class="team-container">
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/anu-adasolum.jpeg"
+          src="https://ik.imagekit.io/7dkc9ii1v1r/anu-adasolum_tV2DpZcFw.jpeg"
           alt="Spaces CEO Anu Adasolum"
         />
         <div class="team-member-card">
@@ -16,7 +16,7 @@
             Anu Adasolum
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/anu-adasolum-46754a19/">
-                <img src="@/assets/linkedin-logo.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
               </a>
             </span>
           </h4>
@@ -26,7 +26,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/funto-faleye.jpg"
+          src="https://ik.imagekit.io/7dkc9ii1v1r/funto-faleye_XdlXInvgq.jpg"
           alt="Spaces COO Funto Faleye"
         />
         <div class="team-member-card">
@@ -34,7 +34,7 @@
             Funto Faleye
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/funto-faleye-b08a4059/">
-                <img src="@/assets/linkedin-logo.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
               </a>
             </span>
           </h4>
@@ -44,7 +44,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/abimbola-dasilva.jpg"
+          src="https://ik.imagekit.io/7dkc9ii1v1r/abimbola-dasilva_-7CtM5y8t.jpg"
           alt="Abimbola Dasilva Spaces Head of Business Intelligence &amp; Customer Experience"
         />
         <div class="team-member-card">
@@ -52,7 +52,7 @@
             Abimbola Dasilva
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/da-silva-abimbola-566a525b/">
-                <img src="@/assets/linkedin-logo.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
               </a>
             </span>
           </h4>
@@ -62,7 +62,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/adegbenga-adeye.jpg"
+          src="https://ik.imagekit.io/7dkc9ii1v1r/adegbenga-adeye_ZE5qJ5C44.jpg"
           alt="Adegbenga Adeye Spaces CTO"
         />
         <div class="team-member-card">
@@ -70,7 +70,7 @@
             Adegbenga Adeye
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
-                <img src="@/assets/linkedin-logo.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
               </a>
             </span>
           </h4>
@@ -82,7 +82,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/afolashakin-ajayi.jpeg"
+          src="https://ik.imagekit.io/7dkc9ii1v1r/afolashakin-ajayi_DoeUY91k5pQ8.jpeg"
           alt="Afolashakin Ajayi Spaces Head of Product"
         />
         <div class="team-member-card">
@@ -90,7 +90,7 @@
             Afolashakin Ajayi
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/afolashakinajayi/">
-                <img src="@/assets/linkedin-logo.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
               </a>
             </span>
           </h4>
@@ -100,7 +100,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/edidiong-uwemakpan.jpeg"
+          src="https://ik.imagekit.io/7dkc9ii1v1r/edidiong-uwemakpan_o6t7EsyOU4fG.jpeg"
           alt="Edidiong Uwemakpan Spaces Head of Marketing"
         />
         <div class="team-member-card">
@@ -110,7 +110,7 @@
           </span>
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/didiuwem/">
-                <img src="@/assets/linkedin-logo.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
               </a>
             </span>
           </h4>
@@ -120,7 +120,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/omokhafe-dirisu.jpeg"
+          src="https://ik.imagekit.io/7dkc9ii1v1r/omokhafe-dirisu_ZY9dZnkmu.jpeg"
           alt="Omokhafe Dirisu Spaces CCO"
         />
         <div class="team-member-card">
@@ -128,7 +128,7 @@
             Omokhafe Dirisu
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/omokhafe-dirisu-25119747/">
-                <img src="@/assets/linkedin-logo.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
               </a>
             </span>
           </h4>
@@ -138,7 +138,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/ademola-adesina.jpg"
+          src="https://ik.imagekit.io/7dkc9ii1v1r/ademola-adesina_AoyRZGl_d.jpg"
           alt="Ademola Adesina Spaces CCO"
         />
         <div class="team-member-card">
@@ -146,7 +146,7 @@
             Ademola Adesina
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/aadesina/">
-                <img src="@/assets/linkedin-logo.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
               </a>
             </span>
           </h4>

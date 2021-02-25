@@ -20,17 +20,17 @@
               >
                 <agile :autoplay="true" :speed="1000">
                   <div class="hero-page__carousel__image">
-                    <!-- <img src="@/assets/images/homepage/merchant-with-app-min.jpeg" alt="Merchant with app" /> -->
+                    <img src="https://ik.imagekit.io/7dkc9ii1v1r/merchant-with-app-min_CQgc6qP_y.jpeg" alt="Merchant with app" />
                   </div>
                   <div class="hero-page__carousel__image">
                     <img
-                      src="@/assets/images/homepage/merchant-in-shop.png"
+                      src="https://ik.imagekit.io/7dkc9ii1v1r/merchant-in-shop_HJVCqqw_OZBR.png"
                       alt="Pepper Merchant"
                     />
                   </div>
                   <div class="hero-page__carousel__image">
                     <img
-                      src="@/assets/images/homepage/cobbler.png"
+                      src="https://ik.imagekit.io/7dkc9ii1v1r/cobbler_eLmkX2OPCv1I.png"
                       alt="Cobbler"
                     />
                   </div>
@@ -85,18 +85,18 @@
             <agile :autoplay="true" :speed="1000">
               <div class="hero-page__carousel__image">
                 <img
-                  src="@/assets/images/homepage/merchant-with-app-min.jpeg"
+                  src="https://ik.imagekit.io/7dkc9ii1v1r/merchant-with-app-min_CQgc6qP_y.jpeg"
                   alt="Merchant with spaces app"
                 />
               </div>
               <div class="hero-page__carousel__image">
                 <img
-                  src="@/assets/images/homepage/merchant-in-shop.png"
+                  src="https://ik.imagekit.io/7dkc9ii1v1r/merchant-in-shop_HJVCqqw_OZBR.png"
                   alt="Pepper Merchant"
                 />
               </div>
               <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/cobbler.png" alt="cobbler" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/cobbler_eLmkX2OPCv1I.png" alt="cobbler" />
               </div>
             </agile>
           </div>

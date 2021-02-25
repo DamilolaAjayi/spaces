@@ -2,7 +2,7 @@
   <section class="company-about__section section-container" id="partner" :class="{'modal-is-open' : openModal}">
       <header class="company-about__header">
         <h3>Why partner with us?</h3>
-        <img src="@/assets/Underline-5-Blue.png" alt="">
+        <img src="https://ik.imagekit.io/7dkc9ii1v1r/Underline-5-Blue_FOHOHoKip.png" alt="">
         <transition
           mode="in-out"
           enter-active-class="animate__animated animate__flipInX"

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="logo">
-          <img src="@/assets/spaces_logo-min.png" alt="Spaces Logo" />
+          <img src="https://ik.imagekit.io/7dkc9ii1v1r/spaces_logo-min_ktkdm48hD.png" alt="Spaces Logo" />
         </div>
         <div class="download-app-modal__header">
             <h3>

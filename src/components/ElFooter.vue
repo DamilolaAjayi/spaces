@@ -1,15 +1,15 @@
 <template>
   <footer class="footer" :class="{'modal-is-open' : openModal}">
     <div class="footer__press">
-      <img src="@/assets/spaces-lg.png" alt="spaces logo" class="footer-press__spaces-logo">
+      <img src="https://ik.imagekit.io/7dkc9ii1v1r/spaces-lg_ymK4OOPNuXj4.png" alt="spaces logo" class="footer-press__spaces-logo">
       <section>
         <h4>In the press</h4>
         <div class="footer__media">
           <a target="_blank" href="http://venturesafrica.com/rensource-launches-platform-to-connect-retailers-and-customers-amid-lockdown/">
-              <img src="@/assets/ventures_africa_logo-min.png" alt="Merchlist featured in Ventures Africa">
+              <img src="https://ik.imagekit.io/7dkc9ii1v1r/ventures_africa_logo-min_-0rBXx2htOR7.png" alt="Merchlist featured in Ventures Africa">
           </a>
           <a target="_blank" href="https://techcrunch.com/2019/12/17/nigerias-rensource-raises-20m-to-power-african-markets-by-solar/">
-              <img src="@/assets/tech_crunch_logo-min.png" alt="Rensource featured in Tech Crunch" class="tech-crunch">
+              <img src="https://ik.imagekit.io/7dkc9ii1v1r/tech_crunch_logo-min_bNxNkREG0.png" alt="Rensource featured in Tech Crunch" class="tech-crunch">
           </a>
         </div>
       </section>

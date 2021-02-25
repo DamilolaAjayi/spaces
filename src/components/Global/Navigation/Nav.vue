@@ -3,7 +3,7 @@
     <div class="nav-left">
       <div class="nav-logo">
         <a href="#home" v-smooth-scroll="{ duration: 1000, offset: -70 }">
-          <img src="@/assets/spaces_logo-min.png" alt="Spaces Logo" />
+          <img src="https://ik.imagekit.io/7dkc9ii1v1r/spaces_logo-min_ktkdm48hD.png" alt="Spaces Logo" />
         </a>
       </div>
     </div>
