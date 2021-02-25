@@ -256,11 +256,6 @@ export default {
 </style>
 
 <style scoped>
-.modal-is-open {
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
-  opacity: 1;
-}
 .hero-page__carousel__image {
   max-height: 40rem;
 	object-fit: cover;
@@ -299,21 +294,14 @@ export default {
 .hero-page__carousel-parent {
   position: relative;
 }
-.hero-page__carousel::before {
-  display: block;
-  content: "";
-  width: 306px;
-  height: 206px;
-  border: 2px solid var(--typeOne);
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  border-radius: 4px;
-  z-index: -1;
+.hero-page__carousel__image {
+  border-radius: 6px;
 }
 .hero-page__carousel__image img {
   z-index: 5;
   height: 40rem;
+  border-radius: 6px;
+  border: 1px solid rgb(0 0 0 / 8%);
 }
 .button-block {
   margin-top: 2rem;
@@ -335,20 +323,6 @@ export default {
     background: var(--neutralTwo);
     box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
     border-radius: 10px;
-  }
-  .hero-page__carousel::before {
-    display: block;
-    content: "";
-    width: 102%;
-    max-width: 61rem;
-    max-height: 41rem;
-    height: 100%;
-    border: 4px solid var(--typeOne);
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    border-radius: 4px;
-    z-index: -1;
   }
   .hero-page__textbox {
     color: black;
