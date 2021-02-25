@@ -83,7 +83,7 @@
         <img
           class="team-member__image"
           src="@/assets/images/people/afolashakin-ajayi.jpeg"
-          alt="Afolashakin Ajayi Spaces Head of Products"
+          alt="Afolashakin Ajayi Spaces Head of Product"
         />
         <div class="team-member-card">
           <h4 class="team-member-card__header">
@@ -120,7 +120,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/omokhafe-dirisuu.jpeg"
+          src="@/assets/images/people/omokhafe-dirisu.jpeg"
           alt="Omokhafe Dirisu Spaces CCO"
         />
         <div class="team-member-card">
