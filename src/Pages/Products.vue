@@ -24,7 +24,7 @@
             <div class="products-item">
               <img src="@/assets/images/product-icons/agency-banking.svg" alt="Agency Banking Icon" class="products-item__image" />
               <figcaption>Agency Banking</figcaption>
-              <p>Enabling merchants and agents to earn money by offering financial services within their community.</p>
+              <p>Enabling merchants and agents to earn money by offering financial services within their communities.</p>
             </div>
             <div class="products-item">
               <img src="@/assets/images/product-icons/warenext.svg" alt="Warenext Icon" class="products-item__image" />
