@@ -37,7 +37,7 @@
                   <ICountUp
                     :delay="delay"
                     :endVal="endVal"
-                    :duration="200"
+                    :duration="300"
                     :options="options"
                     @ready="onReady"
                   />

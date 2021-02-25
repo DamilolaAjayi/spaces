@@ -16,7 +16,7 @@
       <div class="company-portfolio__card">
           <img src="@/assets/images/partner/product.svg" alt="">
           <p>
-              You have a product or service you want to provide to over 
+              You have a product or service you want to provide to 
           <strong>
             <ICountUp
               :delay="delay"
@@ -57,7 +57,7 @@ export default {
   data() {
     return {
       delay: 1500,
-      endVal: 100000,
+      endVal: 109733,
       runanimation: false,
       instance: null,
       options: {
