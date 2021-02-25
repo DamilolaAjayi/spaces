@@ -21,7 +21,7 @@
             <ICountUp
               :delay="delay"
               :endVal="endVal"
-              :duration="300"
+              :duration="500"
               :options="options"
               @ready="onReady"
             />
@@ -59,7 +59,6 @@ export default {
       delay: 1500,
       endVal: 109733,
       runanimation: false,
-      instance: null,
       options: {
         useEasing: true,
         useGrouping: true,
@@ -70,18 +69,44 @@ export default {
       }
     };
   },
+  created() {
+    this.fetchMerchantsCount();
+  },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
+    fetchMerchantsCount() {
+      setTimeout(
+        fetch("https://test-api.superscore.me/dashboards/report/api", {
+          method: "POST",
+          headers: {
+            "Authorization": "cb8a9e5edea54789e18f1cb3f4fe840a07",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            report_id: "5f59ec218156b6210a8ce4eb",
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            this.endVal = data.data + 20000;
+          })
+          .catch((e) => {
+            this.endVal = 110000;
+            console.log(e);
+          }),
+        5000
+      );
+    },
     onReady(instance) {
       this.instance = instance;
       this.rerunCountUp(instance)
     },
     rerunCountUp(instance) {
-      instance.reset();
       instance.start();
       setTimeout(() => {
+        instance.reset();
         this.onReady(instance);
       }, 10000);
     },

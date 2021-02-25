@@ -1,81 +1,99 @@
 <template>
   <main id="home">
-    <div class="hero-page section-container" :class="{'modal-is-open' : openModal}">
+    <div
+      class="hero-page section-container"
+      :class="{ 'modal-is-open': openModal }"
+    >
       <div class="hero-page__textbox">
         <div>
           <h2>
-            Empowering small merchants to grow big profits. 
+            Empowering small merchants to grow big profits.
           </h2>
           <div class="hero-page__carousel-parent">
+            <transition
+              mode="out-in"
+              enter-active-class="animate__animated animate__fadeIn"
+            >
+              <div
+                class="hero-page__carousel"
+                v-if="IsPhone && headerAnimationDone"
+              >
+                <agile :autoplay="true" :speed="1000">
+                  <div class="hero-page__carousel__image">
+                    <!-- <img src="@/assets/images/homepage/merchant-with-app-min.jpeg" alt="Merchant with app" /> -->
+                  </div>
+                  <div class="hero-page__carousel__image">
+                    <img
+                      src="@/assets/images/homepage/merchant-in-shop.png"
+                      alt="Pepper Merchant"
+                    />
+                  </div>
+                  <div class="hero-page__carousel__image">
+                    <img
+                      src="@/assets/images/homepage/cobbler.png"
+                      alt="Cobbler"
+                    />
+                  </div>
+                </agile>
+              </div>
+            </transition>
+          </div>
           <transition
             mode="out-in"
-            enter-active-class="animate__animated animate__fadeIn"
+            enter-active-class="animate__animated animate__fadeInLeft"
           >
-            <div class="hero-page__carousel" v-if="IsPhone && headerAnimationDone">
-              <agile 
-              :autoplay="true"
-              :speed="1000"
-              >
-                <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/merchant-with-app-min.jpg" alt="Merchant with app" />
-                </div>
-                <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/merchant-in-shop.png" alt="Pepper Merchant" />
-                </div>
-                <div class="hero-page__carousel__image">
-                  <img src="@/assets/images/homepage/cobbler.png" alt="Cobbler" />
-                </div>
-              </agile>
-            </div>
-          </transition>
-          </div>
-            <transition
-            mode="out-in"
-            enter-active-class="animate__animated animate__fadeInLeft">
             <div class="hero-page__brief" v-if="headerAnimationDone">
               <p class="hero-page-brief__text">
-                  <ICountUp
-                    :delay="delay"
-                    :endVal="endVal"
-                    :duration="300"
-                    :options="options"
-                    @ready="onReady"
-                  />
-                  merchants have put their trust in Spaces to grow their business and increase their income.                
+                <ICountUp
+                  :delay="delay"
+                  :endVal="endVal"
+                  :duration="300"
+                  :options="options"
+                  @ready="onReady"
+                />
+                merchants have put their trust in Spaces to grow their business
+                and increase their income.
               </p>
               <p class="hero-page-brief__text">
-                Spaces helps you track your sales, provide insights on your customers, and manage logistics all
-                while providing access to finance and a broader market for your products.
+                Spaces helps you track your sales, provide insights on your
+                customers, and manage logistics all while providing access to
+                finance and a broader market for your products.
               </p>
             </div>
-            </transition>
+          </transition>
         </div>
         <transition
-            mode="out-in"
-            enter-active-class="animate__animated animate__fadeInLeftBig"
+          mode="out-in"
+          enter-active-class="animate__animated animate__fadeInLeftBig"
         >
-        <p v-show="headerAnimationDone" class="button-block">
-          <a class="s-button" target="_blank" @click="openDownloadAppModal">
-          Download App
-          </a>
-        </p>
+          <p v-show="headerAnimationDone" class="button-block">
+            <a class="s-button" target="_blank" @click="openDownloadAppModal">
+              Download App
+            </a>
+          </p>
         </transition>
       </div>
       <div class="hero-page__carousel-parent">
-        <transition            
-        mode="out-in"
-        enter-active-class="animate__animated animate__fadeIn"
+        <transition
+          mode="out-in"
+          enter-active-class="animate__animated animate__fadeIn"
         >
-          <div class="hero-page__carousel" v-if="!IsPhone && headerAnimationDone">
-            <agile 
-            :autoplay="true"
-            :speed="1000"
-            >
+          <div
+            class="hero-page__carousel"
+            v-if="!IsPhone && headerAnimationDone"
+          >
+            <agile :autoplay="true" :speed="1000">
               <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/merchant-with-app-min.jpg" alt="Merchant with spaces app" />
+                <img
+                  src="@/assets/images/homepage/merchant-with-app-min.jpeg"
+                  alt="Merchant with spaces app"
+                />
               </div>
               <div class="hero-page__carousel__image">
-                <img src="@/assets/images/homepage/merchant-in-shop.png" alt="Pepper Merchant" />
+                <img
+                  src="@/assets/images/homepage/merchant-in-shop.png"
+                  alt="Pepper Merchant"
+                />
               </div>
               <div class="hero-page__carousel__image">
                 <img src="@/assets/images/homepage/cobbler.png" alt="cobbler" />
@@ -85,23 +103,28 @@
         </transition>
       </div>
     </div>
-    <el-dialog width="400px" :visible.sync="downloadSpacesAppVisible" :show-close="false" :modal-append-to-body="true">
+    <el-dialog
+      width="400px"
+      :visible.sync="downloadSpacesAppVisible"
+      :show-close="false"
+      :modal-append-to-body="true"
+    >
       <download-spaces-app />
     </el-dialog>
   </main>
 </template>
 
 <script>
-import ICountUp from 'vue-countup-v2';
+import ICountUp from "vue-countup-v2";
 import IsPhone from "@/mixins/IsPhone";
-import { VueAgile } from 'vue-agile';
-import 'animate.css';
-import { Dialog } from 'element-ui';
-import DownloadSpacesApp from '../components/Global/DownloadSpacesApp';
-import 'element-ui/lib/theme-chalk/dialog.css';
+import { VueAgile } from "vue-agile";
+import "animate.css";
+import { Dialog } from "element-ui";
+import DownloadSpacesApp from "../components/Global/DownloadSpacesApp";
+import "element-ui/lib/theme-chalk/dialog.css";
 
 export default {
-  name: 'Home',
+  name: "Home",
   props: {
     openModal: Boolean,
   },
@@ -114,7 +137,7 @@ export default {
   mixins: [IsPhone],
   data() {
     return {
-      dataText: 'Empowering small merchants to grow big profits.',
+      dataText: "Empowering small merchants to grow big profits.",
       headerAnimationDone: false,
       delay: 1000,
       endVal: 109733,
@@ -122,29 +145,62 @@ export default {
       options: {
         useEasing: true,
         useGrouping: true,
-        separator: ',',
-        decimal: '.',
-        prefix: '',
-        suffix: '',
+        separator: ",",
+        decimal: ".",
+        prefix: "",
+        suffix: "",
       },
       downloadSpacesAppVisible: false,
     };
   },
+  created() {
+    this.fetchMerchantsCount();
+  },
   watch: {
     downloadSpacesAppVisible(value) {
-      this.$emit('modal-is-open', value);
+      this.$emit("modal-is-open", value);
     },
   },
   beforeMount() {
     window.addEventListener("DOMContentLoaded", this.domLoaded);
   },
   methods: {
+    fetchMerchantsCount() {
+      setTimeout(
+        fetch("https://test-api.superscore.me/dashboards/report/api", {
+          method: "POST",
+          headers: {
+            "Authorization": "cb8a9e5edea54789e18f1cb3f4fe840a07",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            report_id: "5f59ec218156b6210a8ce4eb",
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            this.endVal = data.data + 20000;
+          })
+          .catch((e) => {
+            this.endVal = 110000;
+            console.log(e);
+          }),
+        5000
+      );
+    },
     openDownloadAppModal() {
       this.downloadSpacesAppVisible = true;
     },
-    onReady: function(instance) {
-      const that = this;
-      instance.update(that.endVal + 0);
+    onReady(instance) {
+      this.instance = instance;
+      this.rerunCountUp(instance)
+    },
+    rerunCountUp(instance) {
+      instance.start();
+      setTimeout(() => {
+        instance.reset();
+        this.onReady(instance);
+      }, 10000);
     },
     domLoaded() {
       this.startTextAnimation();
@@ -169,7 +225,7 @@ export default {
       }
     },
     startTextAnimation() {
-        // text exists! start typewriter animation
+      // text exists! start typewriter animation
       this.typeWriter(this.dataText, 0);
     },
   },
@@ -181,50 +237,51 @@ export default {
   width: 100%;
 }
 .agile__actions {
-	margin-top: 20px;
+  margin-top: 20px;
   text-align: center;
 }
 .agile__nav-button {
-		background: transparent;
-		border: none;
-		color: #ccc;
-		cursor: pointer;
-		font-size: 24px;
-		transition-duration: .3s;
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 24px;
+  transition-duration: 0.3s;
 }
 .agile__nav-button:hover {
-			color: var(--typeOne);
+  color: var(--typeOne);
 }
 .agile__dot {
   margin: 0 10px;
 }
 .agile__dot button {
-			background-color: #eee;
-			border: none;
-			border-radius: 50%;
-			cursor: pointer;
-			height: 10px;
-			font-size: 0;
-			line-height: 0;
-			margin: 0;
-			padding: 0;
-			transition-duration: .3s;
-			width: 10px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 10px;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  transition-duration: 0.3s;
+  width: 10px;
 }
 .agile__dot--current button {
-	background-color: var(--typeOne);
+  background-color: var(--typeOne);
   border-radius: 50%;
 }
-.agile__dot--current, .agile__dot:hover {
-	background-color: var(--typeOne);
+.agile__dot--current,
+.agile__dot:hover {
+  background-color: var(--typeOne);
   border-radius: 50%;
 }
 .slide {
-	align-items: center;
-	color: #fff;
-	display: flex;
-	height: 30rem;
-	justify-content: center;
+  align-items: center;
+  color: #fff;
+  display: flex;
+  height: 30rem;
+  justify-content: center;
 }
 
 .agile__nav-button {
@@ -257,7 +314,7 @@ export default {
 <style scoped>
 .hero-page__carousel__image {
   max-height: 40rem;
-	object-fit: cover;
+  object-fit: cover;
   max-width: 60rem;
 }
 .hero-page__brief {
@@ -364,6 +421,6 @@ export default {
   }
   .hero-page__carousel {
     max-width: 30rem;
-  }  
+  }
 }
 </style>

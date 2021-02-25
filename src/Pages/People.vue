@@ -8,7 +8,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/anu-adasolum.jpg"
+          src="@/assets/images/people/anu-adasolum.jpeg"
           alt="Spaces CEO Anu Adasolum"
         />
         <div class="team-member-card">
@@ -44,7 +44,7 @@
       <div class="team-member">
         <img
           class="team-member__image"
-          src="@/assets/images/people/abimbola-dasilva.jpeg"
+          src="@/assets/images/people/abimbola-dasilva.jpg"
           alt="Abimbola Dasilva Spaces Head of Business Intelligence &amp; Customer Experience"
         />
         <div class="team-member-card">
@@ -191,7 +191,7 @@ export default {
     object-fit: cover;
     height: 200px;
     width: 200px;
-    box-shadow: 1px 1px 6px rgb(8 158 255 / 15%);
+    box-shadow: 1px 1px 6px rgb(0 0 0 / 15%);
     position: relative;
   }
   .header__underline {
