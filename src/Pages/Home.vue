@@ -375,7 +375,7 @@ export default {
     width: 50%;
   }
   .hero-page__brief {
-    padding: 1rem;
+    padding: 1rem 0;
     background: var(--neutralTwo);
     box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
     border-radius: 10px;
