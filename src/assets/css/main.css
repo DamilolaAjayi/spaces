@@ -97,7 +97,7 @@ h5 {
 }
 a {
   color: var(--primaryOne);
-  outline: var(--primaryTwo);
+  outline-color: var(--primaryThree);
   cursor: pointer;
   text-decoration: none;
 }
@@ -127,7 +127,7 @@ img {
   padding: 8px 30px;
   width: max-content;
   border-radius: 5px;
-  outline: none;
+  outline-color: var(--primaryTwo);
   cursor: pointer;
   border: none;
   height: 4.4rem;

@@ -134,7 +134,7 @@ export default {
   border-bottom-right-radius: 0;
   box-shadow: 0px 1px 1px rgba(44, 39, 56, 0.08), 0px 1px 3px rgba(44, 39, 56, 0.08);
   width: 100%;
-  outline: var(--primaryTwo);
+  outline-color: var(--primaryThree);
 }
 section {
   margin-top: 1rem;
