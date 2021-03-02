@@ -2,4 +2,4 @@
   from = "/*"
   to = "https://spaces.io"
   status = 200
-  force = true
+  
