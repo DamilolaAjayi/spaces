@@ -2,7 +2,7 @@
   <section class="company-about__section section-container" id="partner" :class="{'modal-is-open' : openModal}">
       <header class="company-about__header">
         <h3>Why partner with us?</h3>
-        <img src="https://ik.imagekit.io/7dkc9ii1v1r/Underline-5-Blue_FOHOHoKip.png" alt="">
+        <img src="https://ik.imagekit.io/7dkc9ii1v1r/Underline-5-Blue_FOHOHoKip.png" alt="blue underline image">
         <transition
           mode="in-out"
           enter-active-class="animate__animated animate__flipInX"
@@ -14,7 +14,7 @@
       </header>
     <div class="company-portfolio">
       <div class="company-portfolio__card">
-          <img src="@/assets/images/partner/product.svg" alt="">
+          <img src="@/assets/images/partner/product.svg" alt="product icon">
           <p>
               You have a product or service you want to provide to 
           <strong>
@@ -30,13 +30,13 @@
           </p>
       </div>
       <div class="company-portfolio__card">
-          <img src="@/assets/images/partner/performance.svg" alt="">
+          <img src="@/assets/images/partner/performance.svg" alt="performance icon">
           <p>
               You want to track performance and preferences for your product or service.
           </p>
       </div>
       <div class="company-portfolio__card">
-          <img src="@/assets/images/partner/distribution.svg" alt="">
+          <img src="@/assets/images/partner/distribution.svg" alt="distribution icon">
           <p>
               Largest informal distribution channel in Africa with over $1.5b in recorded sales and 10,000 agents across Nigeria.
           </p>

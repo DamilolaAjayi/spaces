@@ -3,7 +3,7 @@
     <div class="company section-container">
       <header class="purpose__header">
         <h3>Why Use Spaces?</h3>
-        <img class="purpose__header-image" src="https://ik.imagekit.io/7dkc9ii1v1r/Underline-5-Blue_FOHOHoKip.png" alt="">
+        <img class="purpose__header-image" src="https://ik.imagekit.io/7dkc9ii1v1r/Underline-5-Blue_FOHOHoKip.png" alt="blue underline image">
       </header>
       <div class="company-purpose" v-if="!isMobile">
         <agile
@@ -13,24 +13,24 @@
         <div class="group">
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/increase-demand-1_3aGdjgyCjoug.svg" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/increase-demand-1_3aGdjgyCjoug.svg" alt="increase goods demand" />
               </div>
             </div>
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/improvecash-flows-1_eKS7G5nGn.svg" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/improvecash-flows-1_eKS7G5nGn.svg" alt="improve merchant cashflow" />
               </div>
             </div>
         </div>
         <div class="group">
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/streamlined-logistics-1_ttVtRRTjl.svg" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/streamlined-logistics-1_ttVtRRTjl.svg" alt="streamlined logistics" />
               </div>
             </div>
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/automatic-savings-1_H2xw13uK3wRw.svg" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/automatic-savings-1_H2xw13uK3wRw.svg" alt="automatic savings" />
               </div>
             </div>
         </div>
@@ -43,22 +43,22 @@
         >
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/increase-demand-1_3aGdjgyCjoug.svg" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/increase-demand-1_3aGdjgyCjoug.svg" alt="increase goods demand" />
               </div>
             </div>
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/improvecash-flows-1_eKS7G5nGn.svg" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/improvecash-flows-1_eKS7G5nGn.svg" alt="improve merchant cashflow" />
               </div>
             </div>
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/streamlined-logistics-1_ttVtRRTjl.svg" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/streamlined-logistics-1_ttVtRRTjl.svg" alt="streamlined logistics" />
               </div>
             </div>
             <div class="company-purpose__block">
               <div class="company-purpose-block__image">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/automatic-savings-1_H2xw13uK3wRw.svg" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/automatic-savings-1_H2xw13uK3wRw.svg" alt="automatic savings" />
               </div>
             </div>
         </agile>

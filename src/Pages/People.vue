@@ -2,7 +2,7 @@
   <section id="people" class="team section-container" :class="{'modal-is-open' : openModal}">
     <header class="people">
       <h3 class="team__header">Team</h3>
-      <img src="https://ik.imagekit.io/7dkc9ii1v1r/Underline-5-Blue_FOHOHoKip.png" alt="" class="header__underline">
+      <img src="https://ik.imagekit.io/7dkc9ii1v1r/Underline-5-Blue_FOHOHoKip.png" alt="blue underline image" class="header__underline">
     </header>
     <div class="team-container">
       <div class="team-member">
@@ -16,7 +16,7 @@
             Anu Adasolum
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/anu-adasolum-46754a19/">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="linkedin logo" />
               </a>
             </span>
           </h4>
@@ -34,7 +34,7 @@
             Funto Faleye
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/funto-faleye-b08a4059/">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="linkedin logo" />
               </a>
             </span>
           </h4>
@@ -52,7 +52,7 @@
             Abimbola Dasilva
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/da-silva-abimbola-566a525b/">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="linkedin logo" />
               </a>
             </span>
           </h4>
@@ -70,7 +70,7 @@
             Adegbenga Adeye
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="linkedin logo" />
               </a>
             </span>
           </h4>
@@ -90,7 +90,7 @@
             Afolashakin Ajayi
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/afolashakinajayi/">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="linkedin logo" />
               </a>
             </span>
           </h4>
@@ -110,7 +110,7 @@
           </span>
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/didiuwem/">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="linkedin logo" />
               </a>
             </span>
           </h4>
@@ -128,7 +128,7 @@
             Omokhafe Dirisu
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/omokhafe-dirisu-25119747/">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="linkedin logo" />
               </a>
             </span>
           </h4>
@@ -146,7 +146,7 @@
             Ademola Adesina
             <span>
               <a target="_blank" href="https://www.linkedin.com/in/aadesina/">
-                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="" />
+                <img src="https://ik.imagekit.io/7dkc9ii1v1r/linkedin-logo_NbOm3DVKG.png" alt="linkedin logo" />
               </a>
             </span>
           </h4>
