@@ -2,11 +2,11 @@
   <div id="app" class="app">
     <navigation />
     <div class="container">
-      <home :openModal="openModal" @modal-is-open="modalIsOpen" />
+      <home :openModal="openModal" @modal-is-open="modalIsOpen" @merchant-count="merchantCount"/>
       <products :openModal="openModal" @modal-is-open="modalIsOpen" />
       <why-spaces :openModal="openModal" @modal-is-open="modalIsOpen" />
       <people :openModal="openModal" @modal-is-open="modalIsOpen" />
-      <partner :openModal="openModal" @modal-is-open="modalIsOpen" />
+      <partner :openModal="openModal" @modal-is-open="modalIsOpen" :merchant_count="merchant_count" />
       <el-footer :openModal="openModal" @modal-is-open="modalIsOpen" />
     </div>
   </div>
@@ -39,11 +39,15 @@ export default {
   data() {
     return {
       openModal: false,
+      merchant_count: 110000,
     };
   },
   methods: {
     modalIsOpen(value) {
       this.openModal = value;
+    },
+    merchantCount(payload) {
+      this.merchant_count = payload;
     },
   },
 };

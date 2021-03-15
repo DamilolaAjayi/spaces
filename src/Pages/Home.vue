@@ -179,6 +179,7 @@ export default {
         })
           .then((response) => response.json())
           .then((data) => {
+            this.$emit('merchant-count', data.data + 20000);
             this.endVal = data.data + 20000;
           })
           .catch((e) => {
